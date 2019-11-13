@@ -1,0 +1,592 @@
+﻿@using DemoScore.Models.ViewModel;
+@model AdminGameQuestionViewModel
+<link href="https://fonts.googleapis.com/css?family=Catamaran:200,300,400,700,800&amp;subset=latin-ext" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+@if (TempData["Add"] != null)
+{
+    @section Scripts {
+        <script type="text/JavaScript">
+            $(document).ready(function () {
+                $("#DeleteInfo").modal();
+            });
+        </script>
+    }}
+
+@Scripts.Render("~/bundles/jqueryval")
+
+@if (TempData["Form1"] != null)
+{
+    @section Scripts {
+        <script type="text/JavaScript">
+            $(document).ready(function () {
+                $("#FormUpdateCategory").modal();
+            });
+        </script>
+    }}
+@if (TempData["Form2"] != null)
+{
+    @section Scripts {
+        <script type="text/JavaScript">
+            $(document).ready(function () {
+                $("#FormUpdateSubCategory").modal();
+            });
+        </script>
+    }}
+<br /><br /><br /><br /><br /><br />
+<div class="row fecha">
+    <div class="btn-group btn-breadcrumb">
+        <a href="@Url.Action("Index", "Home")" class="btn btn-info"><i class="glyphicon glyphicon-home"></i></a>
+        <a href="@Url.Action("Setting", "AdminGame")" class="btn btn-info">Ajuste Juego</a>
+    </div>
+</div>
+<br /><br /><br />
+<div class="panel panel-primary">
+
+    <div id="DeleteInfo" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                    @TempData["Add"]
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-heading panel-head"><center><h1 style="font-size:35px;">Gestor de Preguntas</h1></center></div>
+    <div class="panel-body">
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#menu2">Opción Múltiple</a></li>
+            <li class=""><a data-toggle="tab" href="#menu3">Categoria</a></li>
+            <li class=""><a data-toggle="tab" href="#menu4">SubCategoria</a></li>
+            <li>@Html.ActionLink("Vista Previa", "Preview", "ViewGame", new { Id = Model.Sett_Id }, new { @class = "" })</li>
+            <li>@Html.ActionLink("Carga Masiva", "MassiveQuestions", "AdminGame", new { Id = Model.Sett_Id }, new { @class = "" })</li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="menu2" class="tab-pane fade">
+                <div class="contenido-articulo">
+                    <br />
+                    <center>
+                        <h1>Puedes crear una pregunta con una imagen o un texto.</h1>
+                    </center>
+                    <br /><br /><br />
+
+
+                    @if (Model.Setting.MG_MultipleChoice.Count == 0)
+                    {
+                        using (Html.BeginForm("AddMgMultipleChoice", "AdminGame", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
+                        {
+
+                            @Html.AntiForgeryToken()
+                            <div class="row">
+
+                                <div class="col-md-5">
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                    @Html.HiddenFor(model => model.Sett_Id)
+                                    @Html.LabelFor(model => model.MuCh_Description, htmlAttributes: new { @class = "control-label col-md-3" })
+                                    @Html.EditorFor(model => model.MuCh_Description, new { htmlAttributes = new { @class = "form-control", @style = "width:70%" } })
+                                    @Html.ValidationMessageFor(model => model.MuCh_Description, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-12">
+                                </div>
+                                <div class="col-md-5">
+                                    @Html.LabelFor(model => model.cate_Id, htmlAttributes: new { @class = "control-label col-md-3" })
+                                    @Html.DropDownListFor(model => model.cate_Id, Model.Sett_Category, new { @class = "form-control", @style = "width:70%" })
+                                    @Html.ValidationMessageFor(model => model.cate_Id, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-7">
+                                    @Html.LabelFor(model => model.sub_Id, htmlAttributes: new { @class = "control-label col-md-4" })
+                                    @Html.DropDownListFor(model => model.sub_Id, Model.Sett_SubCategory, new { @class = "form-control", @style = "width:58%" })
+                                    @Html.ValidationMessageFor(model => model.sub_Id, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-5">
+                                    @Html.LabelFor(model => model.AnMul_Description, htmlAttributes: new { @class = "control-label col-md-3" })
+                                    @Html.EditorFor(model => model.AnMul_Description, new { htmlAttributes = new { @class = "form-control", @style = "width:70%" } })
+                                    @Html.ValidationMessageFor(model => model.AnMul_Description, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-7">
+                                    @Html.LabelFor(model => model.AnMul_TrueAnswer, htmlAttributes: new { @class = "control-label col-md-4" })
+                                    @Html.EnumDropDownListFor(model => model.AnMul_TrueAnswer, new { @class = "form-control", @style = "width:60%" })
+                                    @Html.ValidationMessageFor(model => model.AnMul_TrueAnswer, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-5">
+                                    @Html.LabelFor(model => model.AnMul_Description2, htmlAttributes: new { @class = "control-label col-md-3" })
+                                    @Html.EditorFor(model => model.AnMul_Description2, new { htmlAttributes = new { @class = "form-control", @style = "width:70%" } })
+                                    @Html.ValidationMessageFor(model => model.AnMul_Description2, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-7">
+                                    @Html.LabelFor(model => model.AnMul_TrueAnswer2, htmlAttributes: new { @class = "control-label col-md-4" })
+                                    @Html.EnumDropDownListFor(model => model.AnMul_TrueAnswer2, new { @class = "form-control", @style = "width:60%" })
+                                    @Html.ValidationMessageFor(model => model.AnMul_TrueAnswer2, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-5">
+                                    @Html.LabelFor(model => model.AnMul_Description3, htmlAttributes: new { @class = "control-label col-md-3" })
+                                    @Html.EditorFor(model => model.AnMul_Description3, new { htmlAttributes = new { @class = "form-control", @style = "width:70%" } })
+                                    @Html.ValidationMessageFor(model => model.AnMul_Description3, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-7">
+                                    @Html.LabelFor(model => model.AnMul_TrueAnswer3, htmlAttributes: new { @class = "control-label col-md-4" })
+                                    @Html.EnumDropDownListFor(model => model.AnMul_TrueAnswer3, new { @class = "form-control", @style = "width:60%" })
+                                    @Html.ValidationMessageFor(model => model.AnMul_TrueAnswer3, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-5">
+                                    @Html.LabelFor(model => model.AnMul_Description4, htmlAttributes: new { @class = "control-label col-md-3" })
+                                    @Html.EditorFor(model => model.AnMul_Description4, new { htmlAttributes = new { @class = "form-control", @style = "width:70%" } })
+                                    @Html.ValidationMessageFor(model => model.AnMul_Description4, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-7">
+                                    @Html.LabelFor(model => model.AnMul_TrueAnswer4, htmlAttributes: new { @class = "control-label col-md-4" })
+                                    @Html.EnumDropDownListFor(model => model.AnMul_TrueAnswer4, new { @class = "form-control", @style = "width:60%" })
+                                    @Html.ValidationMessageFor(model => model.AnMul_TrueAnswer4, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-5">
+                                    @Html.Label("Imagen", htmlAttributes: new { @class = "control-label col-md-3" })
+                                    <input type="file" id="CoverpageModule" name="upload" title="Imagen de pregunta" />
+                                </div>
+                                <div class="col-md-12">
+                                    <br /><br />
+                                </div>
+                                <br />
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-8">
+                                        <center><button class="btn btn-primary" name="singin" type="submit">Crear Pregunta</button></center>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                    }
+
+                    else
+
+                    {
+                        <div style="float:right">
+                            <input type="submit" value="Añadir otra Pregunta" onclick="AddQuestionMultCho('@Model.Sett_Id')" data-cname="@Model.Sett_Id" class="btn btn-primary" />
+                        </div>
+                        <br />
+                        <div id="AddMultipleChoice">
+                        </div>
+                        foreach (var option in Model.Setting.MG_MultipleChoice.OrderByDescending(x => x.MuCh_ID))
+                        {
+                            <br />
+
+                            <br /><br /><br />
+                            <div class="comentario">
+                                <div class="botones-edicion">
+                                    <a href="@Url.Action("DeleteMultipleChoice", "AdminGame", new { id = @option.MuCh_ID })"><i class="fa fa-remove"></i></a>
+                                    <a href="@Url.Action("EditMultipleCh", "AdminGame", new { id = @option.MuCh_ID })"><i class="fa fa-cog"></i></a>
+                                </div>
+                                <p>
+                                    <h4 class="fecha">Pregunta</h4>
+                                </p>
+                                <p><strong>@option.MuCh_NameQuestion</strong></p>
+                                @if (option.MuCh_Description != null)
+                                {
+                                    <p><em>@option.MuCh_Description</em></p>
+                                }
+                                @if (option.MuCh_ImageQuestion != null)
+                                {
+                                    <p>
+                                        Imagen:
+                                        <img src="~/Mg_Game_Image/@option.MuCh_ImageQuestion" style="width:50px; height:50px" />
+                                    </p>
+                                }
+                                <br /><br /><br />
+                                @foreach (var answeroptionmultiple in option.MG_AnswerMultipleChoice)
+                                {
+                                    if (answeroptionmultiple.MG_MultipleChoice.MuCh_ID == option.MuCh_ID)
+                                    {
+                                        <div class="comentario">
+                                            <div class="botones-edicion">
+                                                <a href="@Url.Action("DeleteAnswerMultipleChoice", "AdminGame", new { id = @answeroptionmultiple.AnMul_ID})"><i class="fa fa-remove"></i></a>
+                                                <a href="@Url.Action("EditAnswerOMultiple", "AdminGame", new { id = @answeroptionmultiple.AnMul_ID})"><i class="fa fa-cog"></i></a>
+                                            </div>
+                                            <p>
+                                                <h4 class="fecha">Respuesta</h4>
+                                            </p>
+                                            <p><strong>@answeroptionmultiple.AnMul_Description</strong></p>
+                                            <p><em>@answeroptionmultiple.AnMul_TrueAnswer</em></p>
+                                        </div>
+                                        <br />
+                                    }
+                                }
+                            </div>
+                            <br />
+
+                            <br />
+                            <div id="AddAnswerMultipleChoice">
+
+                            </div>
+                        }
+                        <br /><br /><br />
+                    }
+                </div>
+            </div>
+            <div id="menu3" class="tab-pane fade">
+                <div class="jumbotron col-md-12">
+                    <div class="fecha">
+
+                        <button id="BTN_ADD" type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddCategoryModule">Añadir Categoria</button>
+                    </div>
+                    @using (Html.BeginForm("UpdateCategory", "AdminGame", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="modal fade" id="FormUpdateCategory">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h2 class="modal-title"><strong>MODIFICAR Categoria</strong></h2>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="row">
+                                            @Html.HiddenFor(model => model.cate_Id)
+                                            @Html.HiddenFor(model => model.Sett_Id)
+                                            <div class="col-md-6">
+                                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                                @Html.LabelFor(model => model.Cate_Name, htmlAttributes: new { @class = "control-label col-md-6" })
+                                                @Html.EditorFor(model => model.Cate_Name, new { htmlAttributes = new { @class = "form-control", @style = "width:50%" } })
+                                                @Html.ValidationMessageFor(model => model.Cate_Name, "", new { @class = "text-danger" })
+                                            </div>
+                                            <div class="col-md-12">
+                                                <br />
+                                            </div>
+                                            <br />
+                                            <div class="form-group">
+                                                <div class="col-md-offset-2 col-md-8">
+                                                    <center><button class="btn btn-primary" name="singin" type="submit">Modifica Categoria</button></center>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    }
+
+                    @using (Html.BeginForm("AddCategory", "AdminGame", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="modal fade" id="AddCategoryModule" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h2 class="modal-title"><strong>AÑADIR CATEGORIA</strong></h2>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                @Html.HiddenFor(x => x.Sett_Id)
+                                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                                @Html.LabelFor(model => model.Cate_Name, htmlAttributes: new { @class = "control-label col-md-6" })
+                                                @Html.EditorFor(model => model.Cate_Name, new { htmlAttributes = new { @class = "form-control", @style = "width:50%" } })
+                                                @Html.ValidationMessageFor(model => model.Cate_Name, "", new { @class = "text-danger" })
+                                            </div>
+                                            <div class="col-md-12">
+                                                <br />
+                                            </div>
+                                            <br />
+                                            <div class="form-group">
+                                                <div class="col-md-offset-2 col-md-8">
+                                                    <center><button class="btn btn-primary" name="singin" type="submit">Crear</button></center>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    @if (Model.Listcate != null)
+                    {
+                        if (Model.Listcate.Count != 0)
+                        {
+                            <hr style="width:100%; float:left; border:dashed; border-color: #A3DC68; border-width:thin;">
+                            <div class="table-responsive col-md-12 col-sm-12">
+                                <table class="tablea tablea-hover tablea-striped">
+                                    <thead>
+                                        <tr class="success">
+                                            <th> Categoria </th>
+                                            <th>Modificar</th>
+                                            <th>Eliminar</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+
+                                        @foreach (var item in Model.Listcate)
+                                        {
+                                            <tr>
+                                                <td>@item.Cate_Description</td>
+                                                <td>
+                                                    <input type="button" class="btn btn-primary" value="Modificar" onclick="UpdateCategory('@item.Cate_ID')" data-cname="@item.Cate_ID" />
+                                                </td>
+                                                <td>
+                                                    <input type="button" class="btn btn-primary" value="Eliminar" onclick="DeleteCategory('@item.Cate_ID')" data-cname="@item.Cate_ID" />
+                                                </td>
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        }
+                    }
+
+
+                    @*Modificar Categoria*@
+                    <script type="text/Javascript" language="javascript">
+                        function UpdateCategory(Cate_ID) {
+            if (confirm("Modificar categoria") == true) {
+                var c = Cate_ID;
+                var sett=@Model.Sett_Id;
+                window.location.href = ' @Url.Action("UpdateCategory", "AdminGame", new {id = "ID", sett_Id = "ee" })'.replace("ID", c).replace("ee", sett);
+            }
+            else {
+                var link = '@Url.Action("Index", "Home")';
+            }
+        }
+                    </script>
+                    @*Script eliminar Categoria*@
+                    <script type="text/Javascript" language="javascript">
+                        function DeleteCategory(Cate_ID) {
+            if (confirm("Elimiar categoria") == true) {
+                var c = Cate_ID;
+                window.location.href = ' @Url.Action("DeleteCategory", "AdminGame", new {id = "ID"})'.replace("ID", c);
+            }
+            else {
+                var link = '@Url.Action("Index", "Home")';
+            }
+        }
+                    </script>
+                </div>
+            </div>
+            <div id="menu4" class="tab-pane fade in active">
+                <div class="jumbotron col-md-12">
+                    <div class="fecha">
+
+                        <button id="BTN_ADD" type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddSubCategoryModule">Añadir SubCategoria</button>
+                    </div>
+                    @using (Html.BeginForm("UpdateSubCategory", "AdminGame", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="modal fade" id="FormUpdateSubCategory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h2 class="modal-title"><strong>MODIFICAR SubCategoria</strong></h2>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="row">
+                                            @Html.HiddenFor(model => model.sub_Id)
+                                            @Html.HiddenFor(model => model.Sett_Id)
+                                            <div class="col-md-6">
+                                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                                @Html.LabelFor(model => model.SubC_name, htmlAttributes: new { @class = "control-label col-md-6" })
+                                                @Html.EditorFor(model => model.SubC_name, new { htmlAttributes = new { @class = "form-control", @style = "width:50%" } })
+                                                @Html.ValidationMessageFor(model => model.SubC_name, "", new { @class = "text-danger" })
+                                            </div>
+                                            <div class="col-md-6">
+                                                @Html.LabelFor(model => model.cate_Id, htmlAttributes: new { @class = "control-label col-md-3" })
+                                                @Html.DropDownListFor(model => model.cate_Id, Model.Sett_Category, new { @class = "form-control", @style = "width:70%" })
+                                                @Html.ValidationMessageFor(model => model.cate_Id, "", new { @class = "text-danger" })
+                                            </div>
+                                            <div class="col-md-12">
+                                                <br />
+                                            </div>
+                                            <br />
+                                            <div class="form-group">
+                                                <div class="col-md-offset-2 col-md-8">
+                                                    <center><button class="btn btn-primary" name="singin" type="submit">Modifica SubCategoria</button></center>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    }
+
+                    @using (Html.BeginForm("AddSubCategory", "AdminGame", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="modal fade" id="AddSubCategoryModule" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h2 class="modal-title"><strong>AÑADIR SUBCATEGORIA</strong></h2>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                @Html.HiddenFor(x => x.Sett_Id)
+                                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                                @Html.LabelFor(model => model.SubC_name, htmlAttributes: new { @class = "control-label col-md-6" })
+                                                @Html.EditorFor(model => model.SubC_name, new { htmlAttributes = new { @class = "form-control", @style = "width:50%" } })
+                                                @Html.ValidationMessageFor(model => model.SubC_name, "", new { @class = "text-danger" })
+                                            </div>
+                                            <div class="col-md-6">
+                                                @Html.LabelFor(model => model.cate_Id, htmlAttributes: new { @class = "control-label col-md-3" })
+                                                @Html.DropDownListFor(model => model.cate_Id, Model.Sett_Category, new { @class = "form-control", @style = "width:70%" })
+                                                @Html.ValidationMessageFor(model => model.cate_Id, "", new { @class = "text-danger" })
+                                            </div>
+                                            <div class="col-md-12">
+                                                <br />
+                                            </div>
+                                            <br />
+                                            <div class="form-group">
+                                                <div class="col-md-offset-2 col-md-8">
+                                                    <center><button class="btn btn-primary" name="singin" type="submit">Crear</button></center>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    @if (Model.listsub != null)
+                    {
+                        if (Model.listsub.Count != 0)
+                        {
+                            <hr style="width:100%; float:left; border:dashed; border-color: #A3DC68; border-width:thin;">
+                            <div class="table-responsive col-md-12 col-sm-12">
+                                <table class="tablea tablea-hover tablea-striped">
+                                    <thead>
+                                        <tr class="success">
+                                            <th>SubCategoria </th>
+                                            <th>Categoria </th>
+                                            <th>Modificar</th>
+                                            <th>Eliminar</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+
+                                        @foreach (var item in Model.listsub)
+                                        {
+                                            <tr>
+                                                <td>@item.SubC_Description</td>
+                                                <td>@item.Categoria.Cate_Description</td>
+                                                <td>
+                                                    <input type="button" class="btn btn-primary" value="Modificar" onclick="UpdateSubCategory('@item.SubC_ID')" data-cname="@item.SubC_ID" />
+                                                </td>
+                                                <td>
+                                                    <input type="button" class="btn btn-primary" value="Eliminar" onclick="DeleteSubCategory('@item.SubC_ID')" data-cname="@item.SubC_ID" />
+                                                </td>
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        }
+                    }
+
+
+                    @*Modificar Categoria*@
+                    <script type="text/Javascript" language="javascript">
+                        function UpdateCategory(Cate_ID) {
+            if (confirm("Modificar categoria") == true) {
+                var c = Cate_ID;
+                var sett=@Model.Sett_Id;
+                window.location.href = ' @Url.Action("UpdateCategory", "AdminGame", new {id = "ID", sett_Id = "ee" })'.replace("ID", c).replace("ee", sett);
+            }
+            else {
+                var link = '@Url.Action("Index", "Home")';
+            }
+        }
+                    </script>
+                    @*Script eliminar Categoria*@
+                    <script type="text/Javascript" language="javascript">
+                        function DeleteCategory(Cate_ID) {
+            if (confirm("Elimiar categoria") == true) {
+                var c = Cate_ID;
+                window.location.href = ' @Url.Action("DeleteCategory", "AdminGame", new {id = "ID"})'.replace("ID", c);
+            }
+            else {
+                var link = '@Url.Action("Index", "Home")';
+            }
+        }
+                    </script>
+
+                    <script type="text/Javascript" language="javascript">
+                        function UpdateSubCategory(SubC_ID) {
+                        if (confirm("Modificar Subcategoria") == true) {
+                            var c = SubC_ID;
+                            var sett=@Model.Sett_Id;
+                            window.location.href = ' @Url.Action("UpdateSubCategory", "AdminGame", new {id = "ID", sett_Id = "ee" })'.replace("ID", c).replace("ee", sett);
+                        }
+                        else {
+                        var link = '@Url.Action("Index", "Home")';
+                        }
+                        }
+                        function DeleteSubCategory(SubC_ID) {
+                            if (confirm("Elimiar Subcategoria") == true) {
+                                var c = SubC_ID;
+                                window.location.href = ' @Url.Action("DeleteSubCategory", "AdminGame", new {id = "ID"})'.replace("ID", c);
+                            }
+                            else {
+                                var link = '@Url.Action("Index", "Home")';
+                            }
+                        }
+                    </script>
+                    @*Script eliminar Categoria*@
+                    <script type="text/Javascript" language="javascript">
+
+                    </script>
+                </div>
+            </div>
+            <br />
+        </div>
+    </div>
+    <script>
+    function LoadUpdateUsers(BaQu_Id) {
+        var link = '@Url.Action("AddOpenQuestions","AdminTraining", new { id = "value" })';
+        link = link.replace("value", BaQu_Id)
+        $("#AddQuestionss").load(link);
+    }
+    </script>
+    <script>
+        function AddAnswerMultCho(MuCh_ID) {
+        var link = '@Url.Action("AddAnswerMultiplesChoise", "AdminGame", new { id = "value" })';
+            link = link.replace("value", MuCh_ID)
+            $("#AddAnswerMultipleChoice").load(link);
+    }
+        function AddQuestionMultCho(Sett_Id) {
+        var link = '@Url.Action("AddOtherMultipleChoice", "AdminGame", new { id = "value" })';
+            link = link.replace("value", Sett_Id)
+            $("#AddMultipleChoice").load(link);
+    }
+    </script>
+
+
+
+</div>

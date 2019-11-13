@@ -1,0 +1,155 @@
+﻿@using DemoScore.Models.ViewModel;
+@model AdminPreviw
+@Scripts.Render("~/bundles/jqueryval")
+@if (TempData["Info"] != null)
+{
+    @section Scripts {
+        <script type="text/JavaScript">
+            $(document).ready(function () {
+                $("#DeleteInfo").modal();
+            });
+        </script>
+    }}
+@if (Model.setting.Sett_Audio1 != null)
+{
+    <audio src="~/ResourceGame/@Model.setting.Sett_Audio1" autoplay loop></audio>
+}
+<div id="DeleteInfo" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                <h1 style="color:red"> @TempData["Info"]</h1>
+                <br />
+      
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<body style="background:url(../../ImgTemplate/@Model.setting.MG_Template.Plant_Img_instructions); background-size: cover;background-position: center center;background-repeat: no-repeat;background-attachment: fixed;">
+    <br /><br /><br /><br /><br /><br />
+    <div class="row fecha">
+        <div class="btn-group btn-breadcrumb">
+            <a href="@Url.Action("Index", "Home")" class="btn btn-info"><i class="glyphicon glyphicon-home"></i></a>
+            <a href="@Url.Action("Setting", "AdminGame")" class="btn btn-info">Ajuste Juego</a>
+            <a href="@Url.Action("MgQuestions", "AdminGame", new {id = Model.Sett_Id})" class="btn btn-info">Preguntas</a>
+        </div>
+    </div>
+    <br />
+
+    @if (Model.listquestionsDificil.Count > 44)
+    {
+        <div class="preguntas2 col-md-4" style="left:480px;">
+            <div class="col-md-4">
+                <a href="@Url.Action("Question", "ViewGame", new {id = Model.listquestionsDificil[0].MuCh_ID, contador=2})">
+                    <img src="~/ResourceGame/Nivel1.png" class="img-responsive" />
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="@Url.Action("Question", "ViewGame", new {id = Model.listquestionsDificil[1].MuCh_ID, contador=3})">
+                    <img src="~/ResourceGame/2 (6).png" class="img-responsive" />
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="@Url.Action("Question", "ViewGame", new {id = Model.listquestionsDificil[2].MuCh_ID, contador=4})">
+                    <img src="~/ResourceGame/Nivel3.png" class="img-responsive" />
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="@Url.Action("Question", "ViewGame", new {id = Model.listquestionsDificil[3].MuCh_ID, contador=5})">
+                    <img src="~/ResourceGame/4 (1).png" class="img-responsive" />
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="@Url.Action("Question", "ViewGame", new {id = Model.listquestionsDificil[4].MuCh_ID, contador=6})">
+                    <img src="~/ResourceGame/5 (1).png" class="img-responsive" />
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="@Url.Action("Question", "ViewGame", new {id = Model.listquestionsDificil[5].MuCh_ID, contador=7})">
+                    <img src="~/ResourceGame/Nivel6.png" class="img-responsive" />
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="@Url.Action("Question", "ViewGame", new {id = Model.listquestionsDificil[6].MuCh_ID, contador=8})">
+                    <img src="~/ResourceGame/Nivel7.png" class="img-responsive" />
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="@Url.Action("Question", "ViewGame", new {id = Model.listquestionsDificil[7].MuCh_ID, contador=9})">
+                    <img src="~/ResourceGame/Nivel8.png" class="img-responsive" />
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="@Url.Action("Question", "ViewGame", new {id = Model.listquestionsDificil[8].MuCh_ID, contador=10})">
+                    <img src="~/ResourceGame/Nivel9.png" class="img-responsive" />
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="@Url.Action("Question", "ViewGame", new {id = Model.listquestionsDificil[9].MuCh_ID, contador=11})">
+                    <img src="~/ResourceGame/Nivel10.png" class="img-responsive" />
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="@Url.Action("Question", "ViewGame", new {id = Model.listquestionsDificil[10].MuCh_ID, contador=12})">
+                    <img src="~/ResourceGame/Nivel11.png" class="img-responsive" />
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="@Url.Action("Question", "ViewGame", new {id = Model.listquestionsDificil[11].MuCh_ID, contador=13})">
+                    <img src="~/ResourceGame/Nivel12.png" class="img-responsive" />
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="@Url.Action("Question", "ViewGame", new {id = Model.listquestionsDificil[12].MuCh_ID, contador=14})">
+                    <img src="~/ResourceGame/Nivel13.png" class="img-responsive" />
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="@Url.Action("Question", "ViewGame", new {id = Model.listquestionsDificil[13].MuCh_ID, contador=15})">
+                    <img src="~/ResourceGame/Nivel14.png" class="img-responsive" />
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="@Url.Action("Question", "ViewGame", new {id = Model.listquestionsDificil[14].MuCh_ID, contador=16})">
+                    <img src="~/ResourceGame/Nivel15.png" class="img-responsive" />
+                </a>
+            </div>
+
+        </div>
+    }
+    
+
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4" style="left:100px;">
+
+        <div class="col-md-12">
+            <div class="col-md-12">
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+
+<script>
+    //method Delete User
+    function ResteUserGame(Sett_Id) {
+        if (confirm("Elimiar Datos del Juego (Perdera toda la información del juego sobre la participación de los usuaios. (NO se puede revertir))") == true) {
+            var set = Sett_Id;
+            window.location.href = ' @Url.Action("ResetGame", "ViewGame", new { Id = "ID" })'.replace("ID", set);
+        }
+    }
+
+
+</script>

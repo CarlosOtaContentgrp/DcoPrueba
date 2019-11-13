@@ -1,0 +1,31 @@
+﻿
+
+
+<div class="jumbotron3">
+
+    <div class="col-md-3">
+        <a href='@Url.Action("Companies", "UserAndMassiveManagement")'>
+            <img src='@Url.Content("~/Content/Imagenes/usuarios_registrados.png")' style="width:90%; height:80%;" />
+        </a>
+        <h4>@Html.ActionLink("Usuario", "Companies", "UserAndMassiveManagement", new { ReturnUrl = ViewBag.ReturnUrl }, new { @class = "", role = "form", @style = "background-color:transparent;color:#000;"  })</h4>
+    </div>
+    <div class="col-md-3">
+        <a href='@Url.Action("Companies", "Admin")'>
+            <img src='@Url.Content("~/Content/Imagenes/tema_usuario.png")' style="width:90%; height:80%;" />
+        </a>
+        <h4>@Html.ActionLink("Compañias", "Companies", "Admin", new { ReturnUrl = ViewBag.ReturnUrl }, new { @class = "", role = "form", @style = "background-color:transparent;color:#000;" })</h4>
+    </div>
+    <div class="col-md-3">
+        <a href='@Url.Action("Companies", "AdminGame")'>
+            <img src='@Url.Content("~/Content/Imagenes/puntos.png")' style="width:90%; height:80%;" />
+        </a>
+        <h4>@Html.ActionLink("Gestor de Diagnóstico del Mapa de Conocimiento Organizacional", "Companies", "AdminGame", new { ReturnUrl = ViewBag.ReturnUrl }, new { @class = "", role = "form", @style = "background-color:transparent;color:#000;" })</h4>
+    </div>
+    <div class="col-md-3">
+        <a href='@Url.Action("Company", "Admin")'>
+            <img src='@Url.Content("~/Content/Imagenes/progreso_curso.png")' style="width:90%; height:80%;" />
+        </a>
+        <h4>@Html.ActionLink("Reportes", "Company", "Admin", new { ReturnUrl = ViewBag.ReturnUrl }, new { @class = "", role = "form", @style = "background-color:transparent;color:#000;" })</h4>
+    </div>
+  
+</div>
