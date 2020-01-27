@@ -23,6 +23,13 @@ namespace DemoScore.Models.ViewModel
 
         [Display(Name = "Nombre")]
         public string CompanyName { get; set; }
+
+        [Display(Name = "Cantidad de preguntas nivel 1")]
+        public int qnivel1 { get; set; }
+        [Display(Name = "Cantidad de preguntas nivel 2")]
+        public int qnivel2 { get; set; }
+        [Display(Name = "Cantidad de preguntas nivel 3")]
+        public int qnivel3 { get; set; }
     }
     public class AdminReports 
     {

@@ -97,12 +97,16 @@ namespace DemoScore.Models.ViewModel
         public OPTIONANSWER AnMul_TrueAnswer4 { get; set; }
         public IEnumerable<SelectListItem> Sett_Category { get; set; }
         public IEnumerable<SelectListItem> Sett_SubCategory { get; set; }
+        public IEnumerable<SelectListItem> Sett_Nivel { get; set; }
+        public int Nivel_Id { get; set; }
+        public int state { get; set; }
         public int cate_Id { get; set; }
         public int sub_Id { get; set; }
         public string Cate_Name { get; set; }
         public string SubC_name { get; set; }
         public List<Categoria> Listcate { get; set; }
         public List<SubCategoria>listsub { get; set; }
+        public List<Nivel> Listnivel { get; set; }
         public int company_Id { get; set; }
 
 

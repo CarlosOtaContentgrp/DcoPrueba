@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -253,11 +254,28 @@
     <Compile Include="Migrations\201901302039445_mensaje1.Designer.cs">
       <DependentUpon>201901302039445_mensaje1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001271534188_classNivel_initial.cs" />
+    <Compile Include="Migrations\202001271534188_classNivel_initial.Designer.cs">
+      <DependentUpon>202001271534188_classNivel_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001271537115_addcolumnnivelid-much.cs" />
+    <Compile Include="Migrations\202001271537115_addcolumnnivelid-much.Designer.cs">
+      <DependentUpon>202001271537115_addcolumnnivelid-much.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001271551104_columnstate-much.cs" />
+    <Compile Include="Migrations\202001271551104_columnstate-much.Designer.cs">
+      <DependentUpon>202001271551104_columnstate-much.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001272056304_level-quantity-company.cs" />
+    <Compile Include="Migrations\202001272056304_level-quantity-company.Designer.cs">
+      <DependentUpon>202001272056304_level-quantity-company.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Game\Area.cs" />
     <Compile Include="Models\Game\Cargo.cs" />
     <Compile Include="Models\Game\Categoria.cs" />
     <Compile Include="Models\Game\Ciudad.cs" />
+    <Compile Include="Models\Game\Nivel.cs" />
     <Compile Include="Models\Game\Company.cs" />
     <Compile Include="Models\Game\MG_AnswerMultipleChoice.cs" />
     <Compile Include="Models\Game\MG_AnswerUser.cs" />
@@ -517,6 +535,18 @@
     <EmbeddedResource Include="Migrations\201901302039445_mensaje1.resx">
       <DependentUpon>201901302039445_mensaje1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001271534188_classNivel_initial.resx">
+      <DependentUpon>202001271534188_classNivel_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001271537115_addcolumnnivelid-much.resx">
+      <DependentUpon>202001271537115_addcolumnnivelid-much.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001271551104_columnstate-much.resx">
+      <DependentUpon>202001271551104_columnstate-much.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001272056304_level-quantity-company.resx">
+      <DependentUpon>202001272056304_level-quantity-company.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -532,7 +562,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50127</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

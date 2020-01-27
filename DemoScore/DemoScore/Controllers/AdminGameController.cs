@@ -85,6 +85,17 @@ namespace DemoScore.Controllers
            });
             return new SelectList(Template, "Value", "Text");
         }
+        public IEnumerable<SelectListItem> GetNivel()
+        {
+            List<Nivel> nivel = ApplicationDbContext.Nivels.ToList();
+            IEnumerable<SelectListItem> Template = nivel.Select(x =>
+           new SelectListItem
+           {
+               Value = x.Nivel_Id.ToString(),
+               Text = x.Nivel_Name
+           });
+            return new SelectList(Template, "Value", "Text");
+        }
 
         public ActionResult Companies()
         {
@@ -258,6 +269,7 @@ namespace DemoScore.Controllers
                 TotalQuestion = TotalQuestion,
                 Sett_Category = GetCategory(setting.Company_Id),
                 Sett_SubCategory = GetSubcategory(setting.Company_Id),
+                Sett_Nivel=GetNivel(),
                 Listcate = cate,
                 listsub = subcate,
                 company_Id = setting.Company_Id
@@ -449,6 +461,7 @@ namespace DemoScore.Controllers
                     if (model.sub_Id != 0)
                     {
                         var sub = ApplicationDbContext.SubCategorias.Find(model.sub_Id);
+                        var niv = ApplicationDbContext.Nivels.Find(model.Nivel_Id);
                         if (upload != null && upload.ContentLength <= (2 * 1000000))
                         {
                             string[] allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
@@ -540,7 +553,10 @@ namespace DemoScore.Controllers
                                 Categoria = cate,
                                 Cate_Id = cate.Cate_ID,
                                 SubCategoria = sub,
-                                SubC_Id = sub.SubC_ID
+                                SubC_Id = sub.SubC_ID,
+                                Nivel=niv,
+                                Nivel_Id=niv.Nivel_Id,
+                                state=model.state
                             };
                             ApplicationDbContext.MG_MultipleChoices.Add(multiplechouse);
                             ApplicationDbContext.SaveChanges();
@@ -617,6 +633,7 @@ namespace DemoScore.Controllers
             model.Sett_Id = Getsetting.Sett_Id;
             model.Sett_Category = GetCategory(Getsetting.Company_Id);
             model.Sett_SubCategory = GetSubcategory(Getsetting.Company_Id);
+            model.Sett_Nivel = GetNivel();
             return PartialView("_AddMultipleChoice", model);
         }
 

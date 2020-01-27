@@ -17,7 +17,11 @@ namespace SCORM1.Models.MainGame
         public string MuCh_NameQuestion { get; set;}
         public string MuCh_ImageQuestion { get; set; }
         public string MuCh_Feedback { get; set;}
-
+        [Display(Name = "Estado")]
+        public int state { get; set; }
+        [ForeignKey("Nivel")]
+        public int Nivel_Id { get; set; }
+        public virtual Nivel Nivel { get; set; }
 
         [ForeignKey("Categoria")]
         public int Cate_Id { get; set; }

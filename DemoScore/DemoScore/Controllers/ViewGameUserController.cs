@@ -136,6 +136,7 @@ namespace DemoScore.Controllers
         [Authorize]
         public ActionResult Question()
         {
+            int level = 0;
             var useractual = ApplicationDbContext.Users.Find(GetActualUserId().Id);
              var setting = ApplicationDbContext.MG_SettingMps.First(x => x.Company_Id == useractual.CompanyId);           
             var attempts = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id).OrderByDescending(x => x.AnUs_Id).ToList();
@@ -154,23 +155,25 @@ namespace DemoScore.Controllers
                 var attuser = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id).ToList();
                             foreach (var item1 in attuser)
                             {
-                                listselect.Add(new MultipleChoiceselect
-                                {
-                                    Sett_Id = item1.MG_AnswerMultipleChoice.MG_MultipleChoice.Sett_Id,
-                                    MuCh_ID = item1.MG_AnswerMultipleChoice.MG_MultipleChoice.MuCh_ID,
-                                    MuCh_NameQuestion = item1.MG_AnswerMultipleChoice.MG_MultipleChoice.MuCh_NameQuestion,
-                                    MuCh_Description = item1.MG_AnswerMultipleChoice.MG_MultipleChoice.MuCh_Description,
-                                    MuCh_ImageQuestion = item1.MG_AnswerMultipleChoice.MG_MultipleChoice.MuCh_ImageQuestion,
-                                    MuCh_Categoria=item1.MG_AnswerMultipleChoice.MG_MultipleChoice.Categoria.Cate_Description,
-                                    MuCh_SubCategoria=item1.MG_AnswerMultipleChoice.MG_MultipleChoice.SubCategoria.SubC_Description,
-                                    Cate_Id=item1.MG_AnswerMultipleChoice.MG_MultipleChoice.Cate_Id,
-                                    listanswerM = item1.MG_AnswerMultipleChoice.MG_MultipleChoice.MG_AnswerMultipleChoice.ToList()
+                    listselect.Add(new MultipleChoiceselect
+                    {
+                        Sett_Id = item1.MG_AnswerMultipleChoice.MG_MultipleChoice.Sett_Id,
+                        MuCh_ID = item1.MG_AnswerMultipleChoice.MG_MultipleChoice.MuCh_ID,
+                        MuCh_NameQuestion = item1.MG_AnswerMultipleChoice.MG_MultipleChoice.MuCh_NameQuestion,
+                        MuCh_Description = item1.MG_AnswerMultipleChoice.MG_MultipleChoice.MuCh_Description,
+                        MuCh_ImageQuestion = item1.MG_AnswerMultipleChoice.MG_MultipleChoice.MuCh_ImageQuestion,
+                        MuCh_Categoria = item1.MG_AnswerMultipleChoice.MG_MultipleChoice.Categoria.Cate_Description,
+                        MuCh_SubCategoria = item1.MG_AnswerMultipleChoice.MG_MultipleChoice.SubCategoria.SubC_Description,
+                        Cate_Id = item1.MG_AnswerMultipleChoice.MG_MultipleChoice.Cate_Id,
+                        listanswerM = item1.MG_AnswerMultipleChoice.MG_MultipleChoice.MG_AnswerMultipleChoice.ToList(),
+                        nivel = item1.MG_AnswerMultipleChoice.MG_MultipleChoice.Nivel_Id                                    
                                 });
                             }
                 var categoria = ApplicationDbContext.Categorias.Where(x=>x.Company_Id==useractual.CompanyId).ToList();
                 int pre = 45 / categoria.Count + 1;
                 foreach (var item in categoria)
                 {
+                    /// cambio aqui de la condicion quetion
                     foreach (var item1 in setting.MG_MultipleChoice.Where(X => X.Cate_Id == item.Cate_ID))
                     {
                         listselect.Add(new MultipleChoiceselect
@@ -183,7 +186,8 @@ namespace DemoScore.Controllers
                             MuCh_Categoria=item1.Categoria.Cate_Description,
                             MuCh_SubCategoria=item1.SubCategoria.SubC_Description,
                             Cate_Id = item1.Cate_Id,
-                            listanswerM = item1.MG_AnswerMultipleChoice.ToList()
+                            listanswerM = item1.MG_AnswerMultipleChoice.ToList(),
+                            nivel=item1.Nivel_Id
                         });
                      
                     }
@@ -207,7 +211,8 @@ namespace DemoScore.Controllers
                                             MuCh_ImageQuestion = item1.MuCh_ImageQuestion,
                                             MuCh_Level = item1.MuCh_Level,
                                             Cate_Id=item1.Cate_Id,
-                                            listanswerM = item1.listanswerM.ToList()
+                                            listanswerM = item1.listanswerM.ToList(),
+                                            nivel=item1.nivel
                                         });
                                     }
                                 }
@@ -236,7 +241,8 @@ namespace DemoScore.Controllers
                                     MuCh_SubCategoria = item2.MuCh_SubCategoria,
                                     MuCh_ImageQuestion = item2.MuCh_ImageQuestion,
                                     Cate_Id = item2.Cate_Id,
-                                    listanswerM = item2.listanswerM.ToList()
+                                    listanswerM = item2.listanswerM.ToList(),
+                                    nivel=item2.nivel
                                 });
                             }
                         }
@@ -255,7 +261,8 @@ namespace DemoScore.Controllers
                                     MuCh_SubCategoria = item2.MuCh_SubCategoria,
                                     MuCh_ImageQuestion = item2.MuCh_ImageQuestion,
                                     Cate_Id = item2.Cate_Id,
-                                    listanswerM = item2.listanswerM.ToList()
+                                    listanswerM = item2.listanswerM.ToList(),
+                                    nivel=item2.nivel
                                 });
                             }
                         }
@@ -280,7 +287,8 @@ namespace DemoScore.Controllers
                                 MuCh_ImageQuestion = item1.MuCh_ImageQuestion,
                                 MuCh_Level = item1.MuCh_Level,
                                 Cate_Id = item1.Cate_Id,
-                                listanswerM = item1.listanswerM.ToList()
+                                listanswerM = item1.listanswerM.ToList(),
+                                nivel=item1.nivel
                             });
                         }
                     }
@@ -301,7 +309,8 @@ namespace DemoScore.Controllers
                             MuCh_SubCategoria = item1.MuCh_SubCategoria,
                             MuCh_ImageQuestion = item1.MuCh_ImageQuestion,
                             Cate_Id=item1.Cate_Id,
-                            listanswerM = item1.listanswerM.ToList()
+                            listanswerM = item1.listanswerM.ToList(),
+                            nivel=item1.nivel
                         });
 
                     }
@@ -316,6 +325,7 @@ namespace DemoScore.Controllers
                 var categoria = ApplicationDbContext.Categorias.Where(x => x.Company_Id == useractual.CompanyId).ToList();
                 foreach (var item in categoria)
                 {
+                    /// cambio aqui de la condicion quetion
                     foreach (var item1 in setting.MG_MultipleChoice.Where(X=>X.Cate_Id==item.Cate_ID))
                     {
                         listselect.Add(new MultipleChoiceselect
@@ -326,7 +336,8 @@ namespace DemoScore.Controllers
                             MuCh_Description = item1.MuCh_Description,
                             MuCh_ImageQuestion = item1.MuCh_ImageQuestion,
                             Cate_Id=item1.Cate_Id,
-                            listanswerM = item1.MG_AnswerMultipleChoice.ToList()
+                            listanswerM = item1.MG_AnswerMultipleChoice.ToList(),
+                            nivel=item1.Nivel_Id
                         });
                     }
                 }               

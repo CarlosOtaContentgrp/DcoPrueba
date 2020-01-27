@@ -123,6 +123,7 @@ namespace DemoScore.Models.ViewModel
         public string MuCh_SubCategoria { get; set; }
         public int AnMul_ID { get; set; }
         public List<MG_AnswerMultipleChoice> listanswerM { get; set; }
+        public int nivel { get; set; }
     }
 
     public class listranking

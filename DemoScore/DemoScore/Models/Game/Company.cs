@@ -13,8 +13,13 @@ namespace DemoScore.Models.Game
         public int CompanyId { get; set; }
         [Display(Name = "Nombre")]
         public string CompanyName { get; set; }
+        [Display(Name = "Cantidad de preguntas nivel 1")]
+        public int qnivel1 { get; set; }
+        [Display(Name = "Cantidad de preguntas nivel 2")]
+        public int qnivel2 { get; set; }
+        [Display(Name = "Cantidad de preguntas nivel 3")]
+        public int qnivel3 { get; set; }
 
-      
         public virtual ICollection<ApplicationUser> ApplicationUser { get; set; }
         public virtual ICollection<Area> Area { get; set; }
         public virtual ICollection<Ubicacion> Ubicacion { get; set; }

@@ -72,7 +72,10 @@ namespace DemoScore.Controllers
             {
                 Company NewComapany = new Company
                 {
-                    CompanyName = model.CompanyName
+                    CompanyName = model.CompanyName,
+                    qnivel1=model.qnivel1,
+                    qnivel2=model.qnivel2,
+                    qnivel3=model.qnivel3
                 };
                 ApplicationDbContext.Companies.Add(NewComapany);
                 ApplicationDbContext.SaveChanges();
