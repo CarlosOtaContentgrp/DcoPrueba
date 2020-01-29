@@ -81,17 +81,39 @@ namespace DemoScore.Controllers
             public ActionResult Instructions(int Id)
             {
                 var setting = ApplicationDbContext.MG_SettingMps.Find(Id);
+                setting.MG_MultipleChoice = ApplicationDbContext.MG_MultipleChoices.Where(x => x.Nivel_Id == 1 && x.Sett_Id == Id).ToList();
                 int cont = 0;
+                var nivelattemp = 1;
                 var useractual = ApplicationDbContext.Users.Find(GetActualUserId().Id);
-                var attempts = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id).OrderByDescending(x => x.AnUs_Id).ToList();
+                var temp = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id).OrderByDescending(x => x.AnUs_Id).ToList();
+                var b = temp.FirstOrDefault();
+                    if (temp.Count != 0)
+                    {
+                    
+                        nivelattemp = b.MG_AnswerMultipleChoice.MG_MultipleChoice.Nivel_Id;
+                    }
+                var attempts = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id && x.MG_AnswerMultipleChoice.MG_MultipleChoice.Nivel_Id == nivelattemp).OrderByDescending(x => x.AnUs_Id).ToList();
                 var a = attempts.GroupBy(x => x.Attemps).ToList();
-                int attemptsUser = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id).GroupBy(x => x.Attemps).Count();
+                int attemptsUser = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id && x.MG_AnswerMultipleChoice.MG_MultipleChoice.Nivel_Id == nivelattemp).GroupBy(x => x.Attemps).Count();
                 if (attempts.Count != 0)
                 {
-                var b = attempts.FirstOrDefault();
-                int att = ApplicationDbContext.MG_AnswerUsers.Where(x => x.Attemps == b.Attemps  && x.User_Id == useractual.Id).Count();
+               
+                
+                
+                // numero de preguntas de la empresa en ese nivel
+                var counquestionnivel = ApplicationDbContext.MG_MultipleChoices.Where(x => x.Nivel_Id == nivelattemp && x.Sett_Id == Id).Count();
+                // numero de preguntas respondidas por el usuario en ese nivel
+                var countattempnivel = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id && x.MG_AnswerMultipleChoice.MG_MultipleChoice.Nivel_Id == nivelattemp).Count();
+                if (countattempnivel >= counquestionnivel) {
+                    nivelattemp = nivelattemp + 1;
+                }
+                setting.MG_MultipleChoice = ApplicationDbContext.MG_MultipleChoices.Where(x => x.Nivel_Id == nivelattemp && x.Sett_Id == Id).ToList();
+                //setting.MG_MultipleChoice=mg_setting;
+
+
+                int att = ApplicationDbContext.MG_AnswerUsers.Where(x => x.Attemps == b.Attemps  && x.User_Id == useractual.Id && x.MG_AnswerMultipleChoice.MG_MultipleChoice.Nivel_Id== nivelattemp).Count();
                 cont = att + 1;
-                if (att == 15)
+                if (att == counquestionnivel)
                 {
                     if (TempData["ultimo"]==null)
                     {
@@ -117,6 +139,9 @@ namespace DemoScore.Controllers
                    
                 }
                 }
+                
+                
+                
                 else
                 {
                     cont = 1;
@@ -138,15 +163,32 @@ namespace DemoScore.Controllers
         {
             int level = 0;
             var useractual = ApplicationDbContext.Users.Find(GetActualUserId().Id);
-             var setting = ApplicationDbContext.MG_SettingMps.First(x => x.Company_Id == useractual.CompanyId);           
-            var attempts = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id).OrderByDescending(x => x.AnUs_Id).ToList();
+            var nivelattemp = 1;
+            var temp = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id).OrderByDescending(x => x.AnUs_Id).ToList();
+            var b2 = temp.FirstOrDefault();
+            if (temp.Count != 0)
+            {
+                nivelattemp = b2.MG_AnswerMultipleChoice.MG_MultipleChoice.Nivel_Id;
+            }
+            // numero de preguntas de la empresa en ese nivel
+            var counquestionnivel = ApplicationDbContext.MG_MultipleChoices.Where(x => x.Nivel_Id == nivelattemp && x.Sett_Id == b2.MG_AnswerMultipleChoice.MG_MultipleChoice.Sett_Id).Count();
+            // numero de preguntas respondidas por el usuario en ese nivel
+            var countattempnivel = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id && x.MG_AnswerMultipleChoice.MG_MultipleChoice.Nivel_Id == nivelattemp).Count();
+            if (countattempnivel >= counquestionnivel)
+            {
+                nivelattemp = nivelattemp + 1;
+            }
+            var attempts = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id && x.MG_AnswerMultipleChoice.MG_MultipleChoice.Nivel_Id == nivelattemp).OrderByDescending(x => x.AnUs_Id).ToList();
+            var setting = ApplicationDbContext.MG_SettingMps.First(x => x.Company_Id == useractual.CompanyId);
+            setting.MG_MultipleChoice = ApplicationDbContext.MG_MultipleChoices.Where(x => x.Nivel_Id == nivelattemp && x.Sett_Id == setting.Sett_Id).ToList();
+            //var attempts = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id).OrderByDescending(x => x.AnUs_Id).ToList();
             List<MultipleChoiceselect> listselect = new List<MultipleChoiceselect>();
             List<MultipleChoiceselect> listselect2 = new List<MultipleChoiceselect>();
             List<MultipleChoiceselect> listselect3 = new List<MultipleChoiceselect>();
             List<MultipleChoiceselect> listselect4 = new List<MultipleChoiceselect>();
             List<MultipleChoiceselect> listselect5 = new List<MultipleChoiceselect>();
             List<MultipleChoiceselect> ListFinalfacil = new List<MultipleChoiceselect>();
-             if (attempts.Count != 0)
+           /*  if (attempts.Count != 0)
             {
                 var att = attempts.GroupBy(x => x.Attemps).ToList();
                 var a = att.FirstOrDefault();
@@ -321,12 +363,12 @@ namespace DemoScore.Controllers
                             ListFinalfacil = new List<MultipleChoiceselect>(Newlistselect);            
             }
             else
-            {
+            {*/
                 var categoria = ApplicationDbContext.Categorias.Where(x => x.Company_Id == useractual.CompanyId).ToList();
                 foreach (var item in categoria)
                 {
                     /// cambio aqui de la condicion quetion
-                    foreach (var item1 in setting.MG_MultipleChoice.Where(X=>X.Cate_Id==item.Cate_ID))
+                    foreach (var item1 in setting.MG_MultipleChoice.Where(X=>X.Cate_Id==item.Cate_ID && X.Nivel_Id== nivelattemp))
                     {
                         listselect.Add(new MultipleChoiceselect
                         {
@@ -345,7 +387,7 @@ namespace DemoScore.Controllers
                 var randomselect = listselect.OrderBy(x => rnd.Next()).ToList();
                 var Newlistselect = randomselect.Take(1);
                 ListFinalfacil = new List<MultipleChoiceselect>(Newlistselect);
-            }
+           // }
             Session["Date"] = DateTime.Now;
             QuestionSelect model1 = new QuestionSelect
             {
