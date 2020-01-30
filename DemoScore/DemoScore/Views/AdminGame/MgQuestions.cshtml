@@ -108,6 +108,19 @@
                                     @Html.ValidationMessageFor(model => model.sub_Id, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="col-md-5">
+                                    @Html.LabelFor(model => model.Nivel_Id, htmlAttributes: new { @class = "control-label col-md-3" })
+                                    @Html.DropDownListFor(model => model.Nivel_Id, Model.Sett_Nivel, new { @class = "form-control", @style = "width:70%" })
+                                    @Html.ValidationMessageFor(model => model.Nivel_Id, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-7">
+                                    <label class="control-label col-md-4">Estado</label>
+                                    <select class="form-control" name="state" id="state" style="width:58%">
+                                        <option value="1" selected>Activo</option>
+                                        <option value="2">Inactivo</option>
+                                    </select>
+
+                                </div>
+                                <div class="col-md-5">
                                     @Html.LabelFor(model => model.AnMul_Description, htmlAttributes: new { @class = "control-label col-md-3" })
                                     @Html.EditorFor(model => model.AnMul_Description, new { htmlAttributes = new { @class = "form-control", @style = "width:70%" } })
                                     @Html.ValidationMessageFor(model => model.AnMul_Description, "", new { @class = "text-danger" })

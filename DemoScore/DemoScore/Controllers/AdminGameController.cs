@@ -261,7 +261,7 @@ namespace DemoScore.Controllers
             MG_SettingMp setting = ApplicationDbContext.MG_SettingMps.Find(id);
             int TotalQuestion = setting.MG_MultipleChoice.Count();
             var cate = ApplicationDbContext.Categorias.Where(x => x.Company_Id == setting.Company_Id).ToList();
-            var subcate = ApplicationDbContext.SubCategorias.Where(x => x.Company_Id == setting.Company_Id).ToList();
+            var subcate = ApplicationDbContext.SubCategorias.Where(x => x.Company_Id == setting.Company_Id).ToList();           
             AdminGameQuestionViewModel model = new AdminGameQuestionViewModel
             {
                 Sett_Id = id,
