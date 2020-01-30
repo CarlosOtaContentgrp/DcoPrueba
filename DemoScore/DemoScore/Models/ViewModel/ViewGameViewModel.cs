@@ -46,6 +46,8 @@ namespace DemoScore.Models.ViewModel
         public int medio { get; set; }
         public int dificil { get; set; }
         public int contador { get; set; }
+        public int countquestion { get; set; }
+        public int initial { get; set; }
         public List<MultipleChoiceFacil> listquestionsFacil { get; set; }
         public List<MultipleChoiceMedio> listquestionsMedio { get; set; }
         public List<MultipleChoiceDificil> listquestionsDificil { get; set; }

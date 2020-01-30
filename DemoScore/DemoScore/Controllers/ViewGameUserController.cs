@@ -85,6 +85,8 @@ namespace DemoScore.Controllers
                 int cont = 0;
                 var nivelattemp = 1;
                 var useractual = ApplicationDbContext.Users.Find(GetActualUserId().Id);
+                var countattempnivel = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id && x.MG_AnswerMultipleChoice.MG_MultipleChoice.Nivel_Id == nivelattemp).Count();
+                var counquestionnivel = ApplicationDbContext.MG_MultipleChoices.Where(x => x.Nivel_Id == nivelattemp && x.Sett_Id == Id).Count();
                 var temp = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id).OrderByDescending(x => x.AnUs_Id).ToList();
                 var b = temp.FirstOrDefault();
                     if (temp.Count != 0)
@@ -101,11 +103,24 @@ namespace DemoScore.Controllers
                 
                 
                 // numero de preguntas de la empresa en ese nivel
-                var counquestionnivel = ApplicationDbContext.MG_MultipleChoices.Where(x => x.Nivel_Id == nivelattemp && x.Sett_Id == Id).Count();
+                counquestionnivel = ApplicationDbContext.MG_MultipleChoices.Where(x => x.Nivel_Id == nivelattemp && x.Sett_Id == Id).Count();
                 // numero de preguntas respondidas por el usuario en ese nivel
-                var countattempnivel = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id && x.MG_AnswerMultipleChoice.MG_MultipleChoice.Nivel_Id == nivelattemp).Count();
+                countattempnivel = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id && x.MG_AnswerMultipleChoice.MG_MultipleChoice.Nivel_Id == nivelattemp).Count();
                 if (countattempnivel >= counquestionnivel) {
-                    nivelattemp = nivelattemp + 1;
+
+                   
+                    if (nivelattemp < 3)
+                    {
+                        TempData["ultimo"] = "¡Felicidades has pasado el nivel sigue participando hasta el último nivel!";
+                        nivelattemp = nivelattemp + 1;
+                        countattempnivel = 0;
+                    }
+                    else
+                    {
+                       
+                        TempData["ultimo"] = "¡Gracias por tu participación!";
+                        TempData["ultimo1"] = "¡Ya puedes cerrar tu sesión!";
+                    }
                 }
                 setting.MG_MultipleChoice = ApplicationDbContext.MG_MultipleChoices.Where(x => x.Nivel_Id == nivelattemp && x.Sett_Id == Id).ToList();
                 //setting.MG_MultipleChoice=mg_setting;
@@ -151,9 +166,11 @@ namespace DemoScore.Controllers
                 {
                     setting = setting,
                     Sett_Id = setting.Sett_Id,
-                    contador = cont,
+                    contador = countattempnivel,
                     User_Id = useractual.Id,
-                    attemptUser = attemptsUser
+                    attemptUser = nivelattemp,
+                    countquestion=counquestionnivel,
+                    initial=0
                 };
                 return View(model1);
             }
@@ -163,6 +180,20 @@ namespace DemoScore.Controllers
         {
             int level = 0;
             var useractual = ApplicationDbContext.Users.Find(GetActualUserId().Id);
+            var company = ApplicationDbContext.Companies
+                .Join(ApplicationDbContext.Categorias,
+                        c => c.CompanyId,
+                        cat => cat.Company_Id,
+                        (c, cat) => new { c, cat })
+                .Join(ApplicationDbContext.MG_MultipleChoices,
+                        mch => mch.cat.Cate_ID,
+                        mc => mc.Cate_Id,
+                       (mch, mc) => new { mch, mc })
+                .Join(ApplicationDbContext.Users,
+                        u => u.mch.c.CompanyId,
+                        com => com.CompanyId,
+                       (u, com) => new { u, com })
+                       .Where(us => us.com.Id == useractual.Id).FirstOrDefault();
             var nivelattemp = 1;
             var temp = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id).OrderByDescending(x => x.AnUs_Id).ToList();
             var b2 = temp.FirstOrDefault();
@@ -171,7 +202,7 @@ namespace DemoScore.Controllers
                 nivelattemp = b2.MG_AnswerMultipleChoice.MG_MultipleChoice.Nivel_Id;
             }
             // numero de preguntas de la empresa en ese nivel
-            var counquestionnivel = ApplicationDbContext.MG_MultipleChoices.Where(x => x.Nivel_Id == nivelattemp && x.Sett_Id == b2.MG_AnswerMultipleChoice.MG_MultipleChoice.Sett_Id).Count();
+            var counquestionnivel = ApplicationDbContext.MG_MultipleChoices.Where(x => x.Nivel_Id == nivelattemp && x.Sett_Id == company.u.mc.Sett_Id).Count();
             // numero de preguntas respondidas por el usuario en ese nivel
             var countattempnivel = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id && x.MG_AnswerMultipleChoice.MG_MultipleChoice.Nivel_Id == nivelattemp).Count();
             if (countattempnivel >= counquestionnivel)
