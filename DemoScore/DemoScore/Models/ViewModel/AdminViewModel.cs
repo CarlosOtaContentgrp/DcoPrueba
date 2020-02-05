@@ -39,7 +39,7 @@ namespace DemoScore.Models.ViewModel
     public class Resultadosusuario
     {
         internal string areanam;
-        internal string loca_descri;
+        //internal string loca_descri;
         //variable nueva
         internal string ubicacion;
         //fin variable nueva

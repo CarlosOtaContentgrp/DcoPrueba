@@ -178,7 +178,7 @@ namespace DemoScore.Controllers
         [Authorize]
         public ActionResult Question()
         {
-            int level = 0;
+            //int level = 0;
             var useractual = ApplicationDbContext.Users.Find(GetActualUserId().Id);
             var company = ApplicationDbContext.Companies
                 .Join(ApplicationDbContext.Categorias,
