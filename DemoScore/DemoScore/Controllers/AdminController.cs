@@ -41,30 +41,30 @@ namespace DemoScore.Controllers
         // GET: Admin
         public ActionResult Perfil()
         {
-            
+
             return PartialView("_Perfil");
         }
         public ActionResult Companies()
         {
             List<Company> Companies = ApplicationDbContext.Companies.ToList();
             List<infocompany> listcompany = new List<infocompany>();
-            if (Companies.Count!=0)
+            if (Companies.Count != 0)
             {
 
-           
-            foreach (var item in Companies)
-            {
-                    int user = ApplicationDbContext.Users.Where(X => X.CompanyId == item.CompanyId).ToList().Count();
-                listcompany.Add(new infocompany
+
+                foreach (var item in Companies)
                 {
-                    CompanyId = item.CompanyId,
-                    CompanyName = item.CompanyName,
-                    CompanyUser=user
-                });
-            }
+                    int user = ApplicationDbContext.Users.Where(X => X.CompanyId == item.CompanyId).ToList().Count();
+                    listcompany.Add(new infocompany
+                    {
+                        CompanyId = item.CompanyId,
+                        CompanyName = item.CompanyName,
+                        CompanyUser = user
+                    });
+                }
             }
             AdminGeneralViewModel model = new AdminGeneralViewModel
-            {         
+            {
                 ListCompanies = listcompany
             };
             return View(model);
@@ -78,9 +78,9 @@ namespace DemoScore.Controllers
                 Company NewComapany = new Company
                 {
                     CompanyName = model.CompanyName,
-                    qnivel1=model.qnivel1,
-                    qnivel2=model.qnivel2,
-                    qnivel3=model.qnivel3
+                    qnivel1 = model.qnivel1,
+                    qnivel2 = model.qnivel2,
+                    qnivel3 = model.qnivel3
                 };
                 ApplicationDbContext.Companies.Add(NewComapany);
                 ApplicationDbContext.SaveChanges();
@@ -122,216 +122,89 @@ namespace DemoScore.Controllers
         {
             AdminReports model = new AdminReports
             {
-                company_Id=CompanyId
+                company_Id = CompanyId
             };
             return View("Report", model);
         }
 
         public ActionResult ReporteCategoria(int id)
         {
-          
-            var c= (from k in ApplicationDbContext.Categorias.Where(x => x.Company_Id == id)
-                    select new
-                    {
-                        Código = k.Cate_ID,
-                        Categoria = k.Cate_Description,
 
-                    }).OrderBy(x => x.Categoria).ToList();
+            ReportViewer reportViewer =
+                  new ReportViewer()
+                  {
+                      ProcessingMode = ProcessingMode.Local,
+                      SizeToReportContent = true,
+                      Width = Unit.Percentage(100),
+                      Height = Unit.Percentage(100),
+                  };
+            dcodemoscoreDataSetBD.PROC_REP_CATEGORYDataTable data = new dcodemoscoreDataSetBD.PROC_REP_CATEGORYDataTable();
+            PROC_REP_CATEGORYTableAdapter adapter = new PROC_REP_CATEGORYTableAdapter();
 
-            var AM = (from k in ApplicationDbContext.SubCategorias.Where(x => x.Company_Id == id)
-                      select new
-                      {
-                          Código=k.SubC_ID,
-                          Subcategoria = k.SubC_Description,
-                        
-                      }).OrderBy(x => x.Subcategoria).ToList();
-
-            AdminReports model = new AdminReports
+            adapter.Fill(data, id);
+            if (data != null && data.Rows.Count > 0)
             {
-            };
-
-            if (AM.Count != 0)
-            {
-              
-                var gv = new GridView();
-                gv.DataSource = AM;
-                gv.DataBind();
-                var gv1 = new GridView();
-                gv1.DataSource = c;
-                gv1.DataBind();
-                Response.ClearContent();
-                Response.Buffer = true;
-                Response.AddHeader("content-disposition", "attachment; filename=REPORTE CATEGORIAS Y SUBCATEGORIAS.xls");
-                Response.ContentType = "application/ms-excel";
-                Response.Charset = "";
-                StringWriter objStringWriter = new StringWriter();
-                HtmlTextWriter objHtmlTextWriter = new HtmlTextWriter(objStringWriter);
-                gv.RenderControl(objHtmlTextWriter);
-                StringWriter objStringWriter1 = new StringWriter();
-                HtmlTextWriter objHtmlTextWriter1 = new HtmlTextWriter(objStringWriter1);
-                gv1.RenderControl(objHtmlTextWriter1);
-                Response.Output.Write("<H3>REPORTE CATEGORIAS Y SUBCATEGORIAS </H3>");
-                Response.Output.Write("<H4> <b>FECHA DE REPORTE : " + DateTime.Now);
-                Response.Output.Write("<center><H4> <b>LISTADO CATEGORIAS </H4></center>");
-                Response.Output.Write("<center>" + objStringWriter1.ToString() + "</center>");
-                Response.Output.Write("<br>");
-                Response.Output.Write("<center>" + objStringWriter.ToString() + "</center>");
-                Response.Flush();
-                Response.End();
-                return RedirectToAction("Report");
+                reportViewer.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", data.CopyToDataTable()));
+                reportViewer.LocalReport.ReportPath = Request.MapPath(Request.ApplicationPath) + @"Reports\Rep_Category.rdlc";
+                ViewBag.ReportViewer = reportViewer;
             }
             else
             {
-              
-                TempData["Menssages"] = "No hay datos para mostrar";
+                //Message("No se encontraron datos para el informe con los filtros utilizados, por favor utilice otros filtros", MessageType.Info);
             }
-            return RedirectToAction("Report",new { CompanyId= id });
+            ViewBag.reports = true;
+            AdminReports model = new AdminReports
+            {
+                company_Id = id
+            };
+
+            return View("Report", model);
+
+
         }
 
         public ActionResult ReporteGeneral(int id)
         {
 
-            /*
+            ReportViewer reportViewer =
+                  new ReportViewer()
+                  {
+                      ProcessingMode = ProcessingMode.Local,
+                      SizeToReportContent = true,
+                      Width = Unit.Percentage(100),
+                      Height = Unit.Percentage(100),
+                  };
+            dcodemoscoreDataSetBD.DataByCompanyDataTable data = new dcodemoscoreDataSetBD.DataByCompanyDataTable();
+            DataByCompanyTableAdapter adapter = new DataByCompanyTableAdapter();
+            //ColpensionesDataSet.PROC_REP_POSTSUMMARIESDataTable data = new ColpensionesDataSet.PROC_REP_POSTSUMMARIESDataTable();
+            //PROC_REP_POSTSUMMARIESTableAdapter adapter = new PROC_REP_POSTSUMMARIESTableAdapter();
 
-            List<Resultadosusuario> listarnuevosdatos = new List<Resultadosusuario>();
-            List<Resultadosusuario> listausuariofinal = new List<Resultadosusuario>();
-            var area = ApplicationDbContext.Areas.Where(x => x.CompanyId == id).ToList();
 
-            foreach (var recorrerarea in area)
+            adapter.Fill(data, id);
+            if (data != null && data.Rows.Count > 0)
             {
-
-                var ubicacion = ApplicationDbContext.Ubicaciones.Where(x => x.CompanyId == id).ToList();
-                foreach (var ubi in ubicacion)
-                {
-
-                    var datos = ApplicationDbContext.MG_AnswerUsers.Where(x => x.ApplicationUser.CompanyId == id).ToList();
-               
-                    foreach (var dat in datos)
-                    {
-
-                        var person = ApplicationDbContext.Users.Where(x => x.CompanyId == id).ToList();
-
-                        foreach (var per in person) {
-
-                            listarnuevosdatos.Add(new Resultadosusuario
-                    {
-
-                        areanam = recorrerarea.AreaName,
-                        loca_descri = ubi.Loca_Description,
-                        Resultado = dat.Respuesta,
-                        Nivel = dat.Attemps,
-                        Respuesta = per.Email,
-
-
-                        });
-                }
-                }
-                }
-
-            }
-
-            var itemlist = (from h in listarnuevosdatos
-                            select new
-                            {
-                                Area_Nombre = h.areanam,
-                                Descripcion_Ubicacion = h.loca_descri,
-                                Correo=h.Respuesta,
-                                pregunta=h.Pregunta,
-                                categories=h.Categoria,
-                                Resultado = h.Resultado,
-                                Nivel = h.Nivel,
-                            }).Distinct().OrderBy(x => x.Area_Nombre).ToList();
-
-            AdminReports model = new AdminReports
-            {
-            };
-            if (itemlist.Count != 0)
-            {
-                var gv1 = new GridView();
-                gv1.DataSource = itemlist;
-                gv1.DataBind();
-                Response.ClearContent();
-                Response.Buffer = true;
-                Response.AddHeader("content-disposition", "attachment; filename=REPORTE PROGRESO GENERAL.xls");
-                Response.ContentType = "application/ms-excel";
-                Response.Charset = "";
-                StringWriter objStringWriter1 = new StringWriter();
-                HtmlTextWriter objHtmlTextWriter1 = new HtmlTextWriter(objStringWriter1);
-                gv1.RenderControl(objHtmlTextWriter1);
-                Response.Output.Write("<H3>REPORTE CATEGORIAS Y SUBCATEGORIAS </H3>");
-                Response.Output.Write("<H4> <b>FECHA DE REPORTE : " + DateTime.Now);
-                Response.Output.Write("<center><H4> <b>LISTADO CATEGORIAS </H4></center>");
-                Response.Output.Write("<center>" + objStringWriter1.ToString() + "</center>");
-                Response.Flush();
-                Response.End();
-                return RedirectToAction("Report");
+                reportViewer.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", data.CopyToDataTable()));
+                reportViewer.LocalReport.ReportPath = Request.MapPath(Request.ApplicationPath) + @"Reports\RptDataByCompany.rdlc";
+                ViewBag.ReportViewer = reportViewer;
             }
             else
             {
 
-                TempData["Menssages"] = "No hay datos para mostrar";
+                //Message("No se encontraron datos para el informe con los filtros utilizados, por favor utilice otros filtros", MessageType.Info);
             }
-            return RedirectToAction("Report", new { CompanyId = id });
-        }
-        */
-
-            //Realizamos la consulta Lambda y Linq c# para realizar el doble inner join Para sacar los datos de los usuarios para el reporte de excel, 
-            //Creamos 3 variables (k,U,A) y cada una se le asigna una tabla de la base de datos, realizamos las relaciones de acuerdo al UserId 
-            //Y lo asignamos a un Select y asigno los datos en el reporte del excel.
-            var c = (from k in ApplicationDbContext.MG_AnswerUsers
-                     join U in ApplicationDbContext.Ubicaciones on k.ApplicationUser.LocationId equals U.Loca_Id
-                     join A in ApplicationDbContext.Areas on k.ApplicationUser.AreaId equals A.AreaId
-                     where (k.ApplicationUser.CompanyId == id)
-                     select new
-                     {
-
-                         Nombre = k.ApplicationUser.FirstName + k.ApplicationUser.LastName,
-                         Correo = k.ApplicationUser.Email,
-                         Pregunta = k.MG_AnswerMultipleChoice.MG_MultipleChoice.MuCh_Description,
-                         Categoria = k.MG_AnswerMultipleChoice.MG_MultipleChoice.Categoria.Cate_Description,
-                         Respuesta = k.MG_AnswerMultipleChoice.AnMul_Description,
-                         Resultado = k.Respuesta,
-                         Nivel = k.Attemps,
-
-                         Locacion = U.Loca_Description,
-                         Area = A.AreaName
-                     }).OrderBy(k => k.Categoria).ToList();
-
+            ViewBag.reports = true;
             AdminReports model = new AdminReports
-          {
-          };
-          if (c.Count != 0)
-          {
-              var gv1 = new GridView();
-              gv1.DataSource = c;
-              gv1.DataBind();
-              Response.ClearContent();
-              Response.Buffer = true;
-              Response.AddHeader("content-disposition", "attachment; filename=REPORTE PROGRESO GENERAL.xls");
-              Response.ContentType = "application/ms-excel";
-              Response.Charset = "";
-              StringWriter objStringWriter1 = new StringWriter();
-              HtmlTextWriter objHtmlTextWriter1 = new HtmlTextWriter(objStringWriter1);
-              gv1.RenderControl(objHtmlTextWriter1);
-              Response.Output.Write("<H3>REPORTE CATEGORIAS Y SUBCATEGORIAS </H3>");
-              Response.Output.Write("<H4> <b>FECHA DE REPORTE : " + DateTime.Now);
-              Response.Output.Write("<center><H4> <b>LISTADO CATEGORIAS </H4></center>");
-              Response.Output.Write("<center>" + objStringWriter1.ToString() + "</center>");
-              Response.Flush();
-              Response.End();
-              return RedirectToAction("Report");
-          }
-          else
-          {
+            {
+                company_Id = id
+            };
 
-              TempData["Menssages"] = "No hay datos para mostrar";
-          }
-          return RedirectToAction("Report",new { CompanyId = id});
-      }
-      
+
+            return View("Report", model);
+        }
+
         public ActionResult ReporteResultadosusuario(int id)
         {
-            
+
             var cate = ApplicationDbContext.Categorias.Where(x => x.Company_Id == id).ToList();
             var ubi = ApplicationDbContext.Ubicaciones.Where(x => x.CompanyId == id).ToList();
             var are = ApplicationDbContext.Areas.Where(x => x.CompanyId == id).ToList();
@@ -349,53 +222,53 @@ namespace DemoScore.Controllers
 
                         var ans = ApplicationDbContext.MG_AnswerUsers.Where(x => x.MG_AnswerMultipleChoice.MG_MultipleChoice.Cate_Id == item.Cate_ID).ToList();
 
-                    var user = ApplicationDbContext.Users.Where(x => x.CompanyId == id).ToList();
+                        var user = ApplicationDbContext.Users.Where(x => x.CompanyId == id).ToList();
 
 
 
 
-                    foreach (var item1 in ans)
-                    {
+                        foreach (var item1 in ans)
+                        {
 
-                        var co = ApplicationDbContext.MG_AnswerUsers.Where(x => x.MG_AnswerMultipleChoice.MG_MultipleChoice.Cate_Id == item.Cate_ID && x.Respuesta == RESPUESTA.Correcta && x.User_Id == item1.User_Id).ToList();
-                        var anss = ApplicationDbContext.MG_AnswerUsers.Where(x => x.MG_AnswerMultipleChoice.MG_MultipleChoice.Cate_Id == item.Cate_ID && x.User_Id == item1.User_Id).ToList();
-                        var ubbi = ApplicationDbContext.Ubicaciones.Where(x => x.Loca_Id == item1.ApplicationUser.LocationId && item3.Loca_Id == item1.ApplicationUser.LocationId && x.Loca_Id == item3.Loca_Id).ToList();
-                        var area = ApplicationDbContext.Areas.Where(x => x.AreaId == item1.ApplicationUser.AreaId && item4.AreaId == item1.ApplicationUser.AreaId && x.AreaId == item4.AreaId ).ToList();
+                            var co = ApplicationDbContext.MG_AnswerUsers.Where(x => x.MG_AnswerMultipleChoice.MG_MultipleChoice.Cate_Id == item.Cate_ID && x.Respuesta == RESPUESTA.Correcta && x.User_Id == item1.User_Id).ToList();
+                            var anss = ApplicationDbContext.MG_AnswerUsers.Where(x => x.MG_AnswerMultipleChoice.MG_MultipleChoice.Cate_Id == item.Cate_ID && x.User_Id == item1.User_Id).ToList();
+                            var ubbi = ApplicationDbContext.Ubicaciones.Where(x => x.Loca_Id == item1.ApplicationUser.LocationId && item3.Loca_Id == item1.ApplicationUser.LocationId && x.Loca_Id == item3.Loca_Id).ToList();
+                            var area = ApplicationDbContext.Areas.Where(x => x.AreaId == item1.ApplicationUser.AreaId && item4.AreaId == item1.ApplicationUser.AreaId && x.AreaId == item4.AreaId).ToList();
 
 
                             listausuario.Add(new Resultadosusuario
-                        {
-                            User_Id = item1.User_Id,
-                            Nombre = item1.ApplicationUser.FirstName + item1.ApplicationUser.LastName,
-                            Categoria = item1.MG_AnswerMultipleChoice.MG_MultipleChoice.Categoria.Cate_Description,
-                            Correo = item1.ApplicationUser.Email,
-                            totalpreguntas = anss.Count,
-                            PreguntasCorrectas = co.Count,
-                            cate_id = item1.MG_AnswerMultipleChoice.MG_MultipleChoice.Cate_Id,
-                            ubicacion = item3.Loca_Description,
-                            areanam=item4.AreaName,
+                            {
+                                User_Id = item1.User_Id,
+                                Nombre = item1.ApplicationUser.FirstName + item1.ApplicationUser.LastName,
+                                Categoria = item1.MG_AnswerMultipleChoice.MG_MultipleChoice.Categoria.Cate_Description,
+                                Correo = item1.ApplicationUser.Email,
+                                totalpreguntas = anss.Count,
+                                PreguntasCorrectas = co.Count,
+                                cate_id = item1.MG_AnswerMultipleChoice.MG_MultipleChoice.Cate_Id,
+                                ubicacion = item3.Loca_Description,
+                                areanam = item4.AreaName,
 
 
 
-                        });
+                            });
 
+                        }
                     }
                 }
             }
-        }
 
             var itemlist = (from c in listausuario
                             select new
                             {
                                 User_Id = c.User_Id,
                                 Nombre = c.Nombre,
-                                Categoria =c.Categoria,
+                                Categoria = c.Categoria,
                                 Correo = c.Correo,
-                                totalpreguntas =c.totalpreguntas,
+                                totalpreguntas = c.totalpreguntas,
                                 PreguntasCorrectas = c.PreguntasCorrectas,
-                                Ubicacion=c.ubicacion,
-                                Areas =c.areanam,
-                            }).Distinct().OrderBy(x =>x.Nombre ).ToList();
+                                Ubicacion = c.ubicacion,
+                                Areas = c.areanam,
+                            }).Distinct().OrderBy(x => x.Nombre).ToList();
 
             AdminReports model = new AdminReports
             {
@@ -428,7 +301,8 @@ namespace DemoScore.Controllers
             }
             return RedirectToAction("Report", new { CompanyId = id });
         }
-        public ActionResult ReportByCompany (int id)
+
+        public ActionResult ReportByCompany(int id)
         {
 
             ReportViewer reportViewer =
@@ -453,8 +327,8 @@ namespace DemoScore.Controllers
                 ViewBag.ReportViewer = reportViewer;
             }
             else
-            {   
-                
+            {
+
                 //Message("No se encontraron datos para el informe con los filtros utilizados, por favor utilice otros filtros", MessageType.Info);
             }
             ViewBag.reports = true;
@@ -463,8 +337,9 @@ namespace DemoScore.Controllers
                 company_Id = id
             };
             return View("Report", model);
-            
+
         }
+
         public ActionResult Reporteresultadoscategorias(int id)
         {
 
@@ -492,7 +367,7 @@ namespace DemoScore.Controllers
             var itemlist = (from c in listacategorias
                             select new
                             {
-                             
+
                                 Categoria = c.Categoria,
                                 totalpreguntas = c.totalpreguntas,
                                 PreguntasCorrectas = c.PreguntasCorrectas,

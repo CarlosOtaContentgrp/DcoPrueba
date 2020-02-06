@@ -127,7 +127,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="ReportViewerForMvc">
-      <HintPath>..\packages\ReportViewerForMvc14.140.1000.523\lib\net45\ReportViewerForMvc.dll</HintPath>
+      <HintPath>G:\DCO\ReportViewerForMvc.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -619,6 +619,13 @@
     <EmbeddedResource Include="Migrations\202001272056304_level-quantity-company.resx">
       <DependentUpon>202001272056304_level-quantity-company.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Rep_Category.rdlc" />
+    <EmbeddedResource Include="Reports\Rep_Category_2.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Rep_Process_Category.rdlc" />
+    <EmbeddedResource Include="Reports\Rep_Process_general.rdlc" />
+    <EmbeddedResource Include="Reports\Rep_Process_user.rdlc" />
     <EmbeddedResource Include="Reports\RptDataByCompany.rdlc" />
   </ItemGroup>
   <PropertyGroup>
