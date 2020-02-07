@@ -1458,7 +1458,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>dcodemoscoreDataSetBD</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\avallejo\Documents\GitHub\DcoPrueba\DemoScore\DemoScore\dcodemoscoreDataSetBD.xsd</rd:SchemaPath>
+        <rd:SchemaPath>G:\DcoPrueba\DemoScore\DemoScore\dcodemoscoreDataSetBD.xsd</rd:SchemaPath>
         <rd:TableName>PROC_REP_CATEGORY</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
