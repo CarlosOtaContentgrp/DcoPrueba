@@ -26,13 +26,11 @@ namespace DemoScore {
         
         private DataByCompanyDataTable tableDataByCompany;
         
-        private PROC_REP_PROCESS_CATEGORYDataTable tablePROC_REP_PROCESS_CATEGORY;
-        
-        private PROC_REP_PROCESS_GENERALDataTable tablePROC_REP_PROCESS_GENERAL;
+        private PROC_REP_CATEGORYDataTable tablePROC_REP_CATEGORY;
         
         private PROC_REP_PROCESS_USERDataTable tablePROC_REP_PROCESS_USER;
         
-        private PROC_REP_CATEGORYDataTable tablePROC_REP_CATEGORY;
+        private PROC_REP_PROCESS_GENERALDataTable tablePROC_REP_PROCESS_GENERAL;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -65,17 +63,14 @@ namespace DemoScore {
                 if ((ds.Tables["DataByCompany"] != null)) {
                     base.Tables.Add(new DataByCompanyDataTable(ds.Tables["DataByCompany"]));
                 }
-                if ((ds.Tables["PROC_REP_PROCESS_CATEGORY"] != null)) {
-                    base.Tables.Add(new PROC_REP_PROCESS_CATEGORYDataTable(ds.Tables["PROC_REP_PROCESS_CATEGORY"]));
-                }
-                if ((ds.Tables["PROC_REP_PROCESS_GENERAL"] != null)) {
-                    base.Tables.Add(new PROC_REP_PROCESS_GENERALDataTable(ds.Tables["PROC_REP_PROCESS_GENERAL"]));
+                if ((ds.Tables["PROC_REP_CATEGORY"] != null)) {
+                    base.Tables.Add(new PROC_REP_CATEGORYDataTable(ds.Tables["PROC_REP_CATEGORY"]));
                 }
                 if ((ds.Tables["PROC_REP_PROCESS_USER"] != null)) {
                     base.Tables.Add(new PROC_REP_PROCESS_USERDataTable(ds.Tables["PROC_REP_PROCESS_USER"]));
                 }
-                if ((ds.Tables["PROC_REP_CATEGORY"] != null)) {
-                    base.Tables.Add(new PROC_REP_CATEGORYDataTable(ds.Tables["PROC_REP_CATEGORY"]));
+                if ((ds.Tables["PROC_REP_PROCESS_GENERAL"] != null)) {
+                    base.Tables.Add(new PROC_REP_PROCESS_GENERALDataTable(ds.Tables["PROC_REP_PROCESS_GENERAL"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -109,19 +104,9 @@ namespace DemoScore {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public PROC_REP_PROCESS_CATEGORYDataTable PROC_REP_PROCESS_CATEGORY {
+        public PROC_REP_CATEGORYDataTable PROC_REP_CATEGORY {
             get {
-                return this.tablePROC_REP_PROCESS_CATEGORY;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public PROC_REP_PROCESS_GENERALDataTable PROC_REP_PROCESS_GENERAL {
-            get {
-                return this.tablePROC_REP_PROCESS_GENERAL;
+                return this.tablePROC_REP_CATEGORY;
             }
         }
         
@@ -139,9 +124,9 @@ namespace DemoScore {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public PROC_REP_CATEGORYDataTable PROC_REP_CATEGORY {
+        public PROC_REP_PROCESS_GENERALDataTable PROC_REP_PROCESS_GENERAL {
             get {
-                return this.tablePROC_REP_CATEGORY;
+                return this.tablePROC_REP_PROCESS_GENERAL;
             }
         }
         
@@ -215,17 +200,14 @@ namespace DemoScore {
                 if ((ds.Tables["DataByCompany"] != null)) {
                     base.Tables.Add(new DataByCompanyDataTable(ds.Tables["DataByCompany"]));
                 }
-                if ((ds.Tables["PROC_REP_PROCESS_CATEGORY"] != null)) {
-                    base.Tables.Add(new PROC_REP_PROCESS_CATEGORYDataTable(ds.Tables["PROC_REP_PROCESS_CATEGORY"]));
-                }
-                if ((ds.Tables["PROC_REP_PROCESS_GENERAL"] != null)) {
-                    base.Tables.Add(new PROC_REP_PROCESS_GENERALDataTable(ds.Tables["PROC_REP_PROCESS_GENERAL"]));
+                if ((ds.Tables["PROC_REP_CATEGORY"] != null)) {
+                    base.Tables.Add(new PROC_REP_CATEGORYDataTable(ds.Tables["PROC_REP_CATEGORY"]));
                 }
                 if ((ds.Tables["PROC_REP_PROCESS_USER"] != null)) {
                     base.Tables.Add(new PROC_REP_PROCESS_USERDataTable(ds.Tables["PROC_REP_PROCESS_USER"]));
                 }
-                if ((ds.Tables["PROC_REP_CATEGORY"] != null)) {
-                    base.Tables.Add(new PROC_REP_CATEGORYDataTable(ds.Tables["PROC_REP_CATEGORY"]));
+                if ((ds.Tables["PROC_REP_PROCESS_GENERAL"] != null)) {
+                    base.Tables.Add(new PROC_REP_PROCESS_GENERALDataTable(ds.Tables["PROC_REP_PROCESS_GENERAL"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -266,16 +248,10 @@ namespace DemoScore {
                     this.tableDataByCompany.InitVars();
                 }
             }
-            this.tablePROC_REP_PROCESS_CATEGORY = ((PROC_REP_PROCESS_CATEGORYDataTable)(base.Tables["PROC_REP_PROCESS_CATEGORY"]));
+            this.tablePROC_REP_CATEGORY = ((PROC_REP_CATEGORYDataTable)(base.Tables["PROC_REP_CATEGORY"]));
             if ((initTable == true)) {
-                if ((this.tablePROC_REP_PROCESS_CATEGORY != null)) {
-                    this.tablePROC_REP_PROCESS_CATEGORY.InitVars();
-                }
-            }
-            this.tablePROC_REP_PROCESS_GENERAL = ((PROC_REP_PROCESS_GENERALDataTable)(base.Tables["PROC_REP_PROCESS_GENERAL"]));
-            if ((initTable == true)) {
-                if ((this.tablePROC_REP_PROCESS_GENERAL != null)) {
-                    this.tablePROC_REP_PROCESS_GENERAL.InitVars();
+                if ((this.tablePROC_REP_CATEGORY != null)) {
+                    this.tablePROC_REP_CATEGORY.InitVars();
                 }
             }
             this.tablePROC_REP_PROCESS_USER = ((PROC_REP_PROCESS_USERDataTable)(base.Tables["PROC_REP_PROCESS_USER"]));
@@ -284,10 +260,10 @@ namespace DemoScore {
                     this.tablePROC_REP_PROCESS_USER.InitVars();
                 }
             }
-            this.tablePROC_REP_CATEGORY = ((PROC_REP_CATEGORYDataTable)(base.Tables["PROC_REP_CATEGORY"]));
+            this.tablePROC_REP_PROCESS_GENERAL = ((PROC_REP_PROCESS_GENERALDataTable)(base.Tables["PROC_REP_PROCESS_GENERAL"]));
             if ((initTable == true)) {
-                if ((this.tablePROC_REP_CATEGORY != null)) {
-                    this.tablePROC_REP_CATEGORY.InitVars();
+                if ((this.tablePROC_REP_PROCESS_GENERAL != null)) {
+                    this.tablePROC_REP_PROCESS_GENERAL.InitVars();
                 }
             }
         }
@@ -302,14 +278,12 @@ namespace DemoScore {
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableDataByCompany = new DataByCompanyDataTable();
             base.Tables.Add(this.tableDataByCompany);
-            this.tablePROC_REP_PROCESS_CATEGORY = new PROC_REP_PROCESS_CATEGORYDataTable();
-            base.Tables.Add(this.tablePROC_REP_PROCESS_CATEGORY);
-            this.tablePROC_REP_PROCESS_GENERAL = new PROC_REP_PROCESS_GENERALDataTable();
-            base.Tables.Add(this.tablePROC_REP_PROCESS_GENERAL);
-            this.tablePROC_REP_PROCESS_USER = new PROC_REP_PROCESS_USERDataTable();
-            base.Tables.Add(this.tablePROC_REP_PROCESS_USER);
             this.tablePROC_REP_CATEGORY = new PROC_REP_CATEGORYDataTable();
             base.Tables.Add(this.tablePROC_REP_CATEGORY);
+            this.tablePROC_REP_PROCESS_USER = new PROC_REP_PROCESS_USERDataTable();
+            base.Tables.Add(this.tablePROC_REP_PROCESS_USER);
+            this.tablePROC_REP_PROCESS_GENERAL = new PROC_REP_PROCESS_GENERALDataTable();
+            base.Tables.Add(this.tablePROC_REP_PROCESS_GENERAL);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -320,13 +294,7 @@ namespace DemoScore {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializePROC_REP_PROCESS_CATEGORY() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializePROC_REP_PROCESS_GENERAL() {
+        private bool ShouldSerializePROC_REP_CATEGORY() {
             return false;
         }
         
@@ -338,7 +306,7 @@ namespace DemoScore {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializePROC_REP_CATEGORY() {
+        private bool ShouldSerializePROC_REP_PROCESS_GENERAL() {
             return false;
         }
         
@@ -401,16 +369,13 @@ namespace DemoScore {
         public delegate void DataByCompanyRowChangeEventHandler(object sender, DataByCompanyRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void PROC_REP_PROCESS_CATEGORYRowChangeEventHandler(object sender, PROC_REP_PROCESS_CATEGORYRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void PROC_REP_PROCESS_GENERALRowChangeEventHandler(object sender, PROC_REP_PROCESS_GENERALRowChangeEvent e);
+        public delegate void PROC_REP_CATEGORYRowChangeEventHandler(object sender, PROC_REP_CATEGORYRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void PROC_REP_PROCESS_USERRowChangeEventHandler(object sender, PROC_REP_PROCESS_USERRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void PROC_REP_CATEGORYRowChangeEventHandler(object sender, PROC_REP_CATEGORYRowChangeEvent e);
+        public delegate void PROC_REP_PROCESS_GENERALRowChangeEventHandler(object sender, PROC_REP_PROCESS_GENERALRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -860,74 +825,26 @@ namespace DemoScore {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class PROC_REP_PROCESS_CATEGORYDataTable : global::System.Data.TypedTableBase<PROC_REP_PROCESS_CATEGORYRow> {
+        public partial class PROC_REP_CATEGORYDataTable : global::System.Data.TypedTableBase<PROC_REP_CATEGORYRow> {
             
-            private global::System.Data.DataColumn columnId;
+            private global::System.Data.DataColumn columncomp;
             
-            private global::System.Data.DataColumn columnEmail;
+            private global::System.Data.DataColumn columncat;
             
-            private global::System.Data.DataColumn columnEmailConfirmed;
+            private global::System.Data.DataColumn columnsub_cat;
             
-            private global::System.Data.DataColumn columnPasswordHash;
+            private global::System.Data.DataColumn columnpreguntas;
             
-            private global::System.Data.DataColumn columnSecurityStamp;
+            private global::System.Data.DataColumn columnTRUE;
             
-            private global::System.Data.DataColumn columnPhoneNumber;
+            private global::System.Data.DataColumn columnFALSE;
             
-            private global::System.Data.DataColumn columnPhoneNumberConfirmed;
-            
-            private global::System.Data.DataColumn columnTwoFactorEnabled;
-            
-            private global::System.Data.DataColumn columnLockoutEndDateUtc;
-            
-            private global::System.Data.DataColumn columnLockoutEnabled;
-            
-            private global::System.Data.DataColumn columnAccessFailedCount;
-            
-            private global::System.Data.DataColumn columnUserName;
-            
-            private global::System.Data.DataColumn columnFirstName;
-            
-            private global::System.Data.DataColumn columnLastName;
-            
-            private global::System.Data.DataColumn columnRole;
-            
-            private global::System.Data.DataColumn columnDocument;
-            
-            private global::System.Data.DataColumn columnPositionId;
-            
-            private global::System.Data.DataColumn columnAreaId;
-            
-            private global::System.Data.DataColumn columnCityId;
-            
-            private global::System.Data.DataColumn columnLocationId;
-            
-            private global::System.Data.DataColumn columnlastAccess;
-            
-            private global::System.Data.DataColumn columnfirstAccess;
-            
-            private global::System.Data.DataColumn columnTermsandConditions;
-            
-            private global::System.Data.DataColumn columnCompanyId;
-            
-            private global::System.Data.DataColumn columnCargo_Id;
-            
-            private global::System.Data.DataColumn columnArea_Id;
-            
-            private global::System.Data.DataColumn columnUbicacion_Id;
-            
-            private global::System.Data.DataColumn columnCiudad_Id;
-            
-            private global::System.Data.DataColumn columnDiscriminator;
-            
-            private global::System.Data.DataColumn columnLocation_Desc;
-            
-            private global::System.Data.DataColumn columnNivel_Nivel_Id;
+            private global::System.Data.DataColumn columnTOTAL;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PROC_REP_PROCESS_CATEGORYDataTable() {
-                this.TableName = "PROC_REP_PROCESS_CATEGORY";
+            public PROC_REP_CATEGORYDataTable() {
+                this.TableName = "PROC_REP_CATEGORY";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -935,7 +852,7 @@ namespace DemoScore {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal PROC_REP_PROCESS_CATEGORYDataTable(global::System.Data.DataTable table) {
+            internal PROC_REP_CATEGORYDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -952,256 +869,64 @@ namespace DemoScore {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected PROC_REP_PROCESS_CATEGORYDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected PROC_REP_CATEGORYDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn IdColumn {
+            public global::System.Data.DataColumn compColumn {
                 get {
-                    return this.columnId;
+                    return this.columncomp;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn EmailColumn {
+            public global::System.Data.DataColumn catColumn {
                 get {
-                    return this.columnEmail;
+                    return this.columncat;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn EmailConfirmedColumn {
+            public global::System.Data.DataColumn sub_catColumn {
                 get {
-                    return this.columnEmailConfirmed;
+                    return this.columnsub_cat;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PasswordHashColumn {
+            public global::System.Data.DataColumn preguntasColumn {
                 get {
-                    return this.columnPasswordHash;
+                    return this.columnpreguntas;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn SecurityStampColumn {
+            public global::System.Data.DataColumn TRUEColumn {
                 get {
-                    return this.columnSecurityStamp;
+                    return this.columnTRUE;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PhoneNumberColumn {
+            public global::System.Data.DataColumn FALSEColumn {
                 get {
-                    return this.columnPhoneNumber;
+                    return this.columnFALSE;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PhoneNumberConfirmedColumn {
+            public global::System.Data.DataColumn TOTALColumn {
                 get {
-                    return this.columnPhoneNumberConfirmed;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn TwoFactorEnabledColumn {
-                get {
-                    return this.columnTwoFactorEnabled;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn LockoutEndDateUtcColumn {
-                get {
-                    return this.columnLockoutEndDateUtc;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn LockoutEnabledColumn {
-                get {
-                    return this.columnLockoutEnabled;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn AccessFailedCountColumn {
-                get {
-                    return this.columnAccessFailedCount;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn UserNameColumn {
-                get {
-                    return this.columnUserName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn FirstNameColumn {
-                get {
-                    return this.columnFirstName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn LastNameColumn {
-                get {
-                    return this.columnLastName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn RoleColumn {
-                get {
-                    return this.columnRole;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn DocumentColumn {
-                get {
-                    return this.columnDocument;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PositionIdColumn {
-                get {
-                    return this.columnPositionId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn AreaIdColumn {
-                get {
-                    return this.columnAreaId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn CityIdColumn {
-                get {
-                    return this.columnCityId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn LocationIdColumn {
-                get {
-                    return this.columnLocationId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn lastAccessColumn {
-                get {
-                    return this.columnlastAccess;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn firstAccessColumn {
-                get {
-                    return this.columnfirstAccess;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn TermsandConditionsColumn {
-                get {
-                    return this.columnTermsandConditions;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn CompanyIdColumn {
-                get {
-                    return this.columnCompanyId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Cargo_IdColumn {
-                get {
-                    return this.columnCargo_Id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Area_IdColumn {
-                get {
-                    return this.columnArea_Id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Ubicacion_IdColumn {
-                get {
-                    return this.columnUbicacion_Id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Ciudad_IdColumn {
-                get {
-                    return this.columnCiudad_Id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn DiscriminatorColumn {
-                get {
-                    return this.columnDiscriminator;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Location_DescColumn {
-                get {
-                    return this.columnLocation_Desc;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Nivel_Nivel_IdColumn {
-                get {
-                    return this.columnNivel_Nivel_Id;
+                    return this.columnTOTAL;
                 }
             }
             
@@ -1216,113 +941,51 @@ namespace DemoScore {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PROC_REP_PROCESS_CATEGORYRow this[int index] {
+            public PROC_REP_CATEGORYRow this[int index] {
                 get {
-                    return ((PROC_REP_PROCESS_CATEGORYRow)(this.Rows[index]));
+                    return ((PROC_REP_CATEGORYRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PROC_REP_PROCESS_CATEGORYRowChangeEventHandler PROC_REP_PROCESS_CATEGORYRowChanging;
+            public event PROC_REP_CATEGORYRowChangeEventHandler PROC_REP_CATEGORYRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PROC_REP_PROCESS_CATEGORYRowChangeEventHandler PROC_REP_PROCESS_CATEGORYRowChanged;
+            public event PROC_REP_CATEGORYRowChangeEventHandler PROC_REP_CATEGORYRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PROC_REP_PROCESS_CATEGORYRowChangeEventHandler PROC_REP_PROCESS_CATEGORYRowDeleting;
+            public event PROC_REP_CATEGORYRowChangeEventHandler PROC_REP_CATEGORYRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PROC_REP_PROCESS_CATEGORYRowChangeEventHandler PROC_REP_PROCESS_CATEGORYRowDeleted;
+            public event PROC_REP_CATEGORYRowChangeEventHandler PROC_REP_CATEGORYRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddPROC_REP_PROCESS_CATEGORYRow(PROC_REP_PROCESS_CATEGORYRow row) {
+            public void AddPROC_REP_CATEGORYRow(PROC_REP_CATEGORYRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PROC_REP_PROCESS_CATEGORYRow AddPROC_REP_PROCESS_CATEGORYRow(
-                        string Id, 
-                        string Email, 
-                        bool EmailConfirmed, 
-                        string PasswordHash, 
-                        string SecurityStamp, 
-                        string PhoneNumber, 
-                        bool PhoneNumberConfirmed, 
-                        bool TwoFactorEnabled, 
-                        System.DateTime LockoutEndDateUtc, 
-                        bool LockoutEnabled, 
-                        int AccessFailedCount, 
-                        string UserName, 
-                        string FirstName, 
-                        string LastName, 
-                        int Role, 
-                        string Document, 
-                        int PositionId, 
-                        int AreaId, 
-                        int CityId, 
-                        int LocationId, 
-                        System.DateTime lastAccess, 
-                        System.DateTime firstAccess, 
-                        int TermsandConditions, 
-                        int CompanyId, 
-                        int Cargo_Id, 
-                        int Area_Id, 
-                        int Ubicacion_Id, 
-                        int Ciudad_Id, 
-                        string Discriminator, 
-                        string Location_Desc, 
-                        int Nivel_Nivel_Id) {
-                PROC_REP_PROCESS_CATEGORYRow rowPROC_REP_PROCESS_CATEGORYRow = ((PROC_REP_PROCESS_CATEGORYRow)(this.NewRow()));
+            public PROC_REP_CATEGORYRow AddPROC_REP_CATEGORYRow(string comp, string cat, string sub_cat, string preguntas, int TRUE, int FALSE, int TOTAL) {
+                PROC_REP_CATEGORYRow rowPROC_REP_CATEGORYRow = ((PROC_REP_CATEGORYRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Id,
-                        Email,
-                        EmailConfirmed,
-                        PasswordHash,
-                        SecurityStamp,
-                        PhoneNumber,
-                        PhoneNumberConfirmed,
-                        TwoFactorEnabled,
-                        LockoutEndDateUtc,
-                        LockoutEnabled,
-                        AccessFailedCount,
-                        UserName,
-                        FirstName,
-                        LastName,
-                        Role,
-                        Document,
-                        PositionId,
-                        AreaId,
-                        CityId,
-                        LocationId,
-                        lastAccess,
-                        firstAccess,
-                        TermsandConditions,
-                        CompanyId,
-                        Cargo_Id,
-                        Area_Id,
-                        Ubicacion_Id,
-                        Ciudad_Id,
-                        Discriminator,
-                        Location_Desc,
-                        Nivel_Nivel_Id};
-                rowPROC_REP_PROCESS_CATEGORYRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowPROC_REP_PROCESS_CATEGORYRow);
-                return rowPROC_REP_PROCESS_CATEGORYRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PROC_REP_PROCESS_CATEGORYRow FindById(string Id) {
-                return ((PROC_REP_PROCESS_CATEGORYRow)(this.Rows.Find(new object[] {
-                            Id})));
+                        comp,
+                        cat,
+                        sub_cat,
+                        preguntas,
+                        TRUE,
+                        FALSE,
+                        TOTAL};
+                rowPROC_REP_CATEGORYRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowPROC_REP_CATEGORYRow);
+                return rowPROC_REP_CATEGORYRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                PROC_REP_PROCESS_CATEGORYDataTable cln = ((PROC_REP_PROCESS_CATEGORYDataTable)(base.Clone()));
+                PROC_REP_CATEGORYDataTable cln = ((PROC_REP_CATEGORYDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1330,158 +993,72 @@ namespace DemoScore {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new PROC_REP_PROCESS_CATEGORYDataTable();
+                return new PROC_REP_CATEGORYDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnId = base.Columns["Id"];
-                this.columnEmail = base.Columns["Email"];
-                this.columnEmailConfirmed = base.Columns["EmailConfirmed"];
-                this.columnPasswordHash = base.Columns["PasswordHash"];
-                this.columnSecurityStamp = base.Columns["SecurityStamp"];
-                this.columnPhoneNumber = base.Columns["PhoneNumber"];
-                this.columnPhoneNumberConfirmed = base.Columns["PhoneNumberConfirmed"];
-                this.columnTwoFactorEnabled = base.Columns["TwoFactorEnabled"];
-                this.columnLockoutEndDateUtc = base.Columns["LockoutEndDateUtc"];
-                this.columnLockoutEnabled = base.Columns["LockoutEnabled"];
-                this.columnAccessFailedCount = base.Columns["AccessFailedCount"];
-                this.columnUserName = base.Columns["UserName"];
-                this.columnFirstName = base.Columns["FirstName"];
-                this.columnLastName = base.Columns["LastName"];
-                this.columnRole = base.Columns["Role"];
-                this.columnDocument = base.Columns["Document"];
-                this.columnPositionId = base.Columns["PositionId"];
-                this.columnAreaId = base.Columns["AreaId"];
-                this.columnCityId = base.Columns["CityId"];
-                this.columnLocationId = base.Columns["LocationId"];
-                this.columnlastAccess = base.Columns["lastAccess"];
-                this.columnfirstAccess = base.Columns["firstAccess"];
-                this.columnTermsandConditions = base.Columns["TermsandConditions"];
-                this.columnCompanyId = base.Columns["CompanyId"];
-                this.columnCargo_Id = base.Columns["Cargo_Id"];
-                this.columnArea_Id = base.Columns["Area_Id"];
-                this.columnUbicacion_Id = base.Columns["Ubicacion_Id"];
-                this.columnCiudad_Id = base.Columns["Ciudad_Id"];
-                this.columnDiscriminator = base.Columns["Discriminator"];
-                this.columnLocation_Desc = base.Columns["Location_Desc"];
-                this.columnNivel_Nivel_Id = base.Columns["Nivel_Nivel_Id"];
+                this.columncomp = base.Columns["comp"];
+                this.columncat = base.Columns["cat"];
+                this.columnsub_cat = base.Columns["sub_cat"];
+                this.columnpreguntas = base.Columns["preguntas"];
+                this.columnTRUE = base.Columns["TRUE"];
+                this.columnFALSE = base.Columns["FALSE"];
+                this.columnTOTAL = base.Columns["TOTAL"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId);
-                this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEmail);
-                this.columnEmailConfirmed = new global::System.Data.DataColumn("EmailConfirmed", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEmailConfirmed);
-                this.columnPasswordHash = new global::System.Data.DataColumn("PasswordHash", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPasswordHash);
-                this.columnSecurityStamp = new global::System.Data.DataColumn("SecurityStamp", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSecurityStamp);
-                this.columnPhoneNumber = new global::System.Data.DataColumn("PhoneNumber", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPhoneNumber);
-                this.columnPhoneNumberConfirmed = new global::System.Data.DataColumn("PhoneNumberConfirmed", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPhoneNumberConfirmed);
-                this.columnTwoFactorEnabled = new global::System.Data.DataColumn("TwoFactorEnabled", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTwoFactorEnabled);
-                this.columnLockoutEndDateUtc = new global::System.Data.DataColumn("LockoutEndDateUtc", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLockoutEndDateUtc);
-                this.columnLockoutEnabled = new global::System.Data.DataColumn("LockoutEnabled", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLockoutEnabled);
-                this.columnAccessFailedCount = new global::System.Data.DataColumn("AccessFailedCount", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAccessFailedCount);
-                this.columnUserName = new global::System.Data.DataColumn("UserName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUserName);
-                this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFirstName);
-                this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLastName);
-                this.columnRole = new global::System.Data.DataColumn("Role", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRole);
-                this.columnDocument = new global::System.Data.DataColumn("Document", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDocument);
-                this.columnPositionId = new global::System.Data.DataColumn("PositionId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPositionId);
-                this.columnAreaId = new global::System.Data.DataColumn("AreaId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAreaId);
-                this.columnCityId = new global::System.Data.DataColumn("CityId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCityId);
-                this.columnLocationId = new global::System.Data.DataColumn("LocationId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLocationId);
-                this.columnlastAccess = new global::System.Data.DataColumn("lastAccess", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnlastAccess);
-                this.columnfirstAccess = new global::System.Data.DataColumn("firstAccess", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfirstAccess);
-                this.columnTermsandConditions = new global::System.Data.DataColumn("TermsandConditions", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTermsandConditions);
-                this.columnCompanyId = new global::System.Data.DataColumn("CompanyId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCompanyId);
-                this.columnCargo_Id = new global::System.Data.DataColumn("Cargo_Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCargo_Id);
-                this.columnArea_Id = new global::System.Data.DataColumn("Area_Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnArea_Id);
-                this.columnUbicacion_Id = new global::System.Data.DataColumn("Ubicacion_Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUbicacion_Id);
-                this.columnCiudad_Id = new global::System.Data.DataColumn("Ciudad_Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCiudad_Id);
-                this.columnDiscriminator = new global::System.Data.DataColumn("Discriminator", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDiscriminator);
-                this.columnLocation_Desc = new global::System.Data.DataColumn("Location_Desc", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLocation_Desc);
-                this.columnNivel_Nivel_Id = new global::System.Data.DataColumn("Nivel_Nivel_Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNivel_Nivel_Id);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnId}, true));
-                this.columnId.AllowDBNull = false;
-                this.columnId.Unique = true;
-                this.columnId.MaxLength = 128;
-                this.columnEmail.MaxLength = 256;
-                this.columnEmailConfirmed.AllowDBNull = false;
-                this.columnPasswordHash.MaxLength = 2147483647;
-                this.columnSecurityStamp.MaxLength = 2147483647;
-                this.columnPhoneNumber.MaxLength = 2147483647;
-                this.columnPhoneNumberConfirmed.AllowDBNull = false;
-                this.columnTwoFactorEnabled.AllowDBNull = false;
-                this.columnLockoutEnabled.AllowDBNull = false;
-                this.columnAccessFailedCount.AllowDBNull = false;
-                this.columnUserName.AllowDBNull = false;
-                this.columnUserName.MaxLength = 256;
-                this.columnFirstName.MaxLength = 2147483647;
-                this.columnLastName.MaxLength = 2147483647;
-                this.columnDocument.MaxLength = 2147483647;
-                this.columnDiscriminator.AllowDBNull = false;
-                this.columnDiscriminator.MaxLength = 128;
-                this.columnLocation_Desc.MaxLength = 2147483647;
+                this.columncomp = new global::System.Data.DataColumn("comp", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncomp);
+                this.columncat = new global::System.Data.DataColumn("cat", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncat);
+                this.columnsub_cat = new global::System.Data.DataColumn("sub_cat", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsub_cat);
+                this.columnpreguntas = new global::System.Data.DataColumn("preguntas", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpreguntas);
+                this.columnTRUE = new global::System.Data.DataColumn("TRUE", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTRUE);
+                this.columnFALSE = new global::System.Data.DataColumn("FALSE", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFALSE);
+                this.columnTOTAL = new global::System.Data.DataColumn("TOTAL", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTOTAL);
+                this.columncomp.MaxLength = 2147483647;
+                this.columncat.MaxLength = 2147483647;
+                this.columnsub_cat.MaxLength = 2147483647;
+                this.columnpreguntas.ReadOnly = true;
+                this.columnpreguntas.MaxLength = 1;
+                this.columnTRUE.ReadOnly = true;
+                this.columnFALSE.ReadOnly = true;
+                this.columnTOTAL.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PROC_REP_PROCESS_CATEGORYRow NewPROC_REP_PROCESS_CATEGORYRow() {
-                return ((PROC_REP_PROCESS_CATEGORYRow)(this.NewRow()));
+            public PROC_REP_CATEGORYRow NewPROC_REP_CATEGORYRow() {
+                return ((PROC_REP_CATEGORYRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new PROC_REP_PROCESS_CATEGORYRow(builder);
+                return new PROC_REP_CATEGORYRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(PROC_REP_PROCESS_CATEGORYRow);
+                return typeof(PROC_REP_CATEGORYRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.PROC_REP_PROCESS_CATEGORYRowChanged != null)) {
-                    this.PROC_REP_PROCESS_CATEGORYRowChanged(this, new PROC_REP_PROCESS_CATEGORYRowChangeEvent(((PROC_REP_PROCESS_CATEGORYRow)(e.Row)), e.Action));
+                if ((this.PROC_REP_CATEGORYRowChanged != null)) {
+                    this.PROC_REP_CATEGORYRowChanged(this, new PROC_REP_CATEGORYRowChangeEvent(((PROC_REP_CATEGORYRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1489,8 +1066,8 @@ namespace DemoScore {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.PROC_REP_PROCESS_CATEGORYRowChanging != null)) {
-                    this.PROC_REP_PROCESS_CATEGORYRowChanging(this, new PROC_REP_PROCESS_CATEGORYRowChangeEvent(((PROC_REP_PROCESS_CATEGORYRow)(e.Row)), e.Action));
+                if ((this.PROC_REP_CATEGORYRowChanging != null)) {
+                    this.PROC_REP_CATEGORYRowChanging(this, new PROC_REP_CATEGORYRowChangeEvent(((PROC_REP_CATEGORYRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1498,8 +1075,8 @@ namespace DemoScore {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.PROC_REP_PROCESS_CATEGORYRowDeleted != null)) {
-                    this.PROC_REP_PROCESS_CATEGORYRowDeleted(this, new PROC_REP_PROCESS_CATEGORYRowChangeEvent(((PROC_REP_PROCESS_CATEGORYRow)(e.Row)), e.Action));
+                if ((this.PROC_REP_CATEGORYRowDeleted != null)) {
+                    this.PROC_REP_CATEGORYRowDeleted(this, new PROC_REP_CATEGORYRowChangeEvent(((PROC_REP_CATEGORYRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1507,14 +1084,14 @@ namespace DemoScore {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.PROC_REP_PROCESS_CATEGORYRowDeleting != null)) {
-                    this.PROC_REP_PROCESS_CATEGORYRowDeleting(this, new PROC_REP_PROCESS_CATEGORYRowChangeEvent(((PROC_REP_PROCESS_CATEGORYRow)(e.Row)), e.Action));
+                if ((this.PROC_REP_CATEGORYRowDeleting != null)) {
+                    this.PROC_REP_CATEGORYRowDeleting(this, new PROC_REP_CATEGORYRowChangeEvent(((PROC_REP_CATEGORYRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovePROC_REP_PROCESS_CATEGORYRow(PROC_REP_PROCESS_CATEGORYRow row) {
+            public void RemovePROC_REP_CATEGORYRow(PROC_REP_CATEGORYRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1541,734 +1118,7 @@ namespace DemoScore {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "PROC_REP_PROCESS_CATEGORYDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class PROC_REP_PROCESS_GENERALDataTable : global::System.Data.TypedTableBase<PROC_REP_PROCESS_GENERALRow> {
-            
-            private global::System.Data.DataColumn columnId;
-            
-            private global::System.Data.DataColumn columnEmail;
-            
-            private global::System.Data.DataColumn columnEmailConfirmed;
-            
-            private global::System.Data.DataColumn columnPasswordHash;
-            
-            private global::System.Data.DataColumn columnSecurityStamp;
-            
-            private global::System.Data.DataColumn columnPhoneNumber;
-            
-            private global::System.Data.DataColumn columnPhoneNumberConfirmed;
-            
-            private global::System.Data.DataColumn columnTwoFactorEnabled;
-            
-            private global::System.Data.DataColumn columnLockoutEndDateUtc;
-            
-            private global::System.Data.DataColumn columnLockoutEnabled;
-            
-            private global::System.Data.DataColumn columnAccessFailedCount;
-            
-            private global::System.Data.DataColumn columnUserName;
-            
-            private global::System.Data.DataColumn columnFirstName;
-            
-            private global::System.Data.DataColumn columnLastName;
-            
-            private global::System.Data.DataColumn columnRole;
-            
-            private global::System.Data.DataColumn columnDocument;
-            
-            private global::System.Data.DataColumn columnPositionId;
-            
-            private global::System.Data.DataColumn columnAreaId;
-            
-            private global::System.Data.DataColumn columnCityId;
-            
-            private global::System.Data.DataColumn columnLocationId;
-            
-            private global::System.Data.DataColumn columnlastAccess;
-            
-            private global::System.Data.DataColumn columnfirstAccess;
-            
-            private global::System.Data.DataColumn columnTermsandConditions;
-            
-            private global::System.Data.DataColumn columnCompanyId;
-            
-            private global::System.Data.DataColumn columnCargo_Id;
-            
-            private global::System.Data.DataColumn columnArea_Id;
-            
-            private global::System.Data.DataColumn columnUbicacion_Id;
-            
-            private global::System.Data.DataColumn columnCiudad_Id;
-            
-            private global::System.Data.DataColumn columnDiscriminator;
-            
-            private global::System.Data.DataColumn columnLocation_Desc;
-            
-            private global::System.Data.DataColumn columnNivel_Nivel_Id;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PROC_REP_PROCESS_GENERALDataTable() {
-                this.TableName = "PROC_REP_PROCESS_GENERAL";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal PROC_REP_PROCESS_GENERALDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected PROC_REP_PROCESS_GENERALDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn IdColumn {
-                get {
-                    return this.columnId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn EmailColumn {
-                get {
-                    return this.columnEmail;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn EmailConfirmedColumn {
-                get {
-                    return this.columnEmailConfirmed;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PasswordHashColumn {
-                get {
-                    return this.columnPasswordHash;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn SecurityStampColumn {
-                get {
-                    return this.columnSecurityStamp;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PhoneNumberColumn {
-                get {
-                    return this.columnPhoneNumber;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PhoneNumberConfirmedColumn {
-                get {
-                    return this.columnPhoneNumberConfirmed;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn TwoFactorEnabledColumn {
-                get {
-                    return this.columnTwoFactorEnabled;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn LockoutEndDateUtcColumn {
-                get {
-                    return this.columnLockoutEndDateUtc;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn LockoutEnabledColumn {
-                get {
-                    return this.columnLockoutEnabled;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn AccessFailedCountColumn {
-                get {
-                    return this.columnAccessFailedCount;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn UserNameColumn {
-                get {
-                    return this.columnUserName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn FirstNameColumn {
-                get {
-                    return this.columnFirstName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn LastNameColumn {
-                get {
-                    return this.columnLastName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn RoleColumn {
-                get {
-                    return this.columnRole;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn DocumentColumn {
-                get {
-                    return this.columnDocument;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PositionIdColumn {
-                get {
-                    return this.columnPositionId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn AreaIdColumn {
-                get {
-                    return this.columnAreaId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn CityIdColumn {
-                get {
-                    return this.columnCityId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn LocationIdColumn {
-                get {
-                    return this.columnLocationId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn lastAccessColumn {
-                get {
-                    return this.columnlastAccess;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn firstAccessColumn {
-                get {
-                    return this.columnfirstAccess;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn TermsandConditionsColumn {
-                get {
-                    return this.columnTermsandConditions;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn CompanyIdColumn {
-                get {
-                    return this.columnCompanyId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Cargo_IdColumn {
-                get {
-                    return this.columnCargo_Id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Area_IdColumn {
-                get {
-                    return this.columnArea_Id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Ubicacion_IdColumn {
-                get {
-                    return this.columnUbicacion_Id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Ciudad_IdColumn {
-                get {
-                    return this.columnCiudad_Id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn DiscriminatorColumn {
-                get {
-                    return this.columnDiscriminator;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Location_DescColumn {
-                get {
-                    return this.columnLocation_Desc;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Nivel_Nivel_IdColumn {
-                get {
-                    return this.columnNivel_Nivel_Id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PROC_REP_PROCESS_GENERALRow this[int index] {
-                get {
-                    return ((PROC_REP_PROCESS_GENERALRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PROC_REP_PROCESS_GENERALRowChangeEventHandler PROC_REP_PROCESS_GENERALRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PROC_REP_PROCESS_GENERALRowChangeEventHandler PROC_REP_PROCESS_GENERALRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PROC_REP_PROCESS_GENERALRowChangeEventHandler PROC_REP_PROCESS_GENERALRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PROC_REP_PROCESS_GENERALRowChangeEventHandler PROC_REP_PROCESS_GENERALRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddPROC_REP_PROCESS_GENERALRow(PROC_REP_PROCESS_GENERALRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PROC_REP_PROCESS_GENERALRow AddPROC_REP_PROCESS_GENERALRow(
-                        string Id, 
-                        string Email, 
-                        bool EmailConfirmed, 
-                        string PasswordHash, 
-                        string SecurityStamp, 
-                        string PhoneNumber, 
-                        bool PhoneNumberConfirmed, 
-                        bool TwoFactorEnabled, 
-                        System.DateTime LockoutEndDateUtc, 
-                        bool LockoutEnabled, 
-                        int AccessFailedCount, 
-                        string UserName, 
-                        string FirstName, 
-                        string LastName, 
-                        int Role, 
-                        string Document, 
-                        int PositionId, 
-                        int AreaId, 
-                        int CityId, 
-                        int LocationId, 
-                        System.DateTime lastAccess, 
-                        System.DateTime firstAccess, 
-                        int TermsandConditions, 
-                        int CompanyId, 
-                        int Cargo_Id, 
-                        int Area_Id, 
-                        int Ubicacion_Id, 
-                        int Ciudad_Id, 
-                        string Discriminator, 
-                        string Location_Desc, 
-                        int Nivel_Nivel_Id) {
-                PROC_REP_PROCESS_GENERALRow rowPROC_REP_PROCESS_GENERALRow = ((PROC_REP_PROCESS_GENERALRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        Id,
-                        Email,
-                        EmailConfirmed,
-                        PasswordHash,
-                        SecurityStamp,
-                        PhoneNumber,
-                        PhoneNumberConfirmed,
-                        TwoFactorEnabled,
-                        LockoutEndDateUtc,
-                        LockoutEnabled,
-                        AccessFailedCount,
-                        UserName,
-                        FirstName,
-                        LastName,
-                        Role,
-                        Document,
-                        PositionId,
-                        AreaId,
-                        CityId,
-                        LocationId,
-                        lastAccess,
-                        firstAccess,
-                        TermsandConditions,
-                        CompanyId,
-                        Cargo_Id,
-                        Area_Id,
-                        Ubicacion_Id,
-                        Ciudad_Id,
-                        Discriminator,
-                        Location_Desc,
-                        Nivel_Nivel_Id};
-                rowPROC_REP_PROCESS_GENERALRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowPROC_REP_PROCESS_GENERALRow);
-                return rowPROC_REP_PROCESS_GENERALRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PROC_REP_PROCESS_GENERALRow FindById(string Id) {
-                return ((PROC_REP_PROCESS_GENERALRow)(this.Rows.Find(new object[] {
-                            Id})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                PROC_REP_PROCESS_GENERALDataTable cln = ((PROC_REP_PROCESS_GENERALDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new PROC_REP_PROCESS_GENERALDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal void InitVars() {
-                this.columnId = base.Columns["Id"];
-                this.columnEmail = base.Columns["Email"];
-                this.columnEmailConfirmed = base.Columns["EmailConfirmed"];
-                this.columnPasswordHash = base.Columns["PasswordHash"];
-                this.columnSecurityStamp = base.Columns["SecurityStamp"];
-                this.columnPhoneNumber = base.Columns["PhoneNumber"];
-                this.columnPhoneNumberConfirmed = base.Columns["PhoneNumberConfirmed"];
-                this.columnTwoFactorEnabled = base.Columns["TwoFactorEnabled"];
-                this.columnLockoutEndDateUtc = base.Columns["LockoutEndDateUtc"];
-                this.columnLockoutEnabled = base.Columns["LockoutEnabled"];
-                this.columnAccessFailedCount = base.Columns["AccessFailedCount"];
-                this.columnUserName = base.Columns["UserName"];
-                this.columnFirstName = base.Columns["FirstName"];
-                this.columnLastName = base.Columns["LastName"];
-                this.columnRole = base.Columns["Role"];
-                this.columnDocument = base.Columns["Document"];
-                this.columnPositionId = base.Columns["PositionId"];
-                this.columnAreaId = base.Columns["AreaId"];
-                this.columnCityId = base.Columns["CityId"];
-                this.columnLocationId = base.Columns["LocationId"];
-                this.columnlastAccess = base.Columns["lastAccess"];
-                this.columnfirstAccess = base.Columns["firstAccess"];
-                this.columnTermsandConditions = base.Columns["TermsandConditions"];
-                this.columnCompanyId = base.Columns["CompanyId"];
-                this.columnCargo_Id = base.Columns["Cargo_Id"];
-                this.columnArea_Id = base.Columns["Area_Id"];
-                this.columnUbicacion_Id = base.Columns["Ubicacion_Id"];
-                this.columnCiudad_Id = base.Columns["Ciudad_Id"];
-                this.columnDiscriminator = base.Columns["Discriminator"];
-                this.columnLocation_Desc = base.Columns["Location_Desc"];
-                this.columnNivel_Nivel_Id = base.Columns["Nivel_Nivel_Id"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId);
-                this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEmail);
-                this.columnEmailConfirmed = new global::System.Data.DataColumn("EmailConfirmed", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEmailConfirmed);
-                this.columnPasswordHash = new global::System.Data.DataColumn("PasswordHash", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPasswordHash);
-                this.columnSecurityStamp = new global::System.Data.DataColumn("SecurityStamp", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSecurityStamp);
-                this.columnPhoneNumber = new global::System.Data.DataColumn("PhoneNumber", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPhoneNumber);
-                this.columnPhoneNumberConfirmed = new global::System.Data.DataColumn("PhoneNumberConfirmed", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPhoneNumberConfirmed);
-                this.columnTwoFactorEnabled = new global::System.Data.DataColumn("TwoFactorEnabled", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTwoFactorEnabled);
-                this.columnLockoutEndDateUtc = new global::System.Data.DataColumn("LockoutEndDateUtc", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLockoutEndDateUtc);
-                this.columnLockoutEnabled = new global::System.Data.DataColumn("LockoutEnabled", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLockoutEnabled);
-                this.columnAccessFailedCount = new global::System.Data.DataColumn("AccessFailedCount", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAccessFailedCount);
-                this.columnUserName = new global::System.Data.DataColumn("UserName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUserName);
-                this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFirstName);
-                this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLastName);
-                this.columnRole = new global::System.Data.DataColumn("Role", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRole);
-                this.columnDocument = new global::System.Data.DataColumn("Document", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDocument);
-                this.columnPositionId = new global::System.Data.DataColumn("PositionId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPositionId);
-                this.columnAreaId = new global::System.Data.DataColumn("AreaId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAreaId);
-                this.columnCityId = new global::System.Data.DataColumn("CityId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCityId);
-                this.columnLocationId = new global::System.Data.DataColumn("LocationId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLocationId);
-                this.columnlastAccess = new global::System.Data.DataColumn("lastAccess", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnlastAccess);
-                this.columnfirstAccess = new global::System.Data.DataColumn("firstAccess", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfirstAccess);
-                this.columnTermsandConditions = new global::System.Data.DataColumn("TermsandConditions", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTermsandConditions);
-                this.columnCompanyId = new global::System.Data.DataColumn("CompanyId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCompanyId);
-                this.columnCargo_Id = new global::System.Data.DataColumn("Cargo_Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCargo_Id);
-                this.columnArea_Id = new global::System.Data.DataColumn("Area_Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnArea_Id);
-                this.columnUbicacion_Id = new global::System.Data.DataColumn("Ubicacion_Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUbicacion_Id);
-                this.columnCiudad_Id = new global::System.Data.DataColumn("Ciudad_Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCiudad_Id);
-                this.columnDiscriminator = new global::System.Data.DataColumn("Discriminator", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDiscriminator);
-                this.columnLocation_Desc = new global::System.Data.DataColumn("Location_Desc", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLocation_Desc);
-                this.columnNivel_Nivel_Id = new global::System.Data.DataColumn("Nivel_Nivel_Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNivel_Nivel_Id);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnId}, true));
-                this.columnId.AllowDBNull = false;
-                this.columnId.Unique = true;
-                this.columnId.MaxLength = 128;
-                this.columnEmail.MaxLength = 256;
-                this.columnEmailConfirmed.AllowDBNull = false;
-                this.columnPasswordHash.MaxLength = 2147483647;
-                this.columnSecurityStamp.MaxLength = 2147483647;
-                this.columnPhoneNumber.MaxLength = 2147483647;
-                this.columnPhoneNumberConfirmed.AllowDBNull = false;
-                this.columnTwoFactorEnabled.AllowDBNull = false;
-                this.columnLockoutEnabled.AllowDBNull = false;
-                this.columnAccessFailedCount.AllowDBNull = false;
-                this.columnUserName.AllowDBNull = false;
-                this.columnUserName.MaxLength = 256;
-                this.columnFirstName.MaxLength = 2147483647;
-                this.columnLastName.MaxLength = 2147483647;
-                this.columnDocument.MaxLength = 2147483647;
-                this.columnDiscriminator.AllowDBNull = false;
-                this.columnDiscriminator.MaxLength = 128;
-                this.columnLocation_Desc.MaxLength = 2147483647;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PROC_REP_PROCESS_GENERALRow NewPROC_REP_PROCESS_GENERALRow() {
-                return ((PROC_REP_PROCESS_GENERALRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new PROC_REP_PROCESS_GENERALRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(PROC_REP_PROCESS_GENERALRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.PROC_REP_PROCESS_GENERALRowChanged != null)) {
-                    this.PROC_REP_PROCESS_GENERALRowChanged(this, new PROC_REP_PROCESS_GENERALRowChangeEvent(((PROC_REP_PROCESS_GENERALRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.PROC_REP_PROCESS_GENERALRowChanging != null)) {
-                    this.PROC_REP_PROCESS_GENERALRowChanging(this, new PROC_REP_PROCESS_GENERALRowChangeEvent(((PROC_REP_PROCESS_GENERALRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.PROC_REP_PROCESS_GENERALRowDeleted != null)) {
-                    this.PROC_REP_PROCESS_GENERALRowDeleted(this, new PROC_REP_PROCESS_GENERALRowChangeEvent(((PROC_REP_PROCESS_GENERALRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.PROC_REP_PROCESS_GENERALRowDeleting != null)) {
-                    this.PROC_REP_PROCESS_GENERALRowDeleting(this, new PROC_REP_PROCESS_GENERALRowChangeEvent(((PROC_REP_PROCESS_GENERALRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovePROC_REP_PROCESS_GENERALRow(PROC_REP_PROCESS_GENERALRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dcodemoscoreDataSetBD ds = new dcodemoscoreDataSetBD();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "PROC_REP_PROCESS_GENERALDataTable";
+                attribute2.FixedValue = "PROC_REP_CATEGORYDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2316,67 +1166,21 @@ namespace DemoScore {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class PROC_REP_PROCESS_USERDataTable : global::System.Data.TypedTableBase<PROC_REP_PROCESS_USERRow> {
             
-            private global::System.Data.DataColumn columnId;
-            
-            private global::System.Data.DataColumn columnEmail;
-            
-            private global::System.Data.DataColumn columnEmailConfirmed;
-            
-            private global::System.Data.DataColumn columnPasswordHash;
-            
-            private global::System.Data.DataColumn columnSecurityStamp;
-            
-            private global::System.Data.DataColumn columnPhoneNumber;
-            
-            private global::System.Data.DataColumn columnPhoneNumberConfirmed;
-            
-            private global::System.Data.DataColumn columnTwoFactorEnabled;
-            
-            private global::System.Data.DataColumn columnLockoutEndDateUtc;
-            
-            private global::System.Data.DataColumn columnLockoutEnabled;
-            
-            private global::System.Data.DataColumn columnAccessFailedCount;
-            
             private global::System.Data.DataColumn columnUserName;
-            
-            private global::System.Data.DataColumn columnFirstName;
             
             private global::System.Data.DataColumn columnLastName;
             
-            private global::System.Data.DataColumn columnRole;
+            private global::System.Data.DataColumn columnEmail;
             
-            private global::System.Data.DataColumn columnDocument;
+            private global::System.Data.DataColumn columnCate_Description;
             
-            private global::System.Data.DataColumn columnPositionId;
+            private global::System.Data.DataColumn columnSubC_Description;
             
-            private global::System.Data.DataColumn columnAreaId;
+            private global::System.Data.DataColumn columnTRUE;
             
-            private global::System.Data.DataColumn columnCityId;
+            private global::System.Data.DataColumn columnFALSE;
             
-            private global::System.Data.DataColumn columnLocationId;
-            
-            private global::System.Data.DataColumn columnlastAccess;
-            
-            private global::System.Data.DataColumn columnfirstAccess;
-            
-            private global::System.Data.DataColumn columnTermsandConditions;
-            
-            private global::System.Data.DataColumn columnCompanyId;
-            
-            private global::System.Data.DataColumn columnCargo_Id;
-            
-            private global::System.Data.DataColumn columnArea_Id;
-            
-            private global::System.Data.DataColumn columnUbicacion_Id;
-            
-            private global::System.Data.DataColumn columnCiudad_Id;
-            
-            private global::System.Data.DataColumn columnDiscriminator;
-            
-            private global::System.Data.DataColumn columnLocation_Desc;
-            
-            private global::System.Data.DataColumn columnNivel_Nivel_Id;
+            private global::System.Data.DataColumn columnTOTAL;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -2413,105 +1217,9 @@ namespace DemoScore {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn IdColumn {
-                get {
-                    return this.columnId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn EmailColumn {
-                get {
-                    return this.columnEmail;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn EmailConfirmedColumn {
-                get {
-                    return this.columnEmailConfirmed;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PasswordHashColumn {
-                get {
-                    return this.columnPasswordHash;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn SecurityStampColumn {
-                get {
-                    return this.columnSecurityStamp;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PhoneNumberColumn {
-                get {
-                    return this.columnPhoneNumber;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PhoneNumberConfirmedColumn {
-                get {
-                    return this.columnPhoneNumberConfirmed;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn TwoFactorEnabledColumn {
-                get {
-                    return this.columnTwoFactorEnabled;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn LockoutEndDateUtcColumn {
-                get {
-                    return this.columnLockoutEndDateUtc;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn LockoutEnabledColumn {
-                get {
-                    return this.columnLockoutEnabled;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn AccessFailedCountColumn {
-                get {
-                    return this.columnAccessFailedCount;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn UserNameColumn {
                 get {
                     return this.columnUserName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn FirstNameColumn {
-                get {
-                    return this.columnFirstName;
                 }
             }
             
@@ -2525,137 +1233,49 @@ namespace DemoScore {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn RoleColumn {
+            public global::System.Data.DataColumn EmailColumn {
                 get {
-                    return this.columnRole;
+                    return this.columnEmail;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn DocumentColumn {
+            public global::System.Data.DataColumn Cate_DescriptionColumn {
                 get {
-                    return this.columnDocument;
+                    return this.columnCate_Description;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PositionIdColumn {
+            public global::System.Data.DataColumn SubC_DescriptionColumn {
                 get {
-                    return this.columnPositionId;
+                    return this.columnSubC_Description;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn AreaIdColumn {
+            public global::System.Data.DataColumn TRUEColumn {
                 get {
-                    return this.columnAreaId;
+                    return this.columnTRUE;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn CityIdColumn {
+            public global::System.Data.DataColumn FALSEColumn {
                 get {
-                    return this.columnCityId;
+                    return this.columnFALSE;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn LocationIdColumn {
+            public global::System.Data.DataColumn TOTALColumn {
                 get {
-                    return this.columnLocationId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn lastAccessColumn {
-                get {
-                    return this.columnlastAccess;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn firstAccessColumn {
-                get {
-                    return this.columnfirstAccess;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn TermsandConditionsColumn {
-                get {
-                    return this.columnTermsandConditions;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn CompanyIdColumn {
-                get {
-                    return this.columnCompanyId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Cargo_IdColumn {
-                get {
-                    return this.columnCargo_Id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Area_IdColumn {
-                get {
-                    return this.columnArea_Id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Ubicacion_IdColumn {
-                get {
-                    return this.columnUbicacion_Id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Ciudad_IdColumn {
-                get {
-                    return this.columnCiudad_Id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn DiscriminatorColumn {
-                get {
-                    return this.columnDiscriminator;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Location_DescColumn {
-                get {
-                    return this.columnLocation_Desc;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Nivel_Nivel_IdColumn {
-                get {
-                    return this.columnNivel_Nivel_Id;
+                    return this.columnTOTAL;
                 }
             }
             
@@ -2696,81 +1316,20 @@ namespace DemoScore {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PROC_REP_PROCESS_USERRow AddPROC_REP_PROCESS_USERRow(
-                        string Id, 
-                        string Email, 
-                        bool EmailConfirmed, 
-                        string PasswordHash, 
-                        string SecurityStamp, 
-                        string PhoneNumber, 
-                        bool PhoneNumberConfirmed, 
-                        bool TwoFactorEnabled, 
-                        System.DateTime LockoutEndDateUtc, 
-                        bool LockoutEnabled, 
-                        int AccessFailedCount, 
-                        string UserName, 
-                        string FirstName, 
-                        string LastName, 
-                        int Role, 
-                        string Document, 
-                        int PositionId, 
-                        int AreaId, 
-                        int CityId, 
-                        int LocationId, 
-                        System.DateTime lastAccess, 
-                        System.DateTime firstAccess, 
-                        int TermsandConditions, 
-                        int CompanyId, 
-                        int Cargo_Id, 
-                        int Area_Id, 
-                        int Ubicacion_Id, 
-                        int Ciudad_Id, 
-                        string Discriminator, 
-                        string Location_Desc, 
-                        int Nivel_Nivel_Id) {
+            public PROC_REP_PROCESS_USERRow AddPROC_REP_PROCESS_USERRow(string UserName, string LastName, string Email, string Cate_Description, string SubC_Description, int TRUE, int FALSE, int TOTAL) {
                 PROC_REP_PROCESS_USERRow rowPROC_REP_PROCESS_USERRow = ((PROC_REP_PROCESS_USERRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Id,
-                        Email,
-                        EmailConfirmed,
-                        PasswordHash,
-                        SecurityStamp,
-                        PhoneNumber,
-                        PhoneNumberConfirmed,
-                        TwoFactorEnabled,
-                        LockoutEndDateUtc,
-                        LockoutEnabled,
-                        AccessFailedCount,
                         UserName,
-                        FirstName,
                         LastName,
-                        Role,
-                        Document,
-                        PositionId,
-                        AreaId,
-                        CityId,
-                        LocationId,
-                        lastAccess,
-                        firstAccess,
-                        TermsandConditions,
-                        CompanyId,
-                        Cargo_Id,
-                        Area_Id,
-                        Ubicacion_Id,
-                        Ciudad_Id,
-                        Discriminator,
-                        Location_Desc,
-                        Nivel_Nivel_Id};
+                        Email,
+                        Cate_Description,
+                        SubC_Description,
+                        TRUE,
+                        FALSE,
+                        TOTAL};
                 rowPROC_REP_PROCESS_USERRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPROC_REP_PROCESS_USERRow);
                 return rowPROC_REP_PROCESS_USERRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PROC_REP_PROCESS_USERRow FindById(string Id) {
-                return ((PROC_REP_PROCESS_USERRow)(this.Rows.Find(new object[] {
-                            Id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2790,126 +1349,44 @@ namespace DemoScore {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnId = base.Columns["Id"];
-                this.columnEmail = base.Columns["Email"];
-                this.columnEmailConfirmed = base.Columns["EmailConfirmed"];
-                this.columnPasswordHash = base.Columns["PasswordHash"];
-                this.columnSecurityStamp = base.Columns["SecurityStamp"];
-                this.columnPhoneNumber = base.Columns["PhoneNumber"];
-                this.columnPhoneNumberConfirmed = base.Columns["PhoneNumberConfirmed"];
-                this.columnTwoFactorEnabled = base.Columns["TwoFactorEnabled"];
-                this.columnLockoutEndDateUtc = base.Columns["LockoutEndDateUtc"];
-                this.columnLockoutEnabled = base.Columns["LockoutEnabled"];
-                this.columnAccessFailedCount = base.Columns["AccessFailedCount"];
                 this.columnUserName = base.Columns["UserName"];
-                this.columnFirstName = base.Columns["FirstName"];
                 this.columnLastName = base.Columns["LastName"];
-                this.columnRole = base.Columns["Role"];
-                this.columnDocument = base.Columns["Document"];
-                this.columnPositionId = base.Columns["PositionId"];
-                this.columnAreaId = base.Columns["AreaId"];
-                this.columnCityId = base.Columns["CityId"];
-                this.columnLocationId = base.Columns["LocationId"];
-                this.columnlastAccess = base.Columns["lastAccess"];
-                this.columnfirstAccess = base.Columns["firstAccess"];
-                this.columnTermsandConditions = base.Columns["TermsandConditions"];
-                this.columnCompanyId = base.Columns["CompanyId"];
-                this.columnCargo_Id = base.Columns["Cargo_Id"];
-                this.columnArea_Id = base.Columns["Area_Id"];
-                this.columnUbicacion_Id = base.Columns["Ubicacion_Id"];
-                this.columnCiudad_Id = base.Columns["Ciudad_Id"];
-                this.columnDiscriminator = base.Columns["Discriminator"];
-                this.columnLocation_Desc = base.Columns["Location_Desc"];
-                this.columnNivel_Nivel_Id = base.Columns["Nivel_Nivel_Id"];
+                this.columnEmail = base.Columns["Email"];
+                this.columnCate_Description = base.Columns["Cate_Description"];
+                this.columnSubC_Description = base.Columns["SubC_Description"];
+                this.columnTRUE = base.Columns["TRUE"];
+                this.columnFALSE = base.Columns["FALSE"];
+                this.columnTOTAL = base.Columns["TOTAL"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId);
-                this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEmail);
-                this.columnEmailConfirmed = new global::System.Data.DataColumn("EmailConfirmed", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEmailConfirmed);
-                this.columnPasswordHash = new global::System.Data.DataColumn("PasswordHash", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPasswordHash);
-                this.columnSecurityStamp = new global::System.Data.DataColumn("SecurityStamp", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSecurityStamp);
-                this.columnPhoneNumber = new global::System.Data.DataColumn("PhoneNumber", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPhoneNumber);
-                this.columnPhoneNumberConfirmed = new global::System.Data.DataColumn("PhoneNumberConfirmed", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPhoneNumberConfirmed);
-                this.columnTwoFactorEnabled = new global::System.Data.DataColumn("TwoFactorEnabled", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTwoFactorEnabled);
-                this.columnLockoutEndDateUtc = new global::System.Data.DataColumn("LockoutEndDateUtc", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLockoutEndDateUtc);
-                this.columnLockoutEnabled = new global::System.Data.DataColumn("LockoutEnabled", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLockoutEnabled);
-                this.columnAccessFailedCount = new global::System.Data.DataColumn("AccessFailedCount", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAccessFailedCount);
                 this.columnUserName = new global::System.Data.DataColumn("UserName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUserName);
-                this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFirstName);
                 this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLastName);
-                this.columnRole = new global::System.Data.DataColumn("Role", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRole);
-                this.columnDocument = new global::System.Data.DataColumn("Document", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDocument);
-                this.columnPositionId = new global::System.Data.DataColumn("PositionId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPositionId);
-                this.columnAreaId = new global::System.Data.DataColumn("AreaId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAreaId);
-                this.columnCityId = new global::System.Data.DataColumn("CityId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCityId);
-                this.columnLocationId = new global::System.Data.DataColumn("LocationId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLocationId);
-                this.columnlastAccess = new global::System.Data.DataColumn("lastAccess", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnlastAccess);
-                this.columnfirstAccess = new global::System.Data.DataColumn("firstAccess", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfirstAccess);
-                this.columnTermsandConditions = new global::System.Data.DataColumn("TermsandConditions", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTermsandConditions);
-                this.columnCompanyId = new global::System.Data.DataColumn("CompanyId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCompanyId);
-                this.columnCargo_Id = new global::System.Data.DataColumn("Cargo_Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCargo_Id);
-                this.columnArea_Id = new global::System.Data.DataColumn("Area_Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnArea_Id);
-                this.columnUbicacion_Id = new global::System.Data.DataColumn("Ubicacion_Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUbicacion_Id);
-                this.columnCiudad_Id = new global::System.Data.DataColumn("Ciudad_Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCiudad_Id);
-                this.columnDiscriminator = new global::System.Data.DataColumn("Discriminator", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDiscriminator);
-                this.columnLocation_Desc = new global::System.Data.DataColumn("Location_Desc", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLocation_Desc);
-                this.columnNivel_Nivel_Id = new global::System.Data.DataColumn("Nivel_Nivel_Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNivel_Nivel_Id);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnId}, true));
-                this.columnId.AllowDBNull = false;
-                this.columnId.Unique = true;
-                this.columnId.MaxLength = 128;
-                this.columnEmail.MaxLength = 256;
-                this.columnEmailConfirmed.AllowDBNull = false;
-                this.columnPasswordHash.MaxLength = 2147483647;
-                this.columnSecurityStamp.MaxLength = 2147483647;
-                this.columnPhoneNumber.MaxLength = 2147483647;
-                this.columnPhoneNumberConfirmed.AllowDBNull = false;
-                this.columnTwoFactorEnabled.AllowDBNull = false;
-                this.columnLockoutEnabled.AllowDBNull = false;
-                this.columnAccessFailedCount.AllowDBNull = false;
+                this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmail);
+                this.columnCate_Description = new global::System.Data.DataColumn("Cate_Description", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCate_Description);
+                this.columnSubC_Description = new global::System.Data.DataColumn("SubC_Description", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSubC_Description);
+                this.columnTRUE = new global::System.Data.DataColumn("TRUE", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTRUE);
+                this.columnFALSE = new global::System.Data.DataColumn("FALSE", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFALSE);
+                this.columnTOTAL = new global::System.Data.DataColumn("TOTAL", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTOTAL);
                 this.columnUserName.AllowDBNull = false;
                 this.columnUserName.MaxLength = 256;
-                this.columnFirstName.MaxLength = 2147483647;
                 this.columnLastName.MaxLength = 2147483647;
-                this.columnDocument.MaxLength = 2147483647;
-                this.columnDiscriminator.AllowDBNull = false;
-                this.columnDiscriminator.MaxLength = 128;
-                this.columnLocation_Desc.MaxLength = 2147483647;
+                this.columnEmail.MaxLength = 256;
+                this.columnCate_Description.MaxLength = 2147483647;
+                this.columnSubC_Description.MaxLength = 2147483647;
+                this.columnTRUE.ReadOnly = true;
+                this.columnFALSE.ReadOnly = true;
+                this.columnTOTAL.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3041,26 +1518,22 @@ namespace DemoScore {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class PROC_REP_CATEGORYDataTable : global::System.Data.TypedTableBase<PROC_REP_CATEGORYRow> {
-            
-            private global::System.Data.DataColumn columncat_id;
-            
-            private global::System.Data.DataColumn columnCATEGORY;
-            
-            private global::System.Data.DataColumn columnSUMUSER;
-            
-            private global::System.Data.DataColumn columnTRUE;
-            
-            private global::System.Data.DataColumn columnFALSE;
-            
-            private global::System.Data.DataColumn columnTOTAL;
+        public partial class PROC_REP_PROCESS_GENERALDataTable : global::System.Data.TypedTableBase<PROC_REP_PROCESS_GENERALRow> {
             
             private global::System.Data.DataColumn columnCompanyName;
             
+            private global::System.Data.DataColumn columnCategoria;
+            
+            private global::System.Data.DataColumn columnSubC_Description;
+            
+            private global::System.Data.DataColumn columnQUESTION;
+            
+            private global::System.Data.DataColumn columnUSUARIOS_EVALUADOS;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PROC_REP_CATEGORYDataTable() {
-                this.TableName = "PROC_REP_CATEGORY";
+            public PROC_REP_PROCESS_GENERALDataTable() {
+                this.TableName = "PROC_REP_PROCESS_GENERAL";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -3068,7 +1541,7 @@ namespace DemoScore {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal PROC_REP_CATEGORYDataTable(global::System.Data.DataTable table) {
+            internal PROC_REP_PROCESS_GENERALDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -3085,57 +1558,9 @@ namespace DemoScore {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected PROC_REP_CATEGORYDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected PROC_REP_PROCESS_GENERALDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn cat_idColumn {
-                get {
-                    return this.columncat_id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn CATEGORYColumn {
-                get {
-                    return this.columnCATEGORY;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn SUMUSERColumn {
-                get {
-                    return this.columnSUMUSER;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn TRUEColumn {
-                get {
-                    return this.columnTRUE;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn FALSEColumn {
-                get {
-                    return this.columnFALSE;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn TOTALColumn {
-                get {
-                    return this.columnTOTAL;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3143,6 +1568,38 @@ namespace DemoScore {
             public global::System.Data.DataColumn CompanyNameColumn {
                 get {
                     return this.columnCompanyName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CategoriaColumn {
+                get {
+                    return this.columnCategoria;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn SubC_DescriptionColumn {
+                get {
+                    return this.columnSubC_Description;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn QUESTIONColumn {
+                get {
+                    return this.columnQUESTION;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn USUARIOS_EVALUADOSColumn {
+                get {
+                    return this.columnUSUARIOS_EVALUADOS;
                 }
             }
             
@@ -3157,58 +1614,49 @@ namespace DemoScore {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PROC_REP_CATEGORYRow this[int index] {
+            public PROC_REP_PROCESS_GENERALRow this[int index] {
                 get {
-                    return ((PROC_REP_CATEGORYRow)(this.Rows[index]));
+                    return ((PROC_REP_PROCESS_GENERALRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PROC_REP_CATEGORYRowChangeEventHandler PROC_REP_CATEGORYRowChanging;
+            public event PROC_REP_PROCESS_GENERALRowChangeEventHandler PROC_REP_PROCESS_GENERALRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PROC_REP_CATEGORYRowChangeEventHandler PROC_REP_CATEGORYRowChanged;
+            public event PROC_REP_PROCESS_GENERALRowChangeEventHandler PROC_REP_PROCESS_GENERALRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PROC_REP_CATEGORYRowChangeEventHandler PROC_REP_CATEGORYRowDeleting;
+            public event PROC_REP_PROCESS_GENERALRowChangeEventHandler PROC_REP_PROCESS_GENERALRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PROC_REP_CATEGORYRowChangeEventHandler PROC_REP_CATEGORYRowDeleted;
+            public event PROC_REP_PROCESS_GENERALRowChangeEventHandler PROC_REP_PROCESS_GENERALRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddPROC_REP_CATEGORYRow(PROC_REP_CATEGORYRow row) {
+            public void AddPROC_REP_PROCESS_GENERALRow(PROC_REP_PROCESS_GENERALRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PROC_REP_CATEGORYRow AddPROC_REP_CATEGORYRow(string CATEGORY, int SUMUSER, int TRUE, int FALSE, int TOTAL, string CompanyName) {
-                PROC_REP_CATEGORYRow rowPROC_REP_CATEGORYRow = ((PROC_REP_CATEGORYRow)(this.NewRow()));
+            public PROC_REP_PROCESS_GENERALRow AddPROC_REP_PROCESS_GENERALRow(string CompanyName, string Categoria, string SubC_Description, int QUESTION, int USUARIOS_EVALUADOS) {
+                PROC_REP_PROCESS_GENERALRow rowPROC_REP_PROCESS_GENERALRow = ((PROC_REP_PROCESS_GENERALRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
-                        CATEGORY,
-                        SUMUSER,
-                        TRUE,
-                        FALSE,
-                        TOTAL,
-                        CompanyName};
-                rowPROC_REP_CATEGORYRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowPROC_REP_CATEGORYRow);
-                return rowPROC_REP_CATEGORYRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PROC_REP_CATEGORYRow FindBycat_id(int cat_id) {
-                return ((PROC_REP_CATEGORYRow)(this.Rows.Find(new object[] {
-                            cat_id})));
+                        CompanyName,
+                        Categoria,
+                        SubC_Description,
+                        QUESTION,
+                        USUARIOS_EVALUADOS};
+                rowPROC_REP_PROCESS_GENERALRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowPROC_REP_PROCESS_GENERALRow);
+                return rowPROC_REP_PROCESS_GENERALRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                PROC_REP_CATEGORYDataTable cln = ((PROC_REP_CATEGORYDataTable)(base.Clone()));
+                PROC_REP_PROCESS_GENERALDataTable cln = ((PROC_REP_PROCESS_GENERALDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -3216,78 +1664,63 @@ namespace DemoScore {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new PROC_REP_CATEGORYDataTable();
+                return new PROC_REP_PROCESS_GENERALDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columncat_id = base.Columns["cat_id"];
-                this.columnCATEGORY = base.Columns["CATEGORY"];
-                this.columnSUMUSER = base.Columns["SUMUSER"];
-                this.columnTRUE = base.Columns["TRUE"];
-                this.columnFALSE = base.Columns["FALSE"];
-                this.columnTOTAL = base.Columns["TOTAL"];
                 this.columnCompanyName = base.Columns["CompanyName"];
+                this.columnCategoria = base.Columns["Categoria"];
+                this.columnSubC_Description = base.Columns["SubC_Description"];
+                this.columnQUESTION = base.Columns["QUESTION"];
+                this.columnUSUARIOS_EVALUADOS = base.Columns["USUARIOS_EVALUADOS"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columncat_id = new global::System.Data.DataColumn("cat_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncat_id);
-                this.columnCATEGORY = new global::System.Data.DataColumn("CATEGORY", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCATEGORY);
-                this.columnSUMUSER = new global::System.Data.DataColumn("SUMUSER", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSUMUSER);
-                this.columnTRUE = new global::System.Data.DataColumn("TRUE", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTRUE);
-                this.columnFALSE = new global::System.Data.DataColumn("FALSE", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFALSE);
-                this.columnTOTAL = new global::System.Data.DataColumn("TOTAL", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTOTAL);
                 this.columnCompanyName = new global::System.Data.DataColumn("CompanyName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCompanyName);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columncat_id}, true));
-                this.columncat_id.AutoIncrement = true;
-                this.columncat_id.AutoIncrementSeed = -1;
-                this.columncat_id.AutoIncrementStep = -1;
-                this.columncat_id.AllowDBNull = false;
-                this.columncat_id.ReadOnly = true;
-                this.columncat_id.Unique = true;
-                this.columnCATEGORY.MaxLength = 2147483647;
-                this.columnSUMUSER.ReadOnly = true;
-                this.columnTRUE.ReadOnly = true;
-                this.columnFALSE.ReadOnly = true;
-                this.columnTOTAL.ReadOnly = true;
+                this.columnCategoria = new global::System.Data.DataColumn("Categoria", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCategoria);
+                this.columnSubC_Description = new global::System.Data.DataColumn("SubC_Description", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSubC_Description);
+                this.columnQUESTION = new global::System.Data.DataColumn("QUESTION", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQUESTION);
+                this.columnUSUARIOS_EVALUADOS = new global::System.Data.DataColumn("USUARIOS_EVALUADOS", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUSUARIOS_EVALUADOS);
                 this.columnCompanyName.MaxLength = 2147483647;
+                this.columnCategoria.MaxLength = 2147483647;
+                this.columnSubC_Description.MaxLength = 2147483647;
+                this.columnQUESTION.ReadOnly = true;
+                this.columnUSUARIOS_EVALUADOS.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PROC_REP_CATEGORYRow NewPROC_REP_CATEGORYRow() {
-                return ((PROC_REP_CATEGORYRow)(this.NewRow()));
+            public PROC_REP_PROCESS_GENERALRow NewPROC_REP_PROCESS_GENERALRow() {
+                return ((PROC_REP_PROCESS_GENERALRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new PROC_REP_CATEGORYRow(builder);
+                return new PROC_REP_PROCESS_GENERALRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(PROC_REP_CATEGORYRow);
+                return typeof(PROC_REP_PROCESS_GENERALRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.PROC_REP_CATEGORYRowChanged != null)) {
-                    this.PROC_REP_CATEGORYRowChanged(this, new PROC_REP_CATEGORYRowChangeEvent(((PROC_REP_CATEGORYRow)(e.Row)), e.Action));
+                if ((this.PROC_REP_PROCESS_GENERALRowChanged != null)) {
+                    this.PROC_REP_PROCESS_GENERALRowChanged(this, new PROC_REP_PROCESS_GENERALRowChangeEvent(((PROC_REP_PROCESS_GENERALRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3295,8 +1728,8 @@ namespace DemoScore {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.PROC_REP_CATEGORYRowChanging != null)) {
-                    this.PROC_REP_CATEGORYRowChanging(this, new PROC_REP_CATEGORYRowChangeEvent(((PROC_REP_CATEGORYRow)(e.Row)), e.Action));
+                if ((this.PROC_REP_PROCESS_GENERALRowChanging != null)) {
+                    this.PROC_REP_PROCESS_GENERALRowChanging(this, new PROC_REP_PROCESS_GENERALRowChangeEvent(((PROC_REP_PROCESS_GENERALRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3304,8 +1737,8 @@ namespace DemoScore {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.PROC_REP_CATEGORYRowDeleted != null)) {
-                    this.PROC_REP_CATEGORYRowDeleted(this, new PROC_REP_CATEGORYRowChangeEvent(((PROC_REP_CATEGORYRow)(e.Row)), e.Action));
+                if ((this.PROC_REP_PROCESS_GENERALRowDeleted != null)) {
+                    this.PROC_REP_PROCESS_GENERALRowDeleted(this, new PROC_REP_PROCESS_GENERALRowChangeEvent(((PROC_REP_PROCESS_GENERALRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3313,14 +1746,14 @@ namespace DemoScore {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.PROC_REP_CATEGORYRowDeleting != null)) {
-                    this.PROC_REP_CATEGORYRowDeleting(this, new PROC_REP_CATEGORYRowChangeEvent(((PROC_REP_CATEGORYRow)(e.Row)), e.Action));
+                if ((this.PROC_REP_PROCESS_GENERALRowDeleting != null)) {
+                    this.PROC_REP_PROCESS_GENERALRowDeleting(this, new PROC_REP_PROCESS_GENERALRowChangeEvent(((PROC_REP_PROCESS_GENERALRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovePROC_REP_CATEGORYRow(PROC_REP_CATEGORYRow row) {
+            public void RemovePROC_REP_PROCESS_GENERALRow(PROC_REP_PROCESS_GENERALRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -3347,7 +1780,7 @@ namespace DemoScore {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "PROC_REP_CATEGORYDataTable";
+                attribute2.FixedValue = "PROC_REP_PROCESS_GENERALDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3781,2271 +2214,6 @@ namespace DemoScore {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class PROC_REP_PROCESS_CATEGORYRow : global::System.Data.DataRow {
-            
-            private PROC_REP_PROCESS_CATEGORYDataTable tablePROC_REP_PROCESS_CATEGORY;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal PROC_REP_PROCESS_CATEGORYRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tablePROC_REP_PROCESS_CATEGORY = ((PROC_REP_PROCESS_CATEGORYDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Id {
-                get {
-                    return ((string)(this[this.tablePROC_REP_PROCESS_CATEGORY.IdColumn]));
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Email {
-                get {
-                    try {
-                        return ((string)(this[this.tablePROC_REP_PROCESS_CATEGORY.EmailColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Email\' in table \'PROC_REP_PROCESS_CATEGORY\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.EmailColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool EmailConfirmed {
-                get {
-                    return ((bool)(this[this.tablePROC_REP_PROCESS_CATEGORY.EmailConfirmedColumn]));
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.EmailConfirmedColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string PasswordHash {
-                get {
-                    try {
-                        return ((string)(this[this.tablePROC_REP_PROCESS_CATEGORY.PasswordHashColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PasswordHash\' in table \'PROC_REP_PROCESS_CATEGORY\' is DBNul" +
-                                "l.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.PasswordHashColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string SecurityStamp {
-                get {
-                    try {
-                        return ((string)(this[this.tablePROC_REP_PROCESS_CATEGORY.SecurityStampColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SecurityStamp\' in table \'PROC_REP_PROCESS_CATEGORY\' is DBNu" +
-                                "ll.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.SecurityStampColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string PhoneNumber {
-                get {
-                    try {
-                        return ((string)(this[this.tablePROC_REP_PROCESS_CATEGORY.PhoneNumberColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PhoneNumber\' in table \'PROC_REP_PROCESS_CATEGORY\' is DBNull" +
-                                ".", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.PhoneNumberColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool PhoneNumberConfirmed {
-                get {
-                    return ((bool)(this[this.tablePROC_REP_PROCESS_CATEGORY.PhoneNumberConfirmedColumn]));
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.PhoneNumberConfirmedColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool TwoFactorEnabled {
-                get {
-                    return ((bool)(this[this.tablePROC_REP_PROCESS_CATEGORY.TwoFactorEnabledColumn]));
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.TwoFactorEnabledColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime LockoutEndDateUtc {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablePROC_REP_PROCESS_CATEGORY.LockoutEndDateUtcColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'LockoutEndDateUtc\' in table \'PROC_REP_PROCESS_CATEGORY\' is " +
-                                "DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.LockoutEndDateUtcColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool LockoutEnabled {
-                get {
-                    return ((bool)(this[this.tablePROC_REP_PROCESS_CATEGORY.LockoutEnabledColumn]));
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.LockoutEnabledColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int AccessFailedCount {
-                get {
-                    return ((int)(this[this.tablePROC_REP_PROCESS_CATEGORY.AccessFailedCountColumn]));
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.AccessFailedCountColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string UserName {
-                get {
-                    return ((string)(this[this.tablePROC_REP_PROCESS_CATEGORY.UserNameColumn]));
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.UserNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string FirstName {
-                get {
-                    try {
-                        return ((string)(this[this.tablePROC_REP_PROCESS_CATEGORY.FirstNameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'FirstName\' in table \'PROC_REP_PROCESS_CATEGORY\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.FirstNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string LastName {
-                get {
-                    try {
-                        return ((string)(this[this.tablePROC_REP_PROCESS_CATEGORY.LastNameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'LastName\' in table \'PROC_REP_PROCESS_CATEGORY\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.LastNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Role {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_CATEGORY.RoleColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Role\' in table \'PROC_REP_PROCESS_CATEGORY\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.RoleColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Document {
-                get {
-                    try {
-                        return ((string)(this[this.tablePROC_REP_PROCESS_CATEGORY.DocumentColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Document\' in table \'PROC_REP_PROCESS_CATEGORY\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.DocumentColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int PositionId {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_CATEGORY.PositionIdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PositionId\' in table \'PROC_REP_PROCESS_CATEGORY\' is DBNull." +
-                                "", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.PositionIdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int AreaId {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_CATEGORY.AreaIdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'AreaId\' in table \'PROC_REP_PROCESS_CATEGORY\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.AreaIdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int CityId {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_CATEGORY.CityIdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CityId\' in table \'PROC_REP_PROCESS_CATEGORY\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.CityIdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int LocationId {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_CATEGORY.LocationIdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'LocationId\' in table \'PROC_REP_PROCESS_CATEGORY\' is DBNull." +
-                                "", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.LocationIdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime lastAccess {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablePROC_REP_PROCESS_CATEGORY.lastAccessColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'lastAccess\' in table \'PROC_REP_PROCESS_CATEGORY\' is DBNull." +
-                                "", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.lastAccessColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime firstAccess {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablePROC_REP_PROCESS_CATEGORY.firstAccessColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'firstAccess\' in table \'PROC_REP_PROCESS_CATEGORY\' is DBNull" +
-                                ".", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.firstAccessColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int TermsandConditions {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_CATEGORY.TermsandConditionsColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TermsandConditions\' in table \'PROC_REP_PROCESS_CATEGORY\' is" +
-                                " DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.TermsandConditionsColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int CompanyId {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_CATEGORY.CompanyIdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CompanyId\' in table \'PROC_REP_PROCESS_CATEGORY\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.CompanyIdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Cargo_Id {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_CATEGORY.Cargo_IdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cargo_Id\' in table \'PROC_REP_PROCESS_CATEGORY\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.Cargo_IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Area_Id {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_CATEGORY.Area_IdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Area_Id\' in table \'PROC_REP_PROCESS_CATEGORY\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.Area_IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Ubicacion_Id {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_CATEGORY.Ubicacion_IdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Ubicacion_Id\' in table \'PROC_REP_PROCESS_CATEGORY\' is DBNul" +
-                                "l.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.Ubicacion_IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Ciudad_Id {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_CATEGORY.Ciudad_IdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Ciudad_Id\' in table \'PROC_REP_PROCESS_CATEGORY\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.Ciudad_IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Discriminator {
-                get {
-                    return ((string)(this[this.tablePROC_REP_PROCESS_CATEGORY.DiscriminatorColumn]));
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.DiscriminatorColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Location_Desc {
-                get {
-                    try {
-                        return ((string)(this[this.tablePROC_REP_PROCESS_CATEGORY.Location_DescColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Location_Desc\' in table \'PROC_REP_PROCESS_CATEGORY\' is DBNu" +
-                                "ll.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.Location_DescColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Nivel_Nivel_Id {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_CATEGORY.Nivel_Nivel_IdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Nivel_Nivel_Id\' in table \'PROC_REP_PROCESS_CATEGORY\' is DBN" +
-                                "ull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_CATEGORY.Nivel_Nivel_IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsEmailNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_CATEGORY.EmailColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetEmailNull() {
-                this[this.tablePROC_REP_PROCESS_CATEGORY.EmailColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsPasswordHashNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_CATEGORY.PasswordHashColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetPasswordHashNull() {
-                this[this.tablePROC_REP_PROCESS_CATEGORY.PasswordHashColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSecurityStampNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_CATEGORY.SecurityStampColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSecurityStampNull() {
-                this[this.tablePROC_REP_PROCESS_CATEGORY.SecurityStampColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsPhoneNumberNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_CATEGORY.PhoneNumberColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetPhoneNumberNull() {
-                this[this.tablePROC_REP_PROCESS_CATEGORY.PhoneNumberColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsLockoutEndDateUtcNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_CATEGORY.LockoutEndDateUtcColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetLockoutEndDateUtcNull() {
-                this[this.tablePROC_REP_PROCESS_CATEGORY.LockoutEndDateUtcColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsFirstNameNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_CATEGORY.FirstNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetFirstNameNull() {
-                this[this.tablePROC_REP_PROCESS_CATEGORY.FirstNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsLastNameNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_CATEGORY.LastNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetLastNameNull() {
-                this[this.tablePROC_REP_PROCESS_CATEGORY.LastNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsRoleNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_CATEGORY.RoleColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetRoleNull() {
-                this[this.tablePROC_REP_PROCESS_CATEGORY.RoleColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsDocumentNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_CATEGORY.DocumentColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetDocumentNull() {
-                this[this.tablePROC_REP_PROCESS_CATEGORY.DocumentColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsPositionIdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_CATEGORY.PositionIdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetPositionIdNull() {
-                this[this.tablePROC_REP_PROCESS_CATEGORY.PositionIdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsAreaIdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_CATEGORY.AreaIdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetAreaIdNull() {
-                this[this.tablePROC_REP_PROCESS_CATEGORY.AreaIdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCityIdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_CATEGORY.CityIdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCityIdNull() {
-                this[this.tablePROC_REP_PROCESS_CATEGORY.CityIdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsLocationIdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_CATEGORY.LocationIdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetLocationIdNull() {
-                this[this.tablePROC_REP_PROCESS_CATEGORY.LocationIdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IslastAccessNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_CATEGORY.lastAccessColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetlastAccessNull() {
-                this[this.tablePROC_REP_PROCESS_CATEGORY.lastAccessColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsfirstAccessNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_CATEGORY.firstAccessColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetfirstAccessNull() {
-                this[this.tablePROC_REP_PROCESS_CATEGORY.firstAccessColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsTermsandConditionsNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_CATEGORY.TermsandConditionsColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetTermsandConditionsNull() {
-                this[this.tablePROC_REP_PROCESS_CATEGORY.TermsandConditionsColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCompanyIdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_CATEGORY.CompanyIdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCompanyIdNull() {
-                this[this.tablePROC_REP_PROCESS_CATEGORY.CompanyIdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCargo_IdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_CATEGORY.Cargo_IdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCargo_IdNull() {
-                this[this.tablePROC_REP_PROCESS_CATEGORY.Cargo_IdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsArea_IdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_CATEGORY.Area_IdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetArea_IdNull() {
-                this[this.tablePROC_REP_PROCESS_CATEGORY.Area_IdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsUbicacion_IdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_CATEGORY.Ubicacion_IdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetUbicacion_IdNull() {
-                this[this.tablePROC_REP_PROCESS_CATEGORY.Ubicacion_IdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCiudad_IdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_CATEGORY.Ciudad_IdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCiudad_IdNull() {
-                this[this.tablePROC_REP_PROCESS_CATEGORY.Ciudad_IdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsLocation_DescNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_CATEGORY.Location_DescColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetLocation_DescNull() {
-                this[this.tablePROC_REP_PROCESS_CATEGORY.Location_DescColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsNivel_Nivel_IdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_CATEGORY.Nivel_Nivel_IdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetNivel_Nivel_IdNull() {
-                this[this.tablePROC_REP_PROCESS_CATEGORY.Nivel_Nivel_IdColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class PROC_REP_PROCESS_GENERALRow : global::System.Data.DataRow {
-            
-            private PROC_REP_PROCESS_GENERALDataTable tablePROC_REP_PROCESS_GENERAL;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal PROC_REP_PROCESS_GENERALRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tablePROC_REP_PROCESS_GENERAL = ((PROC_REP_PROCESS_GENERALDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Id {
-                get {
-                    return ((string)(this[this.tablePROC_REP_PROCESS_GENERAL.IdColumn]));
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Email {
-                get {
-                    try {
-                        return ((string)(this[this.tablePROC_REP_PROCESS_GENERAL.EmailColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Email\' in table \'PROC_REP_PROCESS_GENERAL\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.EmailColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool EmailConfirmed {
-                get {
-                    return ((bool)(this[this.tablePROC_REP_PROCESS_GENERAL.EmailConfirmedColumn]));
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.EmailConfirmedColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string PasswordHash {
-                get {
-                    try {
-                        return ((string)(this[this.tablePROC_REP_PROCESS_GENERAL.PasswordHashColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PasswordHash\' in table \'PROC_REP_PROCESS_GENERAL\' is DBNull" +
-                                ".", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.PasswordHashColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string SecurityStamp {
-                get {
-                    try {
-                        return ((string)(this[this.tablePROC_REP_PROCESS_GENERAL.SecurityStampColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SecurityStamp\' in table \'PROC_REP_PROCESS_GENERAL\' is DBNul" +
-                                "l.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.SecurityStampColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string PhoneNumber {
-                get {
-                    try {
-                        return ((string)(this[this.tablePROC_REP_PROCESS_GENERAL.PhoneNumberColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PhoneNumber\' in table \'PROC_REP_PROCESS_GENERAL\' is DBNull." +
-                                "", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.PhoneNumberColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool PhoneNumberConfirmed {
-                get {
-                    return ((bool)(this[this.tablePROC_REP_PROCESS_GENERAL.PhoneNumberConfirmedColumn]));
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.PhoneNumberConfirmedColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool TwoFactorEnabled {
-                get {
-                    return ((bool)(this[this.tablePROC_REP_PROCESS_GENERAL.TwoFactorEnabledColumn]));
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.TwoFactorEnabledColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime LockoutEndDateUtc {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablePROC_REP_PROCESS_GENERAL.LockoutEndDateUtcColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'LockoutEndDateUtc\' in table \'PROC_REP_PROCESS_GENERAL\' is D" +
-                                "BNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.LockoutEndDateUtcColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool LockoutEnabled {
-                get {
-                    return ((bool)(this[this.tablePROC_REP_PROCESS_GENERAL.LockoutEnabledColumn]));
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.LockoutEnabledColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int AccessFailedCount {
-                get {
-                    return ((int)(this[this.tablePROC_REP_PROCESS_GENERAL.AccessFailedCountColumn]));
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.AccessFailedCountColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string UserName {
-                get {
-                    return ((string)(this[this.tablePROC_REP_PROCESS_GENERAL.UserNameColumn]));
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.UserNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string FirstName {
-                get {
-                    try {
-                        return ((string)(this[this.tablePROC_REP_PROCESS_GENERAL.FirstNameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'FirstName\' in table \'PROC_REP_PROCESS_GENERAL\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.FirstNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string LastName {
-                get {
-                    try {
-                        return ((string)(this[this.tablePROC_REP_PROCESS_GENERAL.LastNameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'LastName\' in table \'PROC_REP_PROCESS_GENERAL\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.LastNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Role {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_GENERAL.RoleColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Role\' in table \'PROC_REP_PROCESS_GENERAL\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.RoleColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Document {
-                get {
-                    try {
-                        return ((string)(this[this.tablePROC_REP_PROCESS_GENERAL.DocumentColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Document\' in table \'PROC_REP_PROCESS_GENERAL\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.DocumentColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int PositionId {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_GENERAL.PositionIdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PositionId\' in table \'PROC_REP_PROCESS_GENERAL\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.PositionIdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int AreaId {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_GENERAL.AreaIdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'AreaId\' in table \'PROC_REP_PROCESS_GENERAL\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.AreaIdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int CityId {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_GENERAL.CityIdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CityId\' in table \'PROC_REP_PROCESS_GENERAL\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.CityIdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int LocationId {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_GENERAL.LocationIdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'LocationId\' in table \'PROC_REP_PROCESS_GENERAL\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.LocationIdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime lastAccess {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablePROC_REP_PROCESS_GENERAL.lastAccessColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'lastAccess\' in table \'PROC_REP_PROCESS_GENERAL\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.lastAccessColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime firstAccess {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablePROC_REP_PROCESS_GENERAL.firstAccessColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'firstAccess\' in table \'PROC_REP_PROCESS_GENERAL\' is DBNull." +
-                                "", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.firstAccessColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int TermsandConditions {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_GENERAL.TermsandConditionsColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TermsandConditions\' in table \'PROC_REP_PROCESS_GENERAL\' is " +
-                                "DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.TermsandConditionsColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int CompanyId {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_GENERAL.CompanyIdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CompanyId\' in table \'PROC_REP_PROCESS_GENERAL\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.CompanyIdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Cargo_Id {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_GENERAL.Cargo_IdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cargo_Id\' in table \'PROC_REP_PROCESS_GENERAL\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.Cargo_IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Area_Id {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_GENERAL.Area_IdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Area_Id\' in table \'PROC_REP_PROCESS_GENERAL\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.Area_IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Ubicacion_Id {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_GENERAL.Ubicacion_IdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Ubicacion_Id\' in table \'PROC_REP_PROCESS_GENERAL\' is DBNull" +
-                                ".", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.Ubicacion_IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Ciudad_Id {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_GENERAL.Ciudad_IdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Ciudad_Id\' in table \'PROC_REP_PROCESS_GENERAL\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.Ciudad_IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Discriminator {
-                get {
-                    return ((string)(this[this.tablePROC_REP_PROCESS_GENERAL.DiscriminatorColumn]));
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.DiscriminatorColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Location_Desc {
-                get {
-                    try {
-                        return ((string)(this[this.tablePROC_REP_PROCESS_GENERAL.Location_DescColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Location_Desc\' in table \'PROC_REP_PROCESS_GENERAL\' is DBNul" +
-                                "l.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.Location_DescColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Nivel_Nivel_Id {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_GENERAL.Nivel_Nivel_IdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Nivel_Nivel_Id\' in table \'PROC_REP_PROCESS_GENERAL\' is DBNu" +
-                                "ll.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_GENERAL.Nivel_Nivel_IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsEmailNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.EmailColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetEmailNull() {
-                this[this.tablePROC_REP_PROCESS_GENERAL.EmailColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsPasswordHashNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.PasswordHashColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetPasswordHashNull() {
-                this[this.tablePROC_REP_PROCESS_GENERAL.PasswordHashColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSecurityStampNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.SecurityStampColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSecurityStampNull() {
-                this[this.tablePROC_REP_PROCESS_GENERAL.SecurityStampColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsPhoneNumberNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.PhoneNumberColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetPhoneNumberNull() {
-                this[this.tablePROC_REP_PROCESS_GENERAL.PhoneNumberColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsLockoutEndDateUtcNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.LockoutEndDateUtcColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetLockoutEndDateUtcNull() {
-                this[this.tablePROC_REP_PROCESS_GENERAL.LockoutEndDateUtcColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsFirstNameNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.FirstNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetFirstNameNull() {
-                this[this.tablePROC_REP_PROCESS_GENERAL.FirstNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsLastNameNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.LastNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetLastNameNull() {
-                this[this.tablePROC_REP_PROCESS_GENERAL.LastNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsRoleNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.RoleColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetRoleNull() {
-                this[this.tablePROC_REP_PROCESS_GENERAL.RoleColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsDocumentNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.DocumentColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetDocumentNull() {
-                this[this.tablePROC_REP_PROCESS_GENERAL.DocumentColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsPositionIdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.PositionIdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetPositionIdNull() {
-                this[this.tablePROC_REP_PROCESS_GENERAL.PositionIdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsAreaIdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.AreaIdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetAreaIdNull() {
-                this[this.tablePROC_REP_PROCESS_GENERAL.AreaIdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCityIdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.CityIdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCityIdNull() {
-                this[this.tablePROC_REP_PROCESS_GENERAL.CityIdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsLocationIdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.LocationIdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetLocationIdNull() {
-                this[this.tablePROC_REP_PROCESS_GENERAL.LocationIdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IslastAccessNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.lastAccessColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetlastAccessNull() {
-                this[this.tablePROC_REP_PROCESS_GENERAL.lastAccessColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsfirstAccessNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.firstAccessColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetfirstAccessNull() {
-                this[this.tablePROC_REP_PROCESS_GENERAL.firstAccessColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsTermsandConditionsNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.TermsandConditionsColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetTermsandConditionsNull() {
-                this[this.tablePROC_REP_PROCESS_GENERAL.TermsandConditionsColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCompanyIdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.CompanyIdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCompanyIdNull() {
-                this[this.tablePROC_REP_PROCESS_GENERAL.CompanyIdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCargo_IdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.Cargo_IdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCargo_IdNull() {
-                this[this.tablePROC_REP_PROCESS_GENERAL.Cargo_IdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsArea_IdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.Area_IdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetArea_IdNull() {
-                this[this.tablePROC_REP_PROCESS_GENERAL.Area_IdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsUbicacion_IdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.Ubicacion_IdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetUbicacion_IdNull() {
-                this[this.tablePROC_REP_PROCESS_GENERAL.Ubicacion_IdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCiudad_IdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.Ciudad_IdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCiudad_IdNull() {
-                this[this.tablePROC_REP_PROCESS_GENERAL.Ciudad_IdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsLocation_DescNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.Location_DescColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetLocation_DescNull() {
-                this[this.tablePROC_REP_PROCESS_GENERAL.Location_DescColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsNivel_Nivel_IdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.Nivel_Nivel_IdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetNivel_Nivel_IdNull() {
-                this[this.tablePROC_REP_PROCESS_GENERAL.Nivel_Nivel_IdColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class PROC_REP_PROCESS_USERRow : global::System.Data.DataRow {
-            
-            private PROC_REP_PROCESS_USERDataTable tablePROC_REP_PROCESS_USER;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal PROC_REP_PROCESS_USERRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tablePROC_REP_PROCESS_USER = ((PROC_REP_PROCESS_USERDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Id {
-                get {
-                    return ((string)(this[this.tablePROC_REP_PROCESS_USER.IdColumn]));
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Email {
-                get {
-                    try {
-                        return ((string)(this[this.tablePROC_REP_PROCESS_USER.EmailColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Email\' in table \'PROC_REP_PROCESS_USER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.EmailColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool EmailConfirmed {
-                get {
-                    return ((bool)(this[this.tablePROC_REP_PROCESS_USER.EmailConfirmedColumn]));
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.EmailConfirmedColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string PasswordHash {
-                get {
-                    try {
-                        return ((string)(this[this.tablePROC_REP_PROCESS_USER.PasswordHashColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PasswordHash\' in table \'PROC_REP_PROCESS_USER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.PasswordHashColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string SecurityStamp {
-                get {
-                    try {
-                        return ((string)(this[this.tablePROC_REP_PROCESS_USER.SecurityStampColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SecurityStamp\' in table \'PROC_REP_PROCESS_USER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.SecurityStampColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string PhoneNumber {
-                get {
-                    try {
-                        return ((string)(this[this.tablePROC_REP_PROCESS_USER.PhoneNumberColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PhoneNumber\' in table \'PROC_REP_PROCESS_USER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.PhoneNumberColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool PhoneNumberConfirmed {
-                get {
-                    return ((bool)(this[this.tablePROC_REP_PROCESS_USER.PhoneNumberConfirmedColumn]));
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.PhoneNumberConfirmedColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool TwoFactorEnabled {
-                get {
-                    return ((bool)(this[this.tablePROC_REP_PROCESS_USER.TwoFactorEnabledColumn]));
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.TwoFactorEnabledColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime LockoutEndDateUtc {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablePROC_REP_PROCESS_USER.LockoutEndDateUtcColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'LockoutEndDateUtc\' in table \'PROC_REP_PROCESS_USER\' is DBNu" +
-                                "ll.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.LockoutEndDateUtcColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool LockoutEnabled {
-                get {
-                    return ((bool)(this[this.tablePROC_REP_PROCESS_USER.LockoutEnabledColumn]));
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.LockoutEnabledColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int AccessFailedCount {
-                get {
-                    return ((int)(this[this.tablePROC_REP_PROCESS_USER.AccessFailedCountColumn]));
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.AccessFailedCountColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string UserName {
-                get {
-                    return ((string)(this[this.tablePROC_REP_PROCESS_USER.UserNameColumn]));
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.UserNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string FirstName {
-                get {
-                    try {
-                        return ((string)(this[this.tablePROC_REP_PROCESS_USER.FirstNameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'FirstName\' in table \'PROC_REP_PROCESS_USER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.FirstNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string LastName {
-                get {
-                    try {
-                        return ((string)(this[this.tablePROC_REP_PROCESS_USER.LastNameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'LastName\' in table \'PROC_REP_PROCESS_USER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.LastNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Role {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_USER.RoleColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Role\' in table \'PROC_REP_PROCESS_USER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.RoleColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Document {
-                get {
-                    try {
-                        return ((string)(this[this.tablePROC_REP_PROCESS_USER.DocumentColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Document\' in table \'PROC_REP_PROCESS_USER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.DocumentColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int PositionId {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_USER.PositionIdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PositionId\' in table \'PROC_REP_PROCESS_USER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.PositionIdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int AreaId {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_USER.AreaIdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'AreaId\' in table \'PROC_REP_PROCESS_USER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.AreaIdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int CityId {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_USER.CityIdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CityId\' in table \'PROC_REP_PROCESS_USER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.CityIdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int LocationId {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_USER.LocationIdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'LocationId\' in table \'PROC_REP_PROCESS_USER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.LocationIdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime lastAccess {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablePROC_REP_PROCESS_USER.lastAccessColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'lastAccess\' in table \'PROC_REP_PROCESS_USER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.lastAccessColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime firstAccess {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablePROC_REP_PROCESS_USER.firstAccessColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'firstAccess\' in table \'PROC_REP_PROCESS_USER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.firstAccessColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int TermsandConditions {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_USER.TermsandConditionsColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TermsandConditions\' in table \'PROC_REP_PROCESS_USER\' is DBN" +
-                                "ull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.TermsandConditionsColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int CompanyId {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_USER.CompanyIdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CompanyId\' in table \'PROC_REP_PROCESS_USER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.CompanyIdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Cargo_Id {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_USER.Cargo_IdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cargo_Id\' in table \'PROC_REP_PROCESS_USER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.Cargo_IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Area_Id {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_USER.Area_IdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Area_Id\' in table \'PROC_REP_PROCESS_USER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.Area_IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Ubicacion_Id {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_USER.Ubicacion_IdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Ubicacion_Id\' in table \'PROC_REP_PROCESS_USER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.Ubicacion_IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Ciudad_Id {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_USER.Ciudad_IdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Ciudad_Id\' in table \'PROC_REP_PROCESS_USER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.Ciudad_IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Discriminator {
-                get {
-                    return ((string)(this[this.tablePROC_REP_PROCESS_USER.DiscriminatorColumn]));
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.DiscriminatorColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Location_Desc {
-                get {
-                    try {
-                        return ((string)(this[this.tablePROC_REP_PROCESS_USER.Location_DescColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Location_Desc\' in table \'PROC_REP_PROCESS_USER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.Location_DescColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Nivel_Nivel_Id {
-                get {
-                    try {
-                        return ((int)(this[this.tablePROC_REP_PROCESS_USER.Nivel_Nivel_IdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Nivel_Nivel_Id\' in table \'PROC_REP_PROCESS_USER\' is DBNull." +
-                                "", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_PROCESS_USER.Nivel_Nivel_IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsEmailNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_USER.EmailColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetEmailNull() {
-                this[this.tablePROC_REP_PROCESS_USER.EmailColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsPasswordHashNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_USER.PasswordHashColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetPasswordHashNull() {
-                this[this.tablePROC_REP_PROCESS_USER.PasswordHashColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSecurityStampNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_USER.SecurityStampColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSecurityStampNull() {
-                this[this.tablePROC_REP_PROCESS_USER.SecurityStampColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsPhoneNumberNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_USER.PhoneNumberColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetPhoneNumberNull() {
-                this[this.tablePROC_REP_PROCESS_USER.PhoneNumberColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsLockoutEndDateUtcNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_USER.LockoutEndDateUtcColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetLockoutEndDateUtcNull() {
-                this[this.tablePROC_REP_PROCESS_USER.LockoutEndDateUtcColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsFirstNameNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_USER.FirstNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetFirstNameNull() {
-                this[this.tablePROC_REP_PROCESS_USER.FirstNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsLastNameNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_USER.LastNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetLastNameNull() {
-                this[this.tablePROC_REP_PROCESS_USER.LastNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsRoleNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_USER.RoleColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetRoleNull() {
-                this[this.tablePROC_REP_PROCESS_USER.RoleColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsDocumentNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_USER.DocumentColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetDocumentNull() {
-                this[this.tablePROC_REP_PROCESS_USER.DocumentColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsPositionIdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_USER.PositionIdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetPositionIdNull() {
-                this[this.tablePROC_REP_PROCESS_USER.PositionIdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsAreaIdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_USER.AreaIdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetAreaIdNull() {
-                this[this.tablePROC_REP_PROCESS_USER.AreaIdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCityIdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_USER.CityIdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCityIdNull() {
-                this[this.tablePROC_REP_PROCESS_USER.CityIdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsLocationIdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_USER.LocationIdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetLocationIdNull() {
-                this[this.tablePROC_REP_PROCESS_USER.LocationIdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IslastAccessNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_USER.lastAccessColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetlastAccessNull() {
-                this[this.tablePROC_REP_PROCESS_USER.lastAccessColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsfirstAccessNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_USER.firstAccessColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetfirstAccessNull() {
-                this[this.tablePROC_REP_PROCESS_USER.firstAccessColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsTermsandConditionsNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_USER.TermsandConditionsColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetTermsandConditionsNull() {
-                this[this.tablePROC_REP_PROCESS_USER.TermsandConditionsColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCompanyIdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_USER.CompanyIdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCompanyIdNull() {
-                this[this.tablePROC_REP_PROCESS_USER.CompanyIdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCargo_IdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_USER.Cargo_IdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCargo_IdNull() {
-                this[this.tablePROC_REP_PROCESS_USER.Cargo_IdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsArea_IdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_USER.Area_IdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetArea_IdNull() {
-                this[this.tablePROC_REP_PROCESS_USER.Area_IdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsUbicacion_IdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_USER.Ubicacion_IdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetUbicacion_IdNull() {
-                this[this.tablePROC_REP_PROCESS_USER.Ubicacion_IdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCiudad_IdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_USER.Ciudad_IdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCiudad_IdNull() {
-                this[this.tablePROC_REP_PROCESS_USER.Ciudad_IdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsLocation_DescNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_USER.Location_DescColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetLocation_DescNull() {
-                this[this.tablePROC_REP_PROCESS_USER.Location_DescColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsNivel_Nivel_IdNull() {
-                return this.IsNull(this.tablePROC_REP_PROCESS_USER.Nivel_Nivel_IdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetNivel_Nivel_IdNull() {
-                this[this.tablePROC_REP_PROCESS_USER.Nivel_Nivel_IdColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
         public partial class PROC_REP_CATEGORYRow : global::System.Data.DataRow {
             
             private PROC_REP_CATEGORYDataTable tablePROC_REP_CATEGORY;
@@ -6059,44 +2227,65 @@ namespace DemoScore {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int cat_id {
+            public string comp {
                 get {
-                    return ((int)(this[this.tablePROC_REP_CATEGORY.cat_idColumn]));
+                    try {
+                        return ((string)(this[this.tablePROC_REP_CATEGORY.compColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'comp\' in table \'PROC_REP_CATEGORY\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tablePROC_REP_CATEGORY.cat_idColumn] = value;
+                    this[this.tablePROC_REP_CATEGORY.compColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string CATEGORY {
+            public string cat {
                 get {
                     try {
-                        return ((string)(this[this.tablePROC_REP_CATEGORY.CATEGORYColumn]));
+                        return ((string)(this[this.tablePROC_REP_CATEGORY.catColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CATEGORY\' in table \'PROC_REP_CATEGORY\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'cat\' in table \'PROC_REP_CATEGORY\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePROC_REP_CATEGORY.CATEGORYColumn] = value;
+                    this[this.tablePROC_REP_CATEGORY.catColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int SUMUSER {
+            public string sub_cat {
                 get {
                     try {
-                        return ((int)(this[this.tablePROC_REP_CATEGORY.SUMUSERColumn]));
+                        return ((string)(this[this.tablePROC_REP_CATEGORY.sub_catColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SUMUSER\' in table \'PROC_REP_CATEGORY\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'sub_cat\' in table \'PROC_REP_CATEGORY\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePROC_REP_CATEGORY.SUMUSERColumn] = value;
+                    this[this.tablePROC_REP_CATEGORY.sub_catColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string preguntas {
+                get {
+                    try {
+                        return ((string)(this[this.tablePROC_REP_CATEGORY.preguntasColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'preguntas\' in table \'PROC_REP_CATEGORY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePROC_REP_CATEGORY.preguntasColumn] = value;
                 }
             }
             
@@ -6150,42 +2339,50 @@ namespace DemoScore {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string CompanyName {
-                get {
-                    try {
-                        return ((string)(this[this.tablePROC_REP_CATEGORY.CompanyNameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CompanyName\' in table \'PROC_REP_CATEGORY\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePROC_REP_CATEGORY.CompanyNameColumn] = value;
-                }
+            public bool IscompNull() {
+                return this.IsNull(this.tablePROC_REP_CATEGORY.compColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCATEGORYNull() {
-                return this.IsNull(this.tablePROC_REP_CATEGORY.CATEGORYColumn);
+            public void SetcompNull() {
+                this[this.tablePROC_REP_CATEGORY.compColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCATEGORYNull() {
-                this[this.tablePROC_REP_CATEGORY.CATEGORYColumn] = global::System.Convert.DBNull;
+            public bool IscatNull() {
+                return this.IsNull(this.tablePROC_REP_CATEGORY.catColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSUMUSERNull() {
-                return this.IsNull(this.tablePROC_REP_CATEGORY.SUMUSERColumn);
+            public void SetcatNull() {
+                this[this.tablePROC_REP_CATEGORY.catColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSUMUSERNull() {
-                this[this.tablePROC_REP_CATEGORY.SUMUSERColumn] = global::System.Convert.DBNull;
+            public bool Issub_catNull() {
+                return this.IsNull(this.tablePROC_REP_CATEGORY.sub_catColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setsub_catNull() {
+                this[this.tablePROC_REP_CATEGORY.sub_catColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IspreguntasNull() {
+                return this.IsNull(this.tablePROC_REP_CATEGORY.preguntasColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetpreguntasNull() {
+                this[this.tablePROC_REP_CATEGORY.preguntasColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6223,17 +2420,387 @@ namespace DemoScore {
             public void SetTOTALNull() {
                 this[this.tablePROC_REP_CATEGORY.TOTALColumn] = global::System.Convert.DBNull;
             }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class PROC_REP_PROCESS_USERRow : global::System.Data.DataRow {
+            
+            private PROC_REP_PROCESS_USERDataTable tablePROC_REP_PROCESS_USER;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal PROC_REP_PROCESS_USERRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablePROC_REP_PROCESS_USER = ((PROC_REP_PROCESS_USERDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string UserName {
+                get {
+                    return ((string)(this[this.tablePROC_REP_PROCESS_USER.UserNameColumn]));
+                }
+                set {
+                    this[this.tablePROC_REP_PROCESS_USER.UserNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string LastName {
+                get {
+                    try {
+                        return ((string)(this[this.tablePROC_REP_PROCESS_USER.LastNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LastName\' in table \'PROC_REP_PROCESS_USER\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePROC_REP_PROCESS_USER.LastNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Email {
+                get {
+                    try {
+                        return ((string)(this[this.tablePROC_REP_PROCESS_USER.EmailColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Email\' in table \'PROC_REP_PROCESS_USER\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePROC_REP_PROCESS_USER.EmailColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Cate_Description {
+                get {
+                    try {
+                        return ((string)(this[this.tablePROC_REP_PROCESS_USER.Cate_DescriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Cate_Description\' in table \'PROC_REP_PROCESS_USER\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tablePROC_REP_PROCESS_USER.Cate_DescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string SubC_Description {
+                get {
+                    try {
+                        return ((string)(this[this.tablePROC_REP_PROCESS_USER.SubC_DescriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SubC_Description\' in table \'PROC_REP_PROCESS_USER\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tablePROC_REP_PROCESS_USER.SubC_DescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int TRUE {
+                get {
+                    try {
+                        return ((int)(this[this.tablePROC_REP_PROCESS_USER.TRUEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TRUE\' in table \'PROC_REP_PROCESS_USER\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePROC_REP_PROCESS_USER.TRUEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int FALSE {
+                get {
+                    try {
+                        return ((int)(this[this.tablePROC_REP_PROCESS_USER.FALSEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FALSE\' in table \'PROC_REP_PROCESS_USER\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePROC_REP_PROCESS_USER.FALSEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int TOTAL {
+                get {
+                    try {
+                        return ((int)(this[this.tablePROC_REP_PROCESS_USER.TOTALColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TOTAL\' in table \'PROC_REP_PROCESS_USER\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePROC_REP_PROCESS_USER.TOTALColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsLastNameNull() {
+                return this.IsNull(this.tablePROC_REP_PROCESS_USER.LastNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetLastNameNull() {
+                this[this.tablePROC_REP_PROCESS_USER.LastNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsEmailNull() {
+                return this.IsNull(this.tablePROC_REP_PROCESS_USER.EmailColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetEmailNull() {
+                this[this.tablePROC_REP_PROCESS_USER.EmailColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCate_DescriptionNull() {
+                return this.IsNull(this.tablePROC_REP_PROCESS_USER.Cate_DescriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCate_DescriptionNull() {
+                this[this.tablePROC_REP_PROCESS_USER.Cate_DescriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsSubC_DescriptionNull() {
+                return this.IsNull(this.tablePROC_REP_PROCESS_USER.SubC_DescriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetSubC_DescriptionNull() {
+                this[this.tablePROC_REP_PROCESS_USER.SubC_DescriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsTRUENull() {
+                return this.IsNull(this.tablePROC_REP_PROCESS_USER.TRUEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetTRUENull() {
+                this[this.tablePROC_REP_PROCESS_USER.TRUEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFALSENull() {
+                return this.IsNull(this.tablePROC_REP_PROCESS_USER.FALSEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFALSENull() {
+                this[this.tablePROC_REP_PROCESS_USER.FALSEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsTOTALNull() {
+                return this.IsNull(this.tablePROC_REP_PROCESS_USER.TOTALColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetTOTALNull() {
+                this[this.tablePROC_REP_PROCESS_USER.TOTALColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class PROC_REP_PROCESS_GENERALRow : global::System.Data.DataRow {
+            
+            private PROC_REP_PROCESS_GENERALDataTable tablePROC_REP_PROCESS_GENERAL;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal PROC_REP_PROCESS_GENERALRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablePROC_REP_PROCESS_GENERAL = ((PROC_REP_PROCESS_GENERALDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string CompanyName {
+                get {
+                    try {
+                        return ((string)(this[this.tablePROC_REP_PROCESS_GENERAL.CompanyNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CompanyName\' in table \'PROC_REP_PROCESS_GENERAL\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablePROC_REP_PROCESS_GENERAL.CompanyNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Categoria {
+                get {
+                    try {
+                        return ((string)(this[this.tablePROC_REP_PROCESS_GENERAL.CategoriaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Categoria\' in table \'PROC_REP_PROCESS_GENERAL\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePROC_REP_PROCESS_GENERAL.CategoriaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string SubC_Description {
+                get {
+                    try {
+                        return ((string)(this[this.tablePROC_REP_PROCESS_GENERAL.SubC_DescriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SubC_Description\' in table \'PROC_REP_PROCESS_GENERAL\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tablePROC_REP_PROCESS_GENERAL.SubC_DescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int QUESTION {
+                get {
+                    try {
+                        return ((int)(this[this.tablePROC_REP_PROCESS_GENERAL.QUESTIONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QUESTION\' in table \'PROC_REP_PROCESS_GENERAL\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePROC_REP_PROCESS_GENERAL.QUESTIONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int USUARIOS_EVALUADOS {
+                get {
+                    try {
+                        return ((int)(this[this.tablePROC_REP_PROCESS_GENERAL.USUARIOS_EVALUADOSColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'USUARIOS_EVALUADOS\' in table \'PROC_REP_PROCESS_GENERAL\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePROC_REP_PROCESS_GENERAL.USUARIOS_EVALUADOSColumn] = value;
+                }
+            }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsCompanyNameNull() {
-                return this.IsNull(this.tablePROC_REP_CATEGORY.CompanyNameColumn);
+                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.CompanyNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetCompanyNameNull() {
-                this[this.tablePROC_REP_CATEGORY.CompanyNameColumn] = global::System.Convert.DBNull;
+                this[this.tablePROC_REP_PROCESS_GENERAL.CompanyNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCategoriaNull() {
+                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.CategoriaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCategoriaNull() {
+                this[this.tablePROC_REP_PROCESS_GENERAL.CategoriaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsSubC_DescriptionNull() {
+                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.SubC_DescriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetSubC_DescriptionNull() {
+                this[this.tablePROC_REP_PROCESS_GENERAL.SubC_DescriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsQUESTIONNull() {
+                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.QUESTIONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetQUESTIONNull() {
+                this[this.tablePROC_REP_PROCESS_GENERAL.QUESTIONColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsUSUARIOS_EVALUADOSNull() {
+                return this.IsNull(this.tablePROC_REP_PROCESS_GENERAL.USUARIOS_EVALUADOSColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetUSUARIOS_EVALUADOSNull() {
+                this[this.tablePROC_REP_PROCESS_GENERAL.USUARIOS_EVALUADOSColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -6275,56 +2842,22 @@ namespace DemoScore {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class PROC_REP_PROCESS_CATEGORYRowChangeEvent : global::System.EventArgs {
+        public class PROC_REP_CATEGORYRowChangeEvent : global::System.EventArgs {
             
-            private PROC_REP_PROCESS_CATEGORYRow eventRow;
+            private PROC_REP_CATEGORYRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PROC_REP_PROCESS_CATEGORYRowChangeEvent(PROC_REP_PROCESS_CATEGORYRow row, global::System.Data.DataRowAction action) {
+            public PROC_REP_CATEGORYRowChangeEvent(PROC_REP_CATEGORYRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PROC_REP_PROCESS_CATEGORYRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class PROC_REP_PROCESS_GENERALRowChangeEvent : global::System.EventArgs {
-            
-            private PROC_REP_PROCESS_GENERALRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PROC_REP_PROCESS_GENERALRowChangeEvent(PROC_REP_PROCESS_GENERALRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PROC_REP_PROCESS_GENERALRow Row {
+            public PROC_REP_CATEGORYRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -6377,22 +2910,22 @@ namespace DemoScore {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class PROC_REP_CATEGORYRowChangeEvent : global::System.EventArgs {
+        public class PROC_REP_PROCESS_GENERALRowChangeEvent : global::System.EventArgs {
             
-            private PROC_REP_CATEGORYRow eventRow;
+            private PROC_REP_PROCESS_GENERALRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PROC_REP_CATEGORYRowChangeEvent(PROC_REP_CATEGORYRow row, global::System.Data.DataRowAction action) {
+            public PROC_REP_PROCESS_GENERALRowChangeEvent(PROC_REP_PROCESS_GENERALRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PROC_REP_CATEGORYRow Row {
+            public PROC_REP_PROCESS_GENERALRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -6614,7 +3147,7 @@ namespace DemoScore.dcodemoscoreDataSetBDTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class PROC_REP_PROCESS_CATEGORYTableAdapter : global::System.ComponentModel.Component {
+    public partial class PROC_REP_CATEGORYTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -6628,7 +3161,7 @@ namespace DemoScore.dcodemoscoreDataSetBDTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public PROC_REP_PROCESS_CATEGORYTableAdapter() {
+        public PROC_REP_CATEGORYTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -6725,38 +3258,14 @@ namespace DemoScore.dcodemoscoreDataSetBDTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "PROC_REP_PROCESS_CATEGORY";
-            tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("Email", "Email");
-            tableMapping.ColumnMappings.Add("EmailConfirmed", "EmailConfirmed");
-            tableMapping.ColumnMappings.Add("PasswordHash", "PasswordHash");
-            tableMapping.ColumnMappings.Add("SecurityStamp", "SecurityStamp");
-            tableMapping.ColumnMappings.Add("PhoneNumber", "PhoneNumber");
-            tableMapping.ColumnMappings.Add("PhoneNumberConfirmed", "PhoneNumberConfirmed");
-            tableMapping.ColumnMappings.Add("TwoFactorEnabled", "TwoFactorEnabled");
-            tableMapping.ColumnMappings.Add("LockoutEndDateUtc", "LockoutEndDateUtc");
-            tableMapping.ColumnMappings.Add("LockoutEnabled", "LockoutEnabled");
-            tableMapping.ColumnMappings.Add("AccessFailedCount", "AccessFailedCount");
-            tableMapping.ColumnMappings.Add("UserName", "UserName");
-            tableMapping.ColumnMappings.Add("FirstName", "FirstName");
-            tableMapping.ColumnMappings.Add("LastName", "LastName");
-            tableMapping.ColumnMappings.Add("Role", "Role");
-            tableMapping.ColumnMappings.Add("Document", "Document");
-            tableMapping.ColumnMappings.Add("PositionId", "PositionId");
-            tableMapping.ColumnMappings.Add("AreaId", "AreaId");
-            tableMapping.ColumnMappings.Add("CityId", "CityId");
-            tableMapping.ColumnMappings.Add("LocationId", "LocationId");
-            tableMapping.ColumnMappings.Add("lastAccess", "lastAccess");
-            tableMapping.ColumnMappings.Add("firstAccess", "firstAccess");
-            tableMapping.ColumnMappings.Add("TermsandConditions", "TermsandConditions");
-            tableMapping.ColumnMappings.Add("CompanyId", "CompanyId");
-            tableMapping.ColumnMappings.Add("Cargo_Id", "Cargo_Id");
-            tableMapping.ColumnMappings.Add("Area_Id", "Area_Id");
-            tableMapping.ColumnMappings.Add("Ubicacion_Id", "Ubicacion_Id");
-            tableMapping.ColumnMappings.Add("Ciudad_Id", "Ciudad_Id");
-            tableMapping.ColumnMappings.Add("Discriminator", "Discriminator");
-            tableMapping.ColumnMappings.Add("Location_Desc", "Location_Desc");
-            tableMapping.ColumnMappings.Add("Nivel_Nivel_Id", "Nivel_Nivel_Id");
+            tableMapping.DataSetTable = "PROC_REP_CATEGORY";
+            tableMapping.ColumnMappings.Add("comp", "comp");
+            tableMapping.ColumnMappings.Add("cat", "cat");
+            tableMapping.ColumnMappings.Add("sub_cat", "sub_cat");
+            tableMapping.ColumnMappings.Add("preguntas", "preguntas");
+            tableMapping.ColumnMappings.Add("TRUE", "TRUE");
+            tableMapping.ColumnMappings.Add("FALSE", "FALSE");
+            tableMapping.ColumnMappings.Add("TOTAL", "TOTAL");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -6773,17 +3282,24 @@ namespace DemoScore.dcodemoscoreDataSetBDTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.PROC_REP_PROCESS_CATEGORY";
+            this._commandCollection[0].CommandText = "dbo.PROC_REP_CATEGORY";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idcompany", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dcodemoscoreDataSetBD.PROC_REP_PROCESS_CATEGORYDataTable dataTable) {
+        public virtual int Fill(dcodemoscoreDataSetBD.PROC_REP_CATEGORYDataTable dataTable, global::System.Nullable<int> idcompany) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((idcompany.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idcompany.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -6795,207 +3311,15 @@ namespace DemoScore.dcodemoscoreDataSetBDTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dcodemoscoreDataSetBD.PROC_REP_PROCESS_CATEGORYDataTable GetData() {
+        public virtual dcodemoscoreDataSetBD.PROC_REP_CATEGORYDataTable GetData(global::System.Nullable<int> idcompany) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dcodemoscoreDataSetBD.PROC_REP_PROCESS_CATEGORYDataTable dataTable = new dcodemoscoreDataSetBD.PROC_REP_PROCESS_CATEGORYDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class PROC_REP_PROCESS_GENERALTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public PROC_REP_PROCESS_GENERALTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
+            if ((idcompany.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idcompany.Value));
             }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "PROC_REP_PROCESS_GENERAL";
-            tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("Email", "Email");
-            tableMapping.ColumnMappings.Add("EmailConfirmed", "EmailConfirmed");
-            tableMapping.ColumnMappings.Add("PasswordHash", "PasswordHash");
-            tableMapping.ColumnMappings.Add("SecurityStamp", "SecurityStamp");
-            tableMapping.ColumnMappings.Add("PhoneNumber", "PhoneNumber");
-            tableMapping.ColumnMappings.Add("PhoneNumberConfirmed", "PhoneNumberConfirmed");
-            tableMapping.ColumnMappings.Add("TwoFactorEnabled", "TwoFactorEnabled");
-            tableMapping.ColumnMappings.Add("LockoutEndDateUtc", "LockoutEndDateUtc");
-            tableMapping.ColumnMappings.Add("LockoutEnabled", "LockoutEnabled");
-            tableMapping.ColumnMappings.Add("AccessFailedCount", "AccessFailedCount");
-            tableMapping.ColumnMappings.Add("UserName", "UserName");
-            tableMapping.ColumnMappings.Add("FirstName", "FirstName");
-            tableMapping.ColumnMappings.Add("LastName", "LastName");
-            tableMapping.ColumnMappings.Add("Role", "Role");
-            tableMapping.ColumnMappings.Add("Document", "Document");
-            tableMapping.ColumnMappings.Add("PositionId", "PositionId");
-            tableMapping.ColumnMappings.Add("AreaId", "AreaId");
-            tableMapping.ColumnMappings.Add("CityId", "CityId");
-            tableMapping.ColumnMappings.Add("LocationId", "LocationId");
-            tableMapping.ColumnMappings.Add("lastAccess", "lastAccess");
-            tableMapping.ColumnMappings.Add("firstAccess", "firstAccess");
-            tableMapping.ColumnMappings.Add("TermsandConditions", "TermsandConditions");
-            tableMapping.ColumnMappings.Add("CompanyId", "CompanyId");
-            tableMapping.ColumnMappings.Add("Cargo_Id", "Cargo_Id");
-            tableMapping.ColumnMappings.Add("Area_Id", "Area_Id");
-            tableMapping.ColumnMappings.Add("Ubicacion_Id", "Ubicacion_Id");
-            tableMapping.ColumnMappings.Add("Ciudad_Id", "Ciudad_Id");
-            tableMapping.ColumnMappings.Add("Discriminator", "Discriminator");
-            tableMapping.ColumnMappings.Add("Location_Desc", "Location_Desc");
-            tableMapping.ColumnMappings.Add("Nivel_Nivel_Id", "Nivel_Nivel_Id");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ConexionDCOtest"].ConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.PROC_REP_PROCESS_GENERAL";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dcodemoscoreDataSetBD.PROC_REP_PROCESS_GENERALDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dcodemoscoreDataSetBD.PROC_REP_PROCESS_GENERALDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            dcodemoscoreDataSetBD.PROC_REP_PROCESS_GENERALDataTable dataTable = new dcodemoscoreDataSetBD.PROC_REP_PROCESS_GENERALDataTable();
+            dcodemoscoreDataSetBD.PROC_REP_CATEGORYDataTable dataTable = new dcodemoscoreDataSetBD.PROC_REP_CATEGORYDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7122,37 +3446,14 @@ namespace DemoScore.dcodemoscoreDataSetBDTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "PROC_REP_PROCESS_USER";
-            tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("Email", "Email");
-            tableMapping.ColumnMappings.Add("EmailConfirmed", "EmailConfirmed");
-            tableMapping.ColumnMappings.Add("PasswordHash", "PasswordHash");
-            tableMapping.ColumnMappings.Add("SecurityStamp", "SecurityStamp");
-            tableMapping.ColumnMappings.Add("PhoneNumber", "PhoneNumber");
-            tableMapping.ColumnMappings.Add("PhoneNumberConfirmed", "PhoneNumberConfirmed");
-            tableMapping.ColumnMappings.Add("TwoFactorEnabled", "TwoFactorEnabled");
-            tableMapping.ColumnMappings.Add("LockoutEndDateUtc", "LockoutEndDateUtc");
-            tableMapping.ColumnMappings.Add("LockoutEnabled", "LockoutEnabled");
-            tableMapping.ColumnMappings.Add("AccessFailedCount", "AccessFailedCount");
             tableMapping.ColumnMappings.Add("UserName", "UserName");
-            tableMapping.ColumnMappings.Add("FirstName", "FirstName");
             tableMapping.ColumnMappings.Add("LastName", "LastName");
-            tableMapping.ColumnMappings.Add("Role", "Role");
-            tableMapping.ColumnMappings.Add("Document", "Document");
-            tableMapping.ColumnMappings.Add("PositionId", "PositionId");
-            tableMapping.ColumnMappings.Add("AreaId", "AreaId");
-            tableMapping.ColumnMappings.Add("CityId", "CityId");
-            tableMapping.ColumnMappings.Add("LocationId", "LocationId");
-            tableMapping.ColumnMappings.Add("lastAccess", "lastAccess");
-            tableMapping.ColumnMappings.Add("firstAccess", "firstAccess");
-            tableMapping.ColumnMappings.Add("TermsandConditions", "TermsandConditions");
-            tableMapping.ColumnMappings.Add("CompanyId", "CompanyId");
-            tableMapping.ColumnMappings.Add("Cargo_Id", "Cargo_Id");
-            tableMapping.ColumnMappings.Add("Area_Id", "Area_Id");
-            tableMapping.ColumnMappings.Add("Ubicacion_Id", "Ubicacion_Id");
-            tableMapping.ColumnMappings.Add("Ciudad_Id", "Ciudad_Id");
-            tableMapping.ColumnMappings.Add("Discriminator", "Discriminator");
-            tableMapping.ColumnMappings.Add("Location_Desc", "Location_Desc");
-            tableMapping.ColumnMappings.Add("Nivel_Nivel_Id", "Nivel_Nivel_Id");
+            tableMapping.ColumnMappings.Add("Email", "Email");
+            tableMapping.ColumnMappings.Add("Cate_Description", "Cate_Description");
+            tableMapping.ColumnMappings.Add("SubC_Description", "SubC_Description");
+            tableMapping.ColumnMappings.Add("TRUE", "TRUE");
+            tableMapping.ColumnMappings.Add("FALSE", "FALSE");
+            tableMapping.ColumnMappings.Add("TOTAL", "TOTAL");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -7172,14 +3473,21 @@ namespace DemoScore.dcodemoscoreDataSetBDTableAdapters {
             this._commandCollection[0].CommandText = "dbo.PROC_REP_PROCESS_USER";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idcompany", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dcodemoscoreDataSetBD.PROC_REP_PROCESS_USERDataTable dataTable) {
+        public virtual int Fill(dcodemoscoreDataSetBD.PROC_REP_PROCESS_USERDataTable dataTable, global::System.Nullable<int> idcompany) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((idcompany.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idcompany.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -7191,8 +3499,14 @@ namespace DemoScore.dcodemoscoreDataSetBDTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dcodemoscoreDataSetBD.PROC_REP_PROCESS_USERDataTable GetData() {
+        public virtual dcodemoscoreDataSetBD.PROC_REP_PROCESS_USERDataTable GetData(global::System.Nullable<int> idcompany) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((idcompany.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idcompany.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
             dcodemoscoreDataSetBD.PROC_REP_PROCESS_USERDataTable dataTable = new dcodemoscoreDataSetBD.PROC_REP_PROCESS_USERDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -7208,7 +3522,7 @@ namespace DemoScore.dcodemoscoreDataSetBDTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class PROC_REP_CATEGORYTableAdapter : global::System.ComponentModel.Component {
+    public partial class PROC_REP_PROCESS_GENERALTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -7222,7 +3536,7 @@ namespace DemoScore.dcodemoscoreDataSetBDTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public PROC_REP_CATEGORYTableAdapter() {
+        public PROC_REP_PROCESS_GENERALTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -7319,14 +3633,12 @@ namespace DemoScore.dcodemoscoreDataSetBDTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "PROC_REP_CATEGORY";
-            tableMapping.ColumnMappings.Add("cat_id", "cat_id");
-            tableMapping.ColumnMappings.Add("CATEGORY", "CATEGORY");
-            tableMapping.ColumnMappings.Add("SUMUSER", "SUMUSER");
-            tableMapping.ColumnMappings.Add("TRUE", "TRUE");
-            tableMapping.ColumnMappings.Add("FALSE", "FALSE");
-            tableMapping.ColumnMappings.Add("TOTAL", "TOTAL");
+            tableMapping.DataSetTable = "PROC_REP_PROCESS_GENERAL";
             tableMapping.ColumnMappings.Add("CompanyName", "CompanyName");
+            tableMapping.ColumnMappings.Add("Categoria", "Categoria");
+            tableMapping.ColumnMappings.Add("SubC_Description", "SubC_Description");
+            tableMapping.ColumnMappings.Add("QUESTION", "QUESTION");
+            tableMapping.ColumnMappings.Add("USUARIOS_EVALUADOS", "USUARIOS_EVALUADOS");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -7334,7 +3646,7 @@ namespace DemoScore.dcodemoscoreDataSetBDTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ConexionDCOtest"].ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7343,7 +3655,7 @@ namespace DemoScore.dcodemoscoreDataSetBDTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.PROC_REP_CATEGORY";
+            this._commandCollection[0].CommandText = "dbo.PROC_REP_PROCESS_GENERAL";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idcompany", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7353,7 +3665,7 @@ namespace DemoScore.dcodemoscoreDataSetBDTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dcodemoscoreDataSetBD.PROC_REP_CATEGORYDataTable dataTable, global::System.Nullable<int> idcompany) {
+        public virtual int Fill(dcodemoscoreDataSetBD.PROC_REP_PROCESS_GENERALDataTable dataTable, global::System.Nullable<int> idcompany) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((idcompany.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idcompany.Value));
@@ -7372,7 +3684,7 @@ namespace DemoScore.dcodemoscoreDataSetBDTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dcodemoscoreDataSetBD.PROC_REP_CATEGORYDataTable GetData(global::System.Nullable<int> idcompany) {
+        public virtual dcodemoscoreDataSetBD.PROC_REP_PROCESS_GENERALDataTable GetData(global::System.Nullable<int> idcompany) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((idcompany.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idcompany.Value));
@@ -7380,7 +3692,7 @@ namespace DemoScore.dcodemoscoreDataSetBDTableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            dcodemoscoreDataSetBD.PROC_REP_CATEGORYDataTable dataTable = new dcodemoscoreDataSetBD.PROC_REP_CATEGORYDataTable();
+            dcodemoscoreDataSetBD.PROC_REP_PROCESS_GENERALDataTable dataTable = new dcodemoscoreDataSetBD.PROC_REP_PROCESS_GENERALDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
