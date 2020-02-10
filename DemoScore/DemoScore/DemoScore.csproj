@@ -624,7 +624,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Rep_Process_general.rdlc" />
     <EmbeddedResource Include="Reports\Rep_Process_user.rdlc" />
-    <EmbeddedResource Include="Reports\RptDataByCompany.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

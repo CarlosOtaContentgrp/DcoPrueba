@@ -234,44 +234,6 @@ namespace DemoScore.Controllers
             
         }
 
-        public ActionResult ReportByCompany(int id)
-        {
-
-            ReportViewer reportViewer =
-                  new ReportViewer()
-                  {
-                      ProcessingMode = ProcessingMode.Local,
-                      SizeToReportContent = true,
-                      Width = Unit.Percentage(100),
-                      Height = Unit.Percentage(100),
-                  };
-            dcodemoscoreDataSetBD.DataByCompanyDataTable data = new dcodemoscoreDataSetBD.DataByCompanyDataTable();
-            DataByCompanyTableAdapter adapter = new DataByCompanyTableAdapter();
-            //ColpensionesDataSet.PROC_REP_POSTSUMMARIESDataTable data = new ColpensionesDataSet.PROC_REP_POSTSUMMARIESDataTable();
-            //PROC_REP_POSTSUMMARIESTableAdapter adapter = new PROC_REP_POSTSUMMARIESTableAdapter();
-
-
-            adapter.Fill(data, id);
-            if (data != null && data.Rows.Count > 0)
-            {
-                reportViewer.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", data.CopyToDataTable()));
-                reportViewer.LocalReport.ReportPath = Request.MapPath(Request.ApplicationPath) + @"Reports\RptDataByCompany.rdlc";
-                ViewBag.ReportViewer = reportViewer;
-            }
-            else
-            {
-
-                //Message("No se encontraron datos para el informe con los filtros utilizados, por favor utilice otros filtros", MessageType.Info);
-            }
-            ViewBag.reports = true;
-            AdminReports model = new AdminReports
-            {
-                company_Id = id
-            };
-            return View("Report", model);
-
-        }
-
         public ActionResult Reporteresultadoscategorias(int id)
         {
 

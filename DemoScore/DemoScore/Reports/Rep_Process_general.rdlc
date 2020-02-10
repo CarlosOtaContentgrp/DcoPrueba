@@ -6,24 +6,24 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>0.33854in</Width>
+              <Width>0.36562in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.21355in</Width>
+              <Width>3.24063in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.53197in</Width>
+              <Width>2.55905in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.31178in</Width>
+              <Width>1.33886in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.19792in</Width>
+              <Width>1.225in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.41667in</Height>
+              <Height>0.46875in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -174,7 +174,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Usuarios Evaluados e</Value>
+                              <Value>Usuarios Evaluados</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -388,9 +388,9 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>0.15625in</Top>
-        <Left>0.07292in</Left>
-        <Height>0.66667in</Height>
-        <Width>8.59376in</Width>
+        <Left>0.17813in</Left>
+        <Height>0.71875in</Height>
+        <Width>8.72916in</Width>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -421,10 +421,10 @@
     <Height>0.97393in</Height>
     <Style />
   </Body>
-  <Width>8.89405in</Width>
+  <Width>9.10238in</Width>
   <Page>
     <PageHeader>
-      <Height>1.5625in</Height>
+      <Height>1.77778in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -447,7 +447,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Top>0.13194in</Top>
+              <Top>0.11805in</Top>
               <Left>3.67708in</Left>
               <Height>0.25in</Height>
               <Width>1in</Width>
@@ -610,7 +610,9 @@
                   <TextRuns>
                     <TextRun>
                       <Value>=First(Fields!CompanyName.Value, "DataSet1")</Value>
-                      <Style />
+                      <Style>
+                        <FontSize>12pt</FontSize>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style>
@@ -628,6 +630,11 @@
                 <Border>
                   <Style>None</Style>
                 </Border>
+                <BottomBorder>
+                  <Color>Black</Color>
+                  <Style>Solid</Style>
+                  <Width>1pt</Width>
+                </BottomBorder>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -641,8 +648,10 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value />
-                      <Style />
+                      <Value>=Now()</Value>
+                      <Style>
+                        <FontSize>12pt</FontSize>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style>
@@ -660,6 +669,11 @@
                 <Border>
                   <Style>None</Style>
                 </Border>
+                <BottomBorder>
+                  <Color>Black</Color>
+                  <Style>Solid</Style>
+                  <Width>1pt</Width>
+                </BottomBorder>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -677,7 +691,7 @@
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Calibri</FontFamily>
-                        <FontSize>11pt</FontSize>
+                        <FontSize>12pt</FontSize>
                         <FontWeight>Normal</FontWeight>
                         <TextDecoration>None</TextDecoration>
                         <Color>#000000</Color>
@@ -685,7 +699,7 @@
                     </TextRun>
                   </TextRuns>
                   <Style>
-                    <TextAlign>Left</TextAlign>
+                    <TextAlign>Center</TextAlign>
                   </Style>
                 </Paragraph>
               </Paragraphs>
@@ -699,6 +713,11 @@
                 <Border>
                   <Style>None</Style>
                 </Border>
+                <BottomBorder>
+                  <Color>Black</Color>
+                  <Style>Solid</Style>
+                  <Width>1pt</Width>
+                </BottomBorder>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -713,10 +732,14 @@
                   <TextRuns>
                     <TextRun>
                       <Value />
-                      <Style />
+                      <Style>
+                        <FontSize>12pt</FontSize>
+                      </Style>
                     </TextRun>
                   </TextRuns>
-                  <Style />
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox30</rd:DefaultName>
@@ -729,6 +752,11 @@
                 <Border>
                   <Style>None</Style>
                 </Border>
+                <BottomBorder>
+                  <Color>Black</Color>
+                  <Style>Solid</Style>
+                  <Width>1pt</Width>
+                </BottomBorder>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -742,11 +770,15 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value />
-                      <Style />
+                      <Value>=Sum(Fields!USUARIOS_EVALUADOS.Value, "DataSet1")</Value>
+                      <Style>
+                        <FontSize>12pt</FontSize>
+                      </Style>
                     </TextRun>
                   </TextRuns>
-                  <Style />
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox30</rd:DefaultName>
@@ -759,6 +791,11 @@
                 <Border>
                   <Style>None</Style>
                 </Border>
+                <BottomBorder>
+                  <Color>Black</Color>
+                  <Style>Solid</Style>
+                  <Width>1pt</Width>
+                </BottomBorder>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -772,7 +809,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value />
+                      <Value>= "Pagina " &amp; Globals!PageNumber &amp; "de "&amp; Globals!TotalPages</Value>
                       <Style />
                     </TextRun>
                   </TextRuns>
@@ -797,9 +834,10 @@
             </Textbox>
           </ReportItems>
           <KeepTogether>true</KeepTogether>
-          <Left>0.14584in</Left>
+          <Top>0.29987cm</Top>
+          <Left>0.17813in</Left>
           <Height>1.5625in</Height>
-          <Width>8.52084in</Width>
+          <Width>8.72917in</Width>
           <Style>
             <Border>
               <Style>Solid</Style>
@@ -978,9 +1016,9 @@
           </ReportItems>
           <KeepTogether>true</KeepTogether>
           <Top>0.11632in</Top>
-          <Left>0.14584in</Left>
+          <Left>0.17813in</Left>
           <Height>0.76736in</Height>
-          <Width>8.52084in</Width>
+          <Width>8.72917in</Width>
           <Style>
             <Border>
               <Style>Solid</Style>
@@ -1027,7 +1065,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>559ebc7b-9b7f-46cb-a2a9-16f56e9cf737</rd:DataSourceID>
+      <rd:DataSourceID>90dde1ef-3fa5-41fa-a3c1-1311aa9d22bc</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -1060,7 +1098,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>dcodemoscoreDataSetBD</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\avallejo\Documents\GitHub\DcoPrueba\DemoScore\DemoScore\dcodemoscoreDataSetBD.xsd</rd:SchemaPath>
+        <rd:SchemaPath>G:\DcoPrueba\DemoScore\DemoScore\dcodemoscoreDataSetBD.xsd</rd:SchemaPath>
         <rd:TableName>PROC_REP_PROCESS_GENERAL</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
