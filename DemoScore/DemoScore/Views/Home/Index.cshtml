@@ -6,11 +6,11 @@
 {
     @section Scripts {
         <script type="text/JavaScript">
-    $(document).ready(function () {
-        $("#Inform").modal();
-    });
+            $(document).ready(function () {
+                $("#Inform").modal();
+            });
         </script>
-    }}
+    }       }
 <div id="Inform" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -39,7 +39,7 @@
             }
             else
             {
-                { Html.RenderAction("Preview", "ViewGameUser", new {Id=Model.settin }); }
+                { Html.RenderAction("Preview", "ViewGameUser", new { Id = Model.settin }); }
             }
             break;
         case ROLES.Administrador:
@@ -65,44 +65,44 @@ else
     </div>
 
 
-                                                                        <div class="center-block col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                                            <br /><br />
-                                                                            <div class="logo_inicial">
-                                                                                <br />
-                                                                                <div class='center-block' style='width:500px;height:200px;'>
-                                                                                    <br />
-                                                                                    <p><img class="img-responsive" src="~/Content/Imagenes/LOGO DCO-15.png" border="0" width="1280" height="1000" /></p>  
-                                                                                </div>
-                                                                           
-                                                                                </div>
-                                                                            <br /><br /><br /><br /><br />
-                                                                            <div class="center-block">
+    <div class="center-block col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <br /><br />
+        <div class="logo_inicial">
+            <br />
+            <div class='center-block' style='width:500px;height:200px;'>
+                <br />
+                <p><img class="img-responsive" src="~/Content/Imagenes/LOGO DCO-15.png" border="0" width="1280" height="1000" /></p>
+            </div>
 
-                                                                                @{ Html.RenderPartial("_Login", Model.Login);  }
-                                                                            </div>
-                                                                        </div>
-                                                                                    if (TempData["Menssages"] != null)
-                                                                                    {
-                                                                                        @section Scripts {
-                                                                                            <script type="text/JavaScript">
-                                                                                                                    $(document).ready(function () {
-                                                                                                                        $("#Menssages").modal();
-                                                                                                                    });
-                                                                                            </script>
-                                                                                        }}
+        </div>
+        <br /><br /><br /><br /><br />
+        <div class="center-block">
 
-                                                                                    <div id="Menssages" class="modal fade" role="dialog">
-                                                                                        <div class="modal-dialog1">
-                                                                                            <div class="modal-content">
-                                                                                                <div class="modal-body">
-                                                                                                    <p>
-                                                                                                        @TempData["Menssages"]
-                                                                                                    </p>
-                                                                                                </div>
-                                                                                                <div class="modal-footer">
-                                                                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    }
+            @{ Html.RenderPartial("_Login", Model.Login); }
+        </div>
+    </div>
+    if (TempData["Menssages"] != null)
+    {
+        @section Scripts {
+            <script type="text/JavaScript">
+                $(document).ready(function () {
+                    $("#Menssages").modal();
+                });
+            </script>
+        }}
+
+    <div id="Menssages" class="modal fade" role="dialog">
+        <div class="modal-dialog1">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>
+                        @TempData["Menssages"]
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
