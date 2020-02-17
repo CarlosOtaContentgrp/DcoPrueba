@@ -353,7 +353,7 @@
   <Width>9.19551in</Width>
   <Page>
     <PageHeader>
-      <Height>1.77778in</Height>
+      <Height>1.64236in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -486,45 +486,13 @@
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Textbox Name="Textbox11">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>N° Evaluados:</Value>
-                      <Style>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Top>1.1875in</Top>
-              <Left>3.67708in</Left>
-              <Height>0.25in</Height>
-              <Width>1.00001in</Width>
-              <ZIndex>4</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
             <Image Name="Image2">
               <Source>Embedded</Source>
               <Value>LOGODCOalfa04</Value>
               <Sizing>FitProportional</Sizing>
-              <Height>1.5in</Height>
+              <Height>1.1875in</Height>
               <Width>3.47917in</Width>
-              <ZIndex>5</ZIndex>
+              <ZIndex>4</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -554,7 +522,7 @@
               <Left>4.69098in</Left>
               <Height>0.27778in</Height>
               <Width>2.94792in</Width>
-              <ZIndex>6</ZIndex>
+              <ZIndex>5</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -593,7 +561,7 @@
               <Left>4.69098in</Left>
               <Height>0.25in</Height>
               <Width>3.82986in</Width>
-              <ZIndex>7</ZIndex>
+              <ZIndex>6</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -637,7 +605,7 @@
               <Left>4.67709in</Left>
               <Height>0.25in</Height>
               <Width>3.84375in</Width>
-              <ZIndex>8</ZIndex>
+              <ZIndex>7</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -676,46 +644,7 @@
               <Left>4.69098in</Left>
               <Height>0.25in</Height>
               <Width>3.82986in</Width>
-              <ZIndex>9</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <BottomBorder>
-                  <Color>Black</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </BottomBorder>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox34">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Sum(Fields!USUARIOS_EVALUADOS.Value, "DataSet1")</Value>
-                      <Style>
-                        <FontSize>12pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox30</rd:DefaultName>
-              <Top>1.1875in</Top>
-              <Left>4.69098in</Left>
-              <Height>0.25in</Height>
-              <Width>3.82986in</Width>
-              <ZIndex>10</ZIndex>
+              <ZIndex>8</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -750,7 +679,7 @@
               <Left>7.6389in</Left>
               <Height>0.27778in</Height>
               <Width>0.88194in</Width>
-              <ZIndex>11</ZIndex>
+              <ZIndex>9</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -765,7 +694,7 @@
           <KeepTogether>true</KeepTogether>
           <Top>0.29987cm</Top>
           <Left>0.17813in</Left>
-          <Height>1.5625in</Height>
+          <Height>1.35417in</Height>
           <Width>8.72917in</Width>
           <Style>
             <Border>
